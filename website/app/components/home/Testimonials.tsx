@@ -7,21 +7,21 @@ import { ChevronLeft, ChevronRight, Quote } from "lucide-react"
 const testimonials = [
   {
     id: 1,
-    quote: "EduGroup has transformed my child's approach to learning. The dedicated faculty and excellent facilities have helped them excel both academically and in extracurricular activities.",
+    quote: "Dildhani Education Group has transformed my child's approach to learning. The dedicated faculty and excellent facilities have helped them excel both academically and in extracurricular activities.",
     author: "Navneet Kaushik",
     role: "Parent",
     gradient: "from-blue-600 to-indigo-700",
   },
   {
     id: 2,
-    quote: "Since joining EduGroup School, I have witnessed my child grow into a confident and compassionate teenager. The school's environment has developed a love of learning that extends beyond the classroom.",
+    quote: "Since joining Dildhani Education Group School, I have witnessed my child grow into a confident and compassionate teenager. The school's environment has developed a love of learning that extends beyond the classroom.",
     author: "Rashmita Bhattacharjee",
     role: "Parent",
     gradient: "from-purple-600 to-pink-700",
   },
   {
     id: 3,
-    quote: "My journey at EduGroup was transformative. The values instilled and skills nurtured here have been instrumental in my personal and professional success.",
+    quote: "My journey at Dildhani Education Group was transformative. The values instilled and skills nurtured here have been instrumental in my personal and professional success.",
     author: "Sikander Singh",
     role: "Alumni",
     gradient: "from-amber-500 to-red-600",

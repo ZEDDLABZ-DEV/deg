@@ -1,35 +1,58 @@
 "use client"
 
 import { motion } from "framer-motion"
-import Link from "next/link"
 import { ArrowRight } from "lucide-react"
-import { cn } from "@/app/lib/utils"
+import Link from "next/link"
 
 const schools = [
   {
     id: 1,
-    name: "EduGroup School Pilani",
-    description: "A premier boarding school with over 100 years of educational excellence.",
+    name: "Bhawani Politechnic College",
+    description: "Electrical, civil and mechanical branches at one place.",
     image: "/images/school1.jpg",
     gradient: "from-blue-500 to-purple-600",
     link: "/schools/pilani",
   },
   {
     id: 2,
-    name: "EduGroup School Sanawar",
-    description: "Set amidst beautiful hills, offering holistic education in a serene environment.",
+    name: "Kaptan Officer and Sports Academy",
+    description: "A place of excellence for the future officers and atheletes.",
     image: "/images/school2.jpg",
     gradient: "from-emerald-500 to-teal-600",
     link: "/schools/sanawar",
   },
   {
     id: 3,
-    name: "EduGroup School Shimla",
-    description: "A modern campus with traditional values, nurturing future global leaders.",
+    name: "Kaptan Girls Defence and Hostel",
+    description: "A place of excellence for the future officers and atheletes.",
     image: "/images/school3.jpg",
     gradient: "from-amber-500 to-orange-600",
     link: "/schools/shimla",
   },
+  {
+    id: 4,
+    name: "Colonel Rajvardhan Cricket Academy",
+    description: "Cricket academy for the future cricketers.",
+    image: "/images/school4.jpg",
+    gradient: "from-amber-500 to-orange-600",
+    link: "/schools/shimla",
+  },
+  {
+    id: 5,
+    name: "Kaptan Coaching Centre",
+    description: "Coaching institute from the house of Dildhani Group.",
+    image: "/images/school5.jpg",
+    gradient: "from-amber-500 to-orange-600",
+    link: "/schools/shimla",
+  },
+  {
+    id: 6,
+    name: "PCM Career Point",
+    description: "School and foundation batches for 9th, 10th, 11th and 12th standard.",  
+    image: "/images/school6.jpg",
+    gradient: "from-amber-500 to-orange-600",
+    link: "/schools/shimla",
+  }
 ]
 
 export function Schools() {

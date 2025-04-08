@@ -7,7 +7,7 @@ import { Footer } from "./components/layout/Footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "EduGroup - Premier Educational Institutions",
+  title: "Dildhani Education Group - Premier Educational Institutions",
   description: "A group of premier educational institutions committed to excellence in education",
 };
 

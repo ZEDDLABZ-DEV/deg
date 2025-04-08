@@ -39,7 +39,7 @@ export default function AboutPage() {
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6">About EduGroup</h1>
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6">About Dildhani Education Group</h1>
             <p className="text-xl text-blue-100 max-w-3xl mx-auto">
               A legacy of educational excellence spanning decades, committed to nurturing future leaders.
             </p>
@@ -59,13 +59,13 @@ export default function AboutPage() {
             >
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Story</h2>
               <p className="text-gray-600 mb-4">
-                EduGroup was founded with a vision to provide world-class education that balances academic excellence with character development. For decades, we have been at the forefront of educational innovation, creating learning environments that inspire students to achieve their fullest potential.
+                Dildhani Education Group was founded with a vision to provide world-class education that balances academic excellence with character development. For decades, we have been at the forefront of educational innovation, creating learning environments that inspire students to achieve their fullest potential.
               </p>
               <p className="text-gray-600 mb-4">
                 Our journey began with a single institution and has grown into a family of prestigious schools across the country, each maintaining the highest standards of educational excellence while honoring their unique traditions and heritage.
               </p>
               <p className="text-gray-600">
-                Today, EduGroup institutions are recognized nationally for their academic achievements, state-of-the-art facilities, and the accomplishments of our alumni who have gone on to make significant contributions in various fields across the globe.
+                Today, Dildhani Education Group institutions are recognized nationally for their academic achievements, state-of-the-art facilities, and the accomplishments of our alumni who have gone on to make significant contributions in various fields across the globe.
               </p>
             </motion.div>
             
@@ -96,7 +96,7 @@ export default function AboutPage() {
           >
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Core Values</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              These principles guide everything we do at EduGroup institutions.
+              These principles guide everything we do at Dildhani Education Group institutions.
             </p>
           </motion.div>
 
