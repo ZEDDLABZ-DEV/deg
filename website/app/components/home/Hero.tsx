@@ -14,7 +14,7 @@ export function Hero() {
         <Image
           src="/images/hero.avif"
           alt="School Campus"
-          className="object-cover"
+          className="object-cover opacity-60"
           fill
           priority
         />
