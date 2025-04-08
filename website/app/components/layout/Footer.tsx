@@ -78,7 +78,7 @@ export function Footer() {
                       href={link.href}
                       className="text-sm hover:text-white transition-colors flex items-center gap-2"
                     >
-                      {link.icon && <link.icon className="w-4 h-4" />}
+                      {'icon' in link && link.icon && <link.icon className="w-4 h-4" />}
                       {link.name}
                     </Link>
                   </li>

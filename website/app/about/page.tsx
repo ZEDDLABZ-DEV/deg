@@ -1,6 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
+import Image from "next/image"
 
 export default function AboutPage() {
   return (
@@ -76,8 +77,14 @@ export default function AboutPage() {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="relative rounded-xl overflow-hidden shadow-xl"
             >
-              <div className="aspect-w-16 aspect-h-9">
-                <img src="/images/about.jpg" alt="Our Campus" className="object-cover w-full h-full" />
+              <div className="aspect-w-16 aspect-h-9 relative h-[400px]">
+                <Image 
+                  src="/images/about.jpg" 
+                  alt="Our Campus" 
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
               </div>
             </motion.div>
           </div>

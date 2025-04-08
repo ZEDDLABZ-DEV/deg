@@ -91,7 +91,7 @@ export function Testimonials() {
                     <div className={`absolute top-0 left-0 h-2 w-full rounded-t-2xl bg-gradient-to-r ${testimonial.gradient}`}></div>
                     <Quote className="text-gray-300 h-12 w-12 mb-6" />
                     <p className="text-lg md:text-xl italic text-gray-700 mb-8">
-                      "{testimonial.quote}"
+                      &ldquo;{testimonial.quote}&rdquo;
                     </p>
                     <div className="flex items-center">
                       <div className="h-12 w-12 rounded-full bg-gradient-to-r from-gray-200 to-gray-300 flex items-center justify-center text-white font-bold text-lg">

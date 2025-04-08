@@ -3,6 +3,7 @@
 import { motion } from "framer-motion"
 import { ArrowRight } from "lucide-react"
 import Link from "next/link"
+import Image from "next/image"
 
 const schools = [
   {
@@ -87,10 +88,12 @@ export function Schools() {
             >
               <div className="h-56 relative overflow-hidden">
                 <div className={`absolute inset-0 bg-gradient-to-r ${school.gradient} opacity-80 z-10`}></div>
-                <img
+                <Image
                   alt={school.name}
-                  className="absolute inset-0 w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
+                  className="object-cover group-hover:scale-110 transition-transform duration-700"
                   src={school.image}
+                  fill
+                  sizes="(max-width: 768px) 100vw, 33vw"
                 />
                 <div className="absolute inset-0 z-20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <motion.div 

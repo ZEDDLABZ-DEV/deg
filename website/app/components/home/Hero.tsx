@@ -2,8 +2,8 @@
 
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
-import { cn } from "@/app/lib/utils"
 import Link from "next/link"
+import Image from "next/image"
 
 export function Hero() {
   return (
@@ -11,10 +11,12 @@ export function Hero() {
       {/* Background Image with Gradient Overlay */}
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-br from-blue-900/80 via-indigo-900/70 to-purple-900/80 mix-blend-multiply" />
-        <img
+        <Image
           src="/images/hero-bg.jpg"
           alt="School Campus"
-          className="w-full h-full object-cover"
+          className="object-cover"
+          fill
+          priority
         />
       </div>
 

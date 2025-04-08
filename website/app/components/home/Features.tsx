@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion"
 import { GraduationCap, BookOpen, Users, Globe, Award, Heart } from "lucide-react"
-import { cn } from "@/app/lib/utils"
 
 const features = [
   {
