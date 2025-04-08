@@ -12,7 +12,7 @@ export function Hero() {
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-br from-blue-900/80 via-indigo-900/70 to-purple-900/80 mix-blend-multiply" />
         <Image
-          src="/images/hero-bg.jpg"
+          src="/images/hero.avif"
           alt="School Campus"
           className="object-cover"
           fill
