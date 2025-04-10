@@ -63,7 +63,7 @@ export default function AboutPage() {
                 Since its founding in 2011, Dildhani Education Group has been providing quality education from its base in Jodhpur, Rajasthan. What began as a small initiative has evolved into a comprehensive educational hub offering diverse learning opportunities.
               </p>
               <p className="text-deep-gray mb-4">
-                Recognized by the All India Council for Technical Education (AICTE) and affiliated with the Board of Technical Education, Rajasthan, we've established ourselves as a trusted name in education across the region.
+                Recognized by the All India Council for Technical Education (AICTE) and affiliated with the Board of Technical Education, Rajasthan, we&apos;ve established ourselves as a trusted name in education across the region.
               </p>
               <p className="text-deep-gray">
                 Today, our campus houses multiple specialized institutions including the Bhawani Polytechnic College, Kaptan Officer Academy, PCM Career Point, Colonel Rajvardhan Cricket Academy, and Kaptan Girls Hostel &mdash; creating a holistic educational ecosystem.

@@ -10,11 +10,11 @@ export function Hero() {
     <section className="relative h-[90vh] flex items-center justify-center overflow-hidden">
       {/* Background Image with Gradient Overlay */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-gradient-to-br from-charcoal/90 via-maroon/80 to-charcoal/90 mix-blend-multiply" />
+        <div className="absolute inset-0 bg-gradient-to-br from-black to-gray-900 mix-blend-multiply" />
         <Image
           src="/images/hero.avif"
-          alt="Dildhani Education Group Campus"
-          className="object-cover opacity-70"
+          alt="School Campus"
+          className="object-cover opacity-60"
           fill
           priority
         />
@@ -25,7 +25,7 @@ export function Hero() {
         {[...Array(20)].map((_, i) => (
           <motion.div
             key={i}
-            className="absolute w-2 h-2 bg-gold rounded-full"
+            className="absolute w-2 h-2 bg-white rounded-full"
             style={{
               top: `${Math.random() * 100}%`,
               left: `${Math.random() * 100}%`,
@@ -51,31 +51,23 @@ export function Hero() {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="max-w-3xl mx-auto"
         >
-          <motion.span
-            className="inline-block bg-maroon text-white px-4 py-1 rounded-full text-sm font-medium mb-6"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.1 }}
-          >
-            Since 2011 • AICTE Recognized
-          </motion.span>
           <motion.h1 
-            className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6 leading-tight font-serif"
+            className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6 leading-tight"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <span className="inline-block bg-gradient-to-r from-white to-gold bg-clip-text text-transparent">
+            <span className="inline-block bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
               Shaping Future Leaders Through Excellence
             </span>
           </motion.h1>
           <motion.p 
-            className="text-xl text-light-blue mb-8"
+            className="text-xl text-gray-200 mb-8"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            From polytechnic education to defense training, Dildhani Education Group offers holistic development opportunities for students across Jodhpur, Rajasthan.
+            Join our prestigious educational institutions and embark on a journey of academic excellence and personal growth.
           </motion.p>
           <motion.div 
             className="flex flex-col sm:flex-row gap-4 justify-center"
@@ -86,15 +78,15 @@ export function Hero() {
             <Link href="/admissions">
               <Button 
                 size="lg" 
-                variant="default" 
-                className="bg-maroon hover:bg-maroon/90 text-white font-medium text-base"
+                variant="gradient"
+                className="font-medium text-base"
               >
                 Apply Now
               </Button>
             </Link>
             <Link href="/about">
-              <Button size="lg" variant="outline" className="bg-white/10 text-white hover:bg-white/20 border-gold/50 text-base">
-                Explore Programs
+              <Button size="lg" variant="outline" className="bg-white/10 text-white hover:bg-white/20 border-white/30">
+                Learn More
               </Button>
             </Link>
           </motion.div>
@@ -108,11 +100,11 @@ export function Hero() {
         transition={{ delay: 1.5 }}
         className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20"
       >
-        <div className="w-6 h-10 border-2 border-gold/70 rounded-full flex justify-center p-1">
+        <div className="w-6 h-10 border-2 border-white/70 rounded-full flex justify-center p-1">
           <motion.div
             animate={{ y: [0, 10, 0] }}
             transition={{ duration: 1.5, repeat: Infinity }}
-            className="w-1 h-2 bg-gold rounded-full"
+            className="w-1 h-2 bg-white rounded-full"
           />
         </div>
       </motion.div>
