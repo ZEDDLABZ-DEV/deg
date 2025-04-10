@@ -1,64 +1,70 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { ArrowRight } from "lucide-react"
+import { ArrowRight, GraduationCap, Shield, School, Trophy, Building, BookOpen } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
 
 const schools = [
   {
     id: 1,
-    name: "Bhawani Politechnic College",
-    description: "Electrical, civil and mechanical branches at one place.",
+    name: "Bhawani Polytechnic College",
+    description: "AICTE approved polytechnic institution offering electrical, civil and mechanical engineering programs.",
     image: "/images/school1.jpg",
-    gradient: "from-blue-500 to-purple-600",
-    link: "/schools/pilani",
+    gradient: "from-maroon to-maroon/70",
+    link: "/institutions/polytechnic",
+    icon: GraduationCap
   },
   {
     id: 2,
-    name: "Kaptan Officer and Sports Academy",
-    description: "A place of excellence for the future officers and atheletes.",
+    name: "Kaptan Officer Academy",
+    description: "Defense training academy preparing students for careers in armed forces and security services.",
     image: "/images/school2.jpg",
-    gradient: "from-emerald-500 to-teal-600",
-    link: "/schools/sanawar",
+    gradient: "from-charcoal to-charcoal/80",
+    link: "/institutions/defense-academy",
+    icon: Shield
   },
   {
     id: 3,
-    name: "Kaptan Girls Defence and Hostel",
-    description: "A place of excellence for the future officers and atheletes.",
+    name: "PCM Career Point",
+    description: "Senior secondary school and coaching center for 9th-12th with focus on science & mathematics.",
     image: "/images/school3.jpg",
-    gradient: "from-amber-500 to-orange-600",
-    link: "/schools/shimla",
+    gradient: "from-gold to-gold/70",
+    link: "/institutions/school",
+    icon: School
   },
   {
     id: 4,
     name: "Colonel Rajvardhan Cricket Academy",
-    description: "Cricket academy for the future cricketers.",
+    description: "Professional cricket training facility developing the next generation of cricket talent.",
     image: "/images/school4.jpg",
-    gradient: "from-amber-500 to-orange-600",
-    link: "/schools/shimla",
+    gradient: "from-light-blue to-light-blue/70",
+    link: "/institutions/cricket-academy",
+    icon: Trophy
   },
   {
     id: 5,
-    name: "Kaptan Coaching Centre",
-    description: "Coaching institute from the house of Dildhani Group.",
+    name: "Kaptan Girls Hostel",
+    description: "Safe, comfortable residential facility for female students with modern amenities.",
     image: "/images/school5.jpg",
-    gradient: "from-amber-500 to-orange-600",
-    link: "/schools/shimla",
+    gradient: "from-gold to-gold/70",
+    link: "/institutions/hostel",
+    icon: Building
   },
   {
     id: 6,
-    name: "PCM Career Point",
-    description: "School and foundation batches for 9th, 10th, 11th and 12th standard.",  
+    name: "Kaptan Coaching Centre",
+    description: "Specialized coaching for competitive exams and higher education entrance tests.",
     image: "/images/school6.jpg",
-    gradient: "from-amber-500 to-orange-600",
-    link: "/schools/shimla",
+    gradient: "from-maroon to-maroon/70",
+    link: "/institutions/coaching",
+    icon: BookOpen
   }
 ]
 
 export function Schools() {
   return (
-    <section className="py-20 bg-gradient-to-b from-white to-gray-50">
+    <section className="py-20 bg-gradient-to-b from-white to-off-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -67,11 +73,11 @@ export function Schools() {
           transition={{ duration: 0.5 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl font-bold text-charcoal mb-4 font-serif">
             Our Prestigious Institutions
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Discover our world-class educational institutions that have been nurturing young minds for generations.
+          <p className="text-xl text-deep-gray max-w-3xl mx-auto">
+            Discover our world-class educational institutions in Jodhpur, Rajasthan that have been nurturing young minds since 2011.
           </p>
         </motion.div>
 
@@ -105,11 +111,14 @@ export function Schools() {
                 </div>
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-bold mb-2">{school.name}</h3>
-                <p className="text-gray-600 mb-4">{school.description}</p>
+                <div className="flex items-center gap-3 mb-3">
+                  <school.icon className="h-6 w-6 text-maroon" />
+                  <h3 className="text-xl font-bold text-charcoal font-serif">{school.name}</h3>
+                </div>
+                <p className="text-deep-gray mb-4 text-sm">{school.description}</p>
                 <Link 
                   href={school.link}
-                  className="inline-flex items-center text-primary font-medium hover:text-primary/80 transition-colors"
+                  className="inline-flex items-center text-maroon font-medium hover:text-gold transition-colors"
                 >
                   Learn more
                   <ArrowRight className="ml-2 h-4 w-4" />
