@@ -19,8 +19,8 @@ const testimonials = [
     name: "Priya Sharma",
     role: "Class 12 Student",
     image: "/images/testimonial2.jpg",
-    quote: "The supportive environment at PCM Career Point helped me overcome my fear of mathematics. Now I'm confident and excited about pursuing engineering.",
-    program: "PCM Career Point"
+    quote: "The supportive environment at Adarsh Senior Secondary School helped me overcome my fear of mathematics. Now I'm confident and excited about pursuing engineering.",
+    program: "Adarsh Senior Secondary School"
   },
   {
     id: 3,
@@ -179,7 +179,16 @@ export function Testimonials() {
 }
 
 // Custom component that handles image loading errors
-function ImageWithFallback({ src, alt, fallback, ...props }) {
+function ImageWithFallback({ 
+  src, 
+  alt, 
+  fallback, 
+  ...props 
+}: { 
+  src: string; 
+  alt: string; 
+  fallback: React.ReactNode; 
+} & Omit<React.ComponentProps<typeof Image>, 'src' | 'alt'>) {
   const [error, setError] = useState(false)
   
   return error ? (

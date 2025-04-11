@@ -121,8 +121,8 @@ export function Stats() {
               <h3 className="text-2xl font-bold text-gray-900 mb-2">Since our founding in 2011</h3>
               <p className="text-gray-600">
                 Dildhani Education Group has been committed to providing affordable, quality education 
-                to students across Jodhpur, Rajasthan. From our humble beginnings, we've grown to 
-                become one of the region's most respected educational institutions.
+                to students across Jodhpur, Rajasthan. From our humble beginnings, we&apos;ve grown to 
+                become one of the region&apos;s most respected educational institutions.
               </p>
             </div>
           </div>

@@ -133,7 +133,7 @@ export default function AdmissionsPage() {
                 hoverBg: "group-hover:bg-emerald-50"
               },
               {
-                title: "PCM Career Point",
+                title: "Adarsh Senior Secondary School",
                 description: "Specialized senior secondary education with focused approach to Physics, Chemistry, and Mathematics.",
                 icon: Calendar,
                 link: "/institutions/school",

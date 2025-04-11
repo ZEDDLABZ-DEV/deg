@@ -28,7 +28,7 @@ const schools = [
   },
   {
     id: 3,
-    name: "PCM Career Point",
+    name: "Adarsh Senior Secondary School",
     description: "Senior secondary school and coaching center for 9th-12th with focus on science & mathematics.",
     image: "/images/school3.jpg",
     gradient: "from-amber-700 to-orange-800",

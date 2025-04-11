@@ -13,8 +13,6 @@ import {
   Target, 
   Clock, 
   Shield,
-  CheckCircle,
-  Building,
   GraduationCap,
   Globe
 } from "lucide-react"
@@ -180,7 +178,7 @@ export default function AboutPage() {
                 <div className="grayscale hover:grayscale-0 transition-all duration-300 opacity-80 hover:opacity-100">
                   <div className="h-12 flex items-center">
                     <span className="text-indigo-950 font-bold flex items-center gap-2">
-                      <BuildingIcon className="w-6 h-6 text-indigo-600" /> AICTE
+                      <GraduationCap className="w-6 h-6 text-indigo-600" /> AICTE
                     </span>
                   </div>
                 </div>
@@ -262,13 +260,13 @@ export default function AboutPage() {
               
               <div className="space-y-6 text-lg text-gray-600 leading-relaxed">
                 <p>
-                  Founded in 2011, Dildhani Education Group has evolved from a modest beginning into one of Rajasthan's most respected educational establishments. Our journey began with a single institution and a clear vision: to provide quality education that transforms lives.
+                  Founded in 2011, Dildhani Education Group has evolved from a modest beginning into one of Rajasthan&apos;s most respected educational establishments. Our journey began with a single institution and a clear vision: to provide quality education that transforms lives.
                 </p>
                 <p>
                   Recognized by the All India Council for Technical Education (AICTE) and affiliated with the Board of Technical Education, Rajasthan, we maintain rigorous academic standards across all our programs while embracing innovation in education.
                 </p>
                 <p>
-                  Today, our campus houses multiple specialized institutions including the Bhawani Polytechnic College, Kaptan Officer Academy, PCM Career Point, Colonel Rajvardhan Cricket Academy, and Kaptan Girls Hostel &mdash; creating a holistic educational ecosystem that addresses diverse career aspirations.
+                  Today, our campus houses multiple specialized institutions including the Bhawani Polytechnic College, Kaptan Officer Academy, Adarsh Senior Secondary School, Colonel Rajvardhan Cricket Academy, and Kaptan Girls Hostel &mdash; creating a holistic educational ecosystem that addresses diverse career aspirations.
                 </p>
               </div>
               
@@ -381,7 +379,7 @@ export default function AboutPage() {
                 { 
                   year: "2019", 
                   title: "Growth", 
-                  description: "Addition of PCM Career Point and Colonel Rajvardhan Cricket Academy to our educational ecosystem.",
+                  description: "Addition of Adarsh Senior Secondary School and Colonel Rajvardhan Cricket Academy to our educational ecosystem.",
                   highlight: "Sports Integration"
                 },
                 { 
@@ -600,23 +598,4 @@ export default function AboutPage() {
       </section>
     </div>
   )
-}
-
-// Building icon component
-function BuildingIcon(props) {
-  return (
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}>
-      <rect width="16" height="20" x="4" y="2" rx="2" ry="2"></rect>
-      <path d="M9 22v-4h6v4"></path>
-      <path d="M8 6h.01"></path>
-      <path d="M16 6h.01"></path>
-      <path d="M12 6h.01"></path>
-      <path d="M12 10h.01"></path>
-      <path d="M12 14h.01"></path>
-      <path d="M16 10h.01"></path>
-      <path d="M16 14h.01"></path>
-      <path d="M8 10h.01"></path>
-      <path d="M8 14h.01"></path>
-    </svg>
-  );
 } 
