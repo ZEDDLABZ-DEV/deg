@@ -1,152 +1,168 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { useState, useEffect } from "react"
-import { ChevronLeft, ChevronRight, Quote } from "lucide-react"
+import { Quote } from "lucide-react"
+import Image from "next/image"
 
 const testimonials = [
   {
     id: 1,
-    quote: "The polytechnic program at Dildhani Education Group provided me with excellent technical skills and industry connections. Their placement support helped me secure a great job right after graduation.",
-    author: "Praveen Choudhary",
-    role: "Polytechnic Graduate, 2020",
-    gradient: "from-maroon to-maroon/70",
+    name: "Rahul Singh",
+    role: "JEE Advanced Qualifier",
+    image: "/images/testimonial1.jpg",
+    quote: "The coaching at DEG helped me secure a place at IIT Bombay. The faculty's dedication and structured approach to complex topics made all the difference.",
+    program: "Kaptan Coaching Centre"
   },
   {
     id: 2,
-    quote: "The defense academy&apos;s rigorous training and mentorship prepared me thoroughly for my career in the armed forces. The discipline and skills I gained here have been invaluable.",
-    author: "Lt. Vikram Shekhawat",
-    role: "Defense Academy Alumni",
-    gradient: "from-charcoal to-charcoal/80",
+    name: "Priya Sharma",
+    role: "Class 12 Student",
+    image: "/images/testimonial2.jpg",
+    quote: "The supportive environment at PCM Career Point helped me overcome my fear of mathematics. Now I'm confident and excited about pursuing engineering.",
+    program: "PCM Career Point"
   },
   {
     id: 3,
-    quote: "As a parent, I&apos;ve seen my daughter thrive at PCM Career Point. The faculty provides individual attention and the campus facilities ensure both safety and comfort for students.",
-    author: "Meena Sharma",
-    role: "Parent",
-    gradient: "from-gold to-gold/70",
-  },
+    name: "Amit Kumar",
+    role: "Defense Academy Graduate",
+    image: "/images/testimonial3.jpg",
+    quote: "The discipline and training I received at Kaptan Officer Academy prepared me for both physical and mental challenges of defense services selection.",
+    program: "Kaptan Officer Academy"
+  }
 ]
 
 export function Testimonials() {
-  const [current, setCurrent] = useState(0)
-  const [autoplay, setAutoplay] = useState(true)
-
-  useEffect(() => {
-    let interval: NodeJS.Timeout
-    
-    if (autoplay) {
-      interval = setInterval(() => {
-        setCurrent((prev) => (prev + 1) % testimonials.length)
-      }, 6000)
-    }
-    
-    return () => clearInterval(interval)
-  }, [autoplay])
-
-  const next = () => {
-    setAutoplay(false)
-    setCurrent((prev) => (prev + 1) % testimonials.length)
-  }
-
-  const prev = () => {
-    setAutoplay(false)
-    setCurrent((prev) => (prev - 1 + testimonials.length) % testimonials.length)
-  }
-
   return (
-    <section className="py-20 overflow-hidden bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-24 bg-gradient-to-b from-slate-100 to-white overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+        {/* Background decorative elements */}
+        <div className="absolute -left-64 top-20 w-96 h-96 bg-blue-100 rounded-full mix-blend-multiply blur-3xl opacity-70" />
+        <div className="absolute -right-64 bottom-20 w-96 h-96 bg-indigo-100 rounded-full mix-blend-multiply blur-3xl opacity-70" />
+        
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.7 }}
+          className="relative text-center mb-16"
+        >
+          <motion.span 
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="inline-block px-4 py-1 rounded-full text-sm font-medium bg-indigo-50 text-indigo-700 mb-4"
+          >
+            Student Success Stories
+          </motion.span>
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            <span className="relative inline-block">
+              Voices of Our
+              <motion.span 
+                initial={{ width: 0 }}
+                whileInView={{ width: "100%" }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, delay: 0.3 }}
+                className="absolute bottom-0 left-0 h-3 bg-indigo-100 -z-10"
+              />
+            </span>
+            <span className="relative inline-block ml-2">
+              Students
+              <motion.span 
+                initial={{ width: 0 }}
+                whileInView={{ width: "100%" }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, delay: 0.5 }}
+                className="absolute bottom-0 left-0 h-3 bg-indigo-100 -z-10"
+              />
+            </span>
+          </h2>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto mt-4">
+            Hear directly from our students about their transformational educational journey with us.
+          </p>
+        </motion.div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {testimonials.map((testimonial, index) => (
+            <motion.div
+              key={testimonial.id}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              whileHover={{ 
+                y: -5,
+                boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)",
+                transition: { duration: 0.2 }
+              }}
+              className="bg-white rounded-2xl overflow-hidden shadow p-8 relative"
+            >
+              <div className="absolute top-0 right-0 w-24 h-24 -mt-10 -mr-10 bg-indigo-100 rounded-full" />
+              
+              <div className="mb-6 flex justify-between items-start relative">
+                <div className="flex items-center gap-4">
+                  <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-indigo-100">
+                    <Image 
+                      src={testimonial.image} 
+                      alt={testimonial.name}
+                      width={64}
+                      height={64}
+                      className="object-cover w-full h-full"
+                    />
+                  </div>
+                  <div className="text-left">
+                    <h3 className="text-lg font-bold text-gray-900">{testimonial.name}</h3>
+                    <p className="text-sm text-gray-500">{testimonial.role}</p>
+                    <p className="text-xs text-indigo-600 mt-1">{testimonial.program}</p>
+                  </div>
+                </div>
+                <Quote className="h-8 w-8 text-indigo-400 opacity-40" />
+              </div>
+              
+              <blockquote className="text-gray-600 italic relative">
+                "{testimonial.quote}"
+              </blockquote>
+              
+              <div className="mt-6 flex items-center">
+                <div className="flex">
+                  {[...Array(5)].map((_, i) => (
+                    <svg key={i} className="w-4 h-4 text-yellow-500 fill-current" viewBox="0 0 24 24">
+                      <path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" />
+                    </svg>
+                  ))}
+                </div>
+                <span className="text-gray-500 text-xs ml-2">5.0</span>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+        
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="text-center mb-16"
+          transition={{ duration: 0.7, delay: 0.3 }}
+          className="text-center mt-16"
         >
-          <h2 className="text-3xl font-bold text-charcoal mb-4 font-serif">
-            What Our Community Says
-          </h2>
-          <p className="text-xl text-deep-gray max-w-3xl mx-auto">
-            Hear from our alumni, students, and parents about their experience with our institutions in Jodhpur.
+          <p className="text-gray-600 italic max-w-3xl mx-auto">
+            "Our mission is to provide quality education that transforms lives and creates opportunities for our students to excel in their chosen paths."
           </p>
+          <div className="mt-4 flex items-center justify-center">
+            <div className="w-12 h-12 rounded-full overflow-hidden mr-4">
+              <Image 
+                src="/images/principal.jpg" 
+                alt="Dr. Rajesh Kapoor" 
+                width={48} 
+                height={48}
+                className="object-cover w-full h-full"
+              />
+            </div>
+            <div className="text-left">
+              <p className="font-bold text-gray-900">Dr. Rajesh Kapoor</p>
+              <p className="text-sm text-gray-500">Principal Director, Dildhani Education Group</p>
+            </div>
+          </div>
         </motion.div>
-
-        <div className="relative">
-          <div className="relative h-full overflow-hidden">
-            <div className="flex items-center justify-center">
-              {testimonials.map((testimonial, index) => (
-                <motion.div
-                  key={testimonial.id}
-                  initial={{ opacity: 0, x: 100 }}
-                  animate={{ 
-                    opacity: current === index ? 1 : 0,
-                    x: current === index ? 0 : 100,
-                    display: current === index ? 'block' : 'none'
-                  }}
-                  transition={{ duration: 0.5 }}
-                  className="w-full max-w-3xl mx-auto"
-                >
-                  <div className="bg-off-white rounded-2xl p-8 md:p-12 shadow-lg relative">
-                    <div className={`absolute top-0 left-0 h-2 w-full rounded-t-2xl bg-gradient-to-r ${testimonial.gradient}`}></div>
-                    <Quote className="text-soft-gray h-12 w-12 mb-6" />
-                    <p className="text-lg md:text-xl italic text-charcoal mb-8 font-serif">
-                      &ldquo;{testimonial.quote}&rdquo;
-                    </p>
-                    <div className="flex items-center">
-                      <div className="h-12 w-12 rounded-full bg-gradient-to-r from-maroon/20 to-gold/20 flex items-center justify-center text-maroon font-bold text-lg">
-                        {testimonial.author.charAt(0)}
-                      </div>
-                      <div className="ml-4">
-                        <h4 className="font-semibold text-charcoal">{testimonial.author}</h4>
-                        <p className="text-deep-gray">{testimonial.role}</p>
-                      </div>
-                    </div>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-
-          {/* Navigation Buttons */}
-          <div className="flex items-center justify-center mt-8 space-x-4">
-            <motion.button
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.95 }}
-              onClick={prev}
-              className="p-2 rounded-full bg-white shadow-md hover:bg-off-white transition-colors border border-soft-gray/10"
-              aria-label="Previous testimonial"
-            >
-              <ChevronLeft className="h-6 w-6 text-charcoal" />
-            </motion.button>
-            <div className="flex space-x-2">
-              {testimonials.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => {
-                    setAutoplay(false)
-                    setCurrent(index)
-                  }}
-                  className={`h-2.5 rounded-full transition-all duration-300 ${
-                    current === index 
-                      ? 'w-8 bg-maroon' 
-                      : 'w-2.5 bg-soft-gray hover:bg-deep-gray'
-                  }`}
-                  aria-label={`Go to testimonial ${index + 1}`}
-                />
-              ))}
-            </div>
-            <motion.button
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.95 }}
-              onClick={next}
-              className="p-2 rounded-full bg-white shadow-md hover:bg-off-white transition-colors border border-soft-gray/10"
-              aria-label="Next testimonial"
-            >
-              <ChevronRight className="h-6 w-6 text-charcoal" />
-            </motion.button>
-          </div>
-        </div>
       </div>
     </section>
   )
