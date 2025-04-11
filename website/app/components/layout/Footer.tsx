@@ -1,14 +1,15 @@
 "use client"
 
 import Link from "next/link"
-import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin } from "lucide-react"
+import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin, ArrowUp } from "lucide-react"
 import { motion } from "framer-motion"
+import { useState, useEffect } from "react"
 
 const socialLinks = [
-  { icon: Facebook, href: "https://facebook.com/DildhaniEducationGroup", label: "Facebook" },
-  { icon: Instagram, href: "https://instagram.com/DildhaniEducationGroup", label: "Instagram" },
-  { icon: Linkedin, href: "https://linkedin.com/company/DildhaniEducationGroup", label: "LinkedIn" },
-  { icon: Twitter, href: "https://twitter.com/DildhaniEdu", label: "Twitter" },
+  { icon: Facebook, href: "https://facebook.com/DildhaniEducationGroup", label: "Facebook", color: "hover:bg-blue-600" },
+  { icon: Instagram, href: "https://instagram.com/DildhaniEducationGroup", label: "Instagram", color: "hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500" },
+  { icon: Linkedin, href: "https://linkedin.com/company/DildhaniEducationGroup", label: "LinkedIn", color: "hover:bg-blue-700" },
+  { icon: Twitter, href: "https://twitter.com/DildhaniEdu", label: "Twitter", color: "hover:bg-sky-500" },
 ]
 
 const footerLinks = [
@@ -43,59 +44,167 @@ const footerLinks = [
 ]
 
 export function Footer() {
+  const [showBackToTop, setShowBackToTop] = useState(false)
+  
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowBackToTop(window.scrollY > 300)
+    }
+    
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+  
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
+  
   return (
-    <footer className="bg-charcoal text-off-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {/* Brand Section */}
-          <div className="space-y-4">
-            <h3 className="text-2xl font-bold text-gold font-serif">Dildhani Education Group</h3>
-            <p className="text-sm">
-              Shaping future leaders through excellence in education since 2011. AICTE recognized and affiliated with the Board of Technical Education, Rajasthan.
-            </p>
-            <div className="flex space-x-4">
-              {socialLinks.map((social) => (
-                <motion.a
-                  key={social.label}
-                  href={social.href}
-                  whileHover={{ y: -2 }}
-                  className="text-soft-gray hover:text-gold transition-colors"
-                  aria-label={social.label}
-                >
-                  <social.icon className="w-5 h-5" />
-                </motion.a>
-              ))}
+    <footer className="relative overflow-hidden">
+      {/* Decorative top wave */}
+      <div className="absolute top-0 left-0 w-full overflow-hidden leading-0 transform">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none" className="relative block w-full h-12 text-indigo-900">
+          <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" fill="currentColor"></path>
+        </svg>
+      </div>
+      
+      {/* Main footer content */}
+      <div className="relative bg-gradient-to-b from-indigo-950 via-indigo-900 to-indigo-950 text-white pt-24 pb-12">
+        {/* Background pattern */}
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute inset-y-0 left-0 w-1/2 bg-white/5"></div>
+          <div className="absolute top-0 right-0 h-96 w-1/3 bg-white/5 rounded-bl-full"></div>
+          <div className="absolute bottom-0 right-1/4 h-32 w-32 bg-white/5 rounded-full"></div>
+          <div className="absolute top-1/3 left-1/4 h-24 w-24 bg-white/5 rounded-full"></div>
+        </div>
+        
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
+            {/* Brand Section */}
+            <div className="space-y-6">
+              <div className="flex flex-col">
+                <h3 className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-amber-300 font-serif mb-1">
+                  Dildhani Education Group
+                </h3>
+                <div className="w-20 h-1 bg-gradient-to-r from-amber-400 to-transparent rounded-full mb-4"></div>
+              </div>
+              
+              <p className="text-indigo-100 leading-relaxed">
+                Shaping future leaders through excellence in education since 2011. AICTE recognized and affiliated with the Board of Technical Education, Rajasthan.
+              </p>
+              
+              <div className="flex space-x-3">
+                {socialLinks.map((social) => (
+                  <motion.a
+                    key={social.label}
+                    href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    initial={{ opacity: 0.8 }}
+                    whileHover={{ 
+                      opacity: 1, 
+                      y: -5,
+                      transition: { duration: 0.2 }
+                    }}
+                    className={`flex items-center justify-center w-9 h-9 rounded-full bg-white/10 ${social.color} backdrop-blur-sm text-white transition-all duration-300 hover:shadow-lg hover:shadow-indigo-500/20`}
+                    aria-label={social.label}
+                  >
+                    <social.icon className="w-4 h-4" />
+                  </motion.a>
+                ))}
+              </div>
+              
+              {/* Newsletter subscription */}
+              <div className="pt-2">
+                <h4 className="text-sm uppercase tracking-wider text-indigo-300 font-semibold mb-3">
+                  Stay Updated
+                </h4>
+                <div className="flex">
+                  <input 
+                    type="email" 
+                    placeholder="Your email" 
+                    className="w-full px-4 py-2 text-sm bg-white/10 rounded-l-md text-white placeholder-indigo-300 backdrop-blur-sm focus:outline-none focus:ring-1 focus:ring-amber-400 border-r border-transparent"
+                  />
+                  <button className="px-4 py-2 bg-gradient-to-r from-amber-500 to-amber-400 text-indigo-900 font-medium rounded-r-md hover:from-amber-400 hover:to-amber-300 transition-all duration-300">
+                    Subscribe
+                  </button>
+                </div>
+              </div>
             </div>
+
+            {/* Footer Links - modernized with animations */}
+            {footerLinks.map((section) => (
+              <div key={section.title}>
+                <h4 className="text-lg font-semibold mb-6 text-amber-300 font-serif relative inline-block">
+                  {section.title}
+                  <span className="absolute -bottom-2 left-0 w-12 h-0.5 bg-gradient-to-r from-amber-400 to-transparent rounded-full"></span>
+                </h4>
+                <ul className="space-y-3">
+                  {section.links.map((link, index) => (
+                    <motion.li 
+                      key={link.name}
+                      initial={{ opacity: 0, x: -10 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ duration: 0.2, delay: index * 0.05 }}
+                    >
+                      <Link
+                        href={link.href}
+                        className="text-indigo-100 hover:text-amber-300 transition-colors flex items-center gap-2 group"
+                      >
+                        {'icon' in link && link.icon && 
+                          <span className="text-indigo-300 group-hover:text-amber-300 transition-colors">
+                            <link.icon className="w-4 h-4" />
+                          </span>
+                        }
+                        <span className="relative overflow-hidden">
+                          {link.name}
+                          <span className="absolute left-0 bottom-0 w-full h-[1px] bg-amber-300 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-right group-hover:origin-left duration-300"></span>
+                        </span>
+                      </Link>
+                    </motion.li>
+                  ))}
+                </ul>
+              </div>
+            ))}
           </div>
 
-          {/* Footer Links */}
-          {footerLinks.map((section) => (
-            <div key={section.title}>
-              <h4 className="text-gold font-semibold mb-4 font-serif">{section.title}</h4>
-              <ul className="space-y-2">
-                {section.links.map((link) => (
-                  <li key={link.name}>
-                    <Link
-                      href={link.href}
-                      className="text-sm hover:text-gold transition-colors flex items-center gap-2"
-                    >
-                      {'icon' in link && link.icon && <link.icon className="w-4 h-4" />}
-                      {link.name}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
+          {/* Bottom Bar with subtle dividers */}
+          <div className="mt-16 pt-8 border-t border-white/10">
+            <div className="flex flex-col md:flex-row justify-between items-center">
+              <div className="flex items-center space-x-2">
+                <p className="text-indigo-200 text-sm">
+                  © {new Date().getFullYear()} Dildhani Education Group. All rights reserved.
+                </p>
+              </div>
+              
+              <div className="mt-4 md:mt-0 flex space-x-6 text-xs text-indigo-300">
+                <Link href="/privacy-policy" className="hover:text-amber-300 transition-colors">
+                  Privacy Policy
+                </Link>
+                <Link href="/terms" className="hover:text-amber-300 transition-colors">
+                  Terms of Service
+                </Link>
+              </div>
             </div>
-          ))}
-        </div>
-
-        {/* Bottom Bar */}
-        <div className="border-t border-soft-gray/20 mt-12 pt-8 text-sm text-center">
-          <p className="text-soft-gray">
-            © {new Date().getFullYear()} Dildhani Education Group. All rights reserved.
-          </p>
+          </div>
         </div>
       </div>
+      
+      {/* Back to top button */}
+      <motion.button
+        onClick={scrollToTop}
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ 
+          opacity: showBackToTop ? 1 : 0, 
+          y: showBackToTop ? 0 : 20,
+          pointerEvents: showBackToTop ? 'auto' : 'none'
+        }}
+        transition={{ duration: 0.3 }}
+        className="fixed bottom-8 right-8 p-3 bg-amber-400 text-indigo-900 rounded-full shadow-lg hover:bg-amber-300 transition-colors z-50 focus:outline-none"
+        aria-label="Back to top"
+      >
+        <ArrowUp className="w-5 h-5" />
+      </motion.button>
     </footer>
   )
 } 
