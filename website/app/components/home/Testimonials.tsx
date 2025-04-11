@@ -1,8 +1,9 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Quote } from "lucide-react"
+import { Quote, User } from "lucide-react"
 import Image from "next/image"
+import { useState } from "react"
 
 const testimonials = [
   {
@@ -101,13 +102,18 @@ export function Testimonials() {
               
               <div className="mb-6 flex justify-between items-start relative">
                 <div className="flex items-center gap-4">
-                  <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-indigo-100">
-                    <Image 
+                  <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-indigo-100 bg-indigo-50 flex items-center justify-center">
+                    {/* Using fallback UI with User icon if image is not available */}
+                    <ImageWithFallback 
                       src={testimonial.image} 
                       alt={testimonial.name}
                       width={64}
                       height={64}
-                      className="object-cover w-full h-full"
+                      fallback={
+                        <div className="flex items-center justify-center w-full h-full bg-indigo-100">
+                          <User className="h-8 w-8 text-indigo-500" />
+                        </div>
+                      }
                     />
                   </div>
                   <div className="text-left">
@@ -120,7 +126,7 @@ export function Testimonials() {
               </div>
               
               <blockquote className="text-gray-600 italic relative">
-                "{testimonial.quote}"
+                &ldquo;{testimonial.quote}&rdquo;
               </blockquote>
               
               <div className="mt-6 flex items-center">
@@ -145,16 +151,20 @@ export function Testimonials() {
           className="text-center mt-16"
         >
           <p className="text-gray-600 italic max-w-3xl mx-auto">
-            "Our mission is to provide quality education that transforms lives and creates opportunities for our students to excel in their chosen paths."
+            &ldquo;Our mission is to provide quality education that transforms lives and creates opportunities for our students to excel in their chosen paths.&rdquo;
           </p>
           <div className="mt-4 flex items-center justify-center">
-            <div className="w-12 h-12 rounded-full overflow-hidden mr-4">
-              <Image 
+            <div className="w-12 h-12 rounded-full overflow-hidden mr-4 bg-indigo-50 flex items-center justify-center">
+              <ImageWithFallback 
                 src="/images/principal.jpg" 
                 alt="Dr. Rajesh Kapoor" 
                 width={48} 
                 height={48}
-                className="object-cover w-full h-full"
+                fallback={
+                  <div className="flex items-center justify-center w-full h-full bg-indigo-100">
+                    <User className="h-6 w-6 text-indigo-500" />
+                  </div>
+                }
               />
             </div>
             <div className="text-left">
@@ -165,5 +175,22 @@ export function Testimonials() {
         </motion.div>
       </div>
     </section>
+  )
+}
+
+// Custom component that handles image loading errors
+function ImageWithFallback({ src, alt, fallback, ...props }) {
+  const [error, setError] = useState(false)
+  
+  return error ? (
+    fallback
+  ) : (
+    <Image 
+      src={src} 
+      alt={alt}
+      className="object-cover w-full h-full"
+      onError={() => setError(true)}
+      {...props}
+    />
   )
 } 
