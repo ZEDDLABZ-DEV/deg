@@ -1,9 +1,9 @@
 "use client"
 
-import Link from "next/link"
+import { cn } from "@/lib/utils"
 import { motion } from "framer-motion"
-import { cn } from "@/app/lib/utils"
 import { Menu, X } from "lucide-react"
+import Link from "next/link"
 import { useState } from "react"
 
 const navItems = [
