@@ -9,97 +9,121 @@ import { Sparkles, X, ChevronLeft, ChevronRight, Grid } from "lucide-react"
 const showcaseImages = [
   {
     src: "/images/showcase/file.jpeg",
-    alt: "College campus building",
+    alt: "College campus building with modern architecture",
     width: 5,
     height: 3
   },
   {
     src: "/images/showcase/83afd1_b7e1813b4faf4cc5a36d79a7c6a26a81~mv2_2.jpeg",
-    alt: "Students in classroom",
+    alt: "Students collaborating in a classroom setting",
     width: 4,
     height: 3
   },
   {
     src: "/images/showcase/83afd1_f628312b180348ccbeb31f5d062cd5cc~mv2_2.jpeg",
-    alt: "Laboratory equipment",
+    alt: "Advanced laboratory equipment for practical learning",
     width: 4,
     height: 3
   },
   {
-    src: "/images/showcase/a3c153_3592f141741849e8b2cb99afa8e3a412~mv2.jpg_1.jpeg",
-    alt: "Campus event",
+    src: "/images/more_images/83afd1_8b2e5266f3be46ec9c610cdc9a0253a8~mv2.jpg.jpeg",
+    alt: "Student graduation ceremony with caps and gowns",
     width: 4,
     height: 3
   },
   {
     src: "/images/showcase/83afd1_80f6fde1ef8743c48dccfcbd40d35abc~mv2.jpg_1.jpeg",
-    alt: "Library resources",
+    alt: "Modern library with extensive study resources",
     width: 4,
     height: 3
   },
   {
-    src: "/images/showcase/83afd1_c30463f0c33b4713a1e268b6262855bdf000.jpg.jpeg",
-    alt: "Sports facilities",
+    src: "/images/more_images/83afd1_d82db51ba27a40629ed67314b0b940a0~mv2.jpg_1.jpeg",
+    alt: "Hands-on engineering workshop for students",
     width: 4,
     height: 3
   },
   {
     src: "/images/showcase/file_1.jpeg",
-    alt: "Cultural program",
+    alt: "Cultural program showcasing student talent",
     width: 4,
     height: 3
   },
   {
-    src: "/images/showcase/11062b_a6e1bb8d93704b859a65ba5d3dd3645a~mv2.jpg_1.jpeg",
-    alt: "Student activities",
+    src: "/images/more_images/83afd1_bac3206c269b406a97df5f78340a78b6~mv2_1.jpeg",
+    alt: "Professor teaching a small group of engaged students",
     width: 4,
     height: 3
   },
   {
-    src: "/images/showcase/83afd1_c0443b5f612b478e8e2d8ed3835b6034~mv2_1.jpeg",
-    alt: "Computer lab",
+    src: "/images/more_images/83afd1_a470b6e8b1724464a2d05b223cb937a1~mv2_1.jpeg",
+    alt: "Interactive digital learning session in progress",
     width: 4,
     height: 3
   },
   {
-    src: "/images/showcase/83afd1_f650882d571c49378a3fd0fb72312637~mv2_1.jpeg",
-    alt: "Science experiment",
+    src: "/images/more_images/83afd1_4f226c8429914af7b58e26b9cd98e3ae~mv2_1.jpeg",
+    alt: "Research equipment in the science department",
     width: 4,
     height: 3
   },
   {
-    src: "/images/showcase/83afd1_50d7361c1d02434fb259474c5916bb45~mv2_1.jpeg",
-    alt: "Outdoor campus view",
+    src: "/images/more_images/83afd1_50d7361c1d02434fb259474c5916bb45~mv2_1.jpeg",
+    alt: "Tree-lined campus walkway during spring",
     width: 4,
     height: 3
   },
   {
     src: "/images/showcase/83afd1_15e02e8c902047f3881ee5e64edf1912~mv2_2.jpeg",
-    alt: "Graduation ceremony",
+    alt: "Graduation day celebrations with friends and family",
     width: 4,
     height: 3
   },
   {
-    src: "/images/showcase/83afd1_0d2865aa93f6446ba3527d9700ac92a0~mv2_1.jpeg",
-    alt: "Student project exhibition",
+    src: "/images/more_images/83afd1_e272790fdc8f442e8fce0f46e0cad890~mv2_1.jpeg",
+    alt: "Computer programming lab with students at workstations",
+    width: 4,
+    height: 3
+  },
+  {
+    src: "/images/more_images/83afd1_7308011757bf48b495446e75c31cf7eb~mv2_1.jpeg",
+    alt: "Student study group collaborating on a project",
+    width: 4,
+    height: 3
+  },
+  {
+    src: "/images/more_images/83afd1_0cfc464d5171461faea0ecd7962405d7~mv2_1.jpeg",
+    alt: "State-of-the-art auditorium during a lecture",
+    width: 4,
+    height: 3
+  },
+  {
+    src: "/images/more_images/83afd1_b5ccad43f0654accb97baa4b7d097b73~mv2_1.jpeg",
+    alt: "Chemistry laboratory with safety equipment",
     width: 4,
     height: 3
   },
   {
     src: "/images/showcase/83afd1_b3357d2affca49519a7647de3867da43~mv2_1.jpeg",
-    alt: "Technical workshop",
+    alt: "Technical workshop with industry-standard tools",
     width: 4,
     height: 3
   },
   {
     src: "/images/showcase/83afd1_bac3206c269b406a97df5f78340a78b6~mv2_1.jpeg",
-    alt: "Faculty member teaching",
+    alt: "Faculty member providing personalized guidance",
+    width: 4,
+    height: 3
+  },
+  {
+    src: "/images/more_images/83afd1_d8295c77a1c3423e881f3dd0c2c7a9da~mv2_1.jpeg",
+    alt: "Student art exhibition showcasing creativity",
     width: 4,
     height: 3
   },
   {
     src: "/images/showcase/83afd1_4884a6f3dc6e4352b1237a29fa31eb59~mv2_1.png",
-    alt: "Campus infrastructure",
+    alt: "Aerial view of campus infrastructure and grounds",
     width: 4,
     height: 3
   }

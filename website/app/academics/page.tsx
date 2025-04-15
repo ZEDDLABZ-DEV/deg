@@ -18,8 +18,45 @@ import {
   FileText,
   CheckCircle,
   CalendarClock,
-  ArrowUpRight
+  ArrowUpRight,
+  Sparkles,
+  ClipboardList
 } from "lucide-react"
+
+const programs = [
+  {
+    title: "Polytechnic Diploma Programs",
+    description: "AICTE approved diploma courses in engineering and technology",
+    icon: GraduationCap,
+    courses: ["Mechanical Engineering", "Civil Engineering", "Computer Science", "Electrical Engineering"],
+    color: "from-blue-500 to-indigo-600",
+    shadowColor: "shadow-blue-500/30"
+  },
+  {
+    title: "Vocational Training",
+    description: "Practical skills development programs for career readiness",
+    icon: Medal,
+    courses: ["Industrial Training", "Computer Applications", "Automotive Skills", "Electrical Wiring"],
+    color: "from-purple-500 to-indigo-600",
+    shadowColor: "shadow-purple-500/30"
+  },
+  {
+    title: "School Education",
+    description: "Quality K-12 education with a focus on holistic development",
+    icon: BookOpen,
+    courses: ["Primary Education", "Secondary Education", "Senior Secondary"],
+    color: "from-teal-500 to-emerald-600",
+    shadowColor: "shadow-teal-500/30"
+  },
+  {
+    title: "Preparatory Programs",
+    description: "Specialized coaching for competitive exams and career advancement",
+    icon: ClipboardList,
+    courses: ["Defense Services", "Banking & SSC", "Engineering Entrance", "Civil Services"],
+    color: "from-amber-500 to-orange-600",
+    shadowColor: "shadow-amber-500/30"
+  }
+]
 
 export default function AcademicsPage() {
   const containerRef = useRef(null)
@@ -265,90 +302,43 @@ export default function AcademicsPage() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              {
-                title: "Polytechnic Engineering",
-                description: "AICTE-approved diploma programs in various engineering disciplines with hands-on training and industry exposure.",
-                icon: GraduationCap,
-                features: ["3-year diploma program", "Industry partnerships", "Advanced labs", "Placement assistance"],
-                link: "/institutions/polytechnic",
-                color: "from-blue-500 to-indigo-600"
-              },
-              {
-                title: "Defense Services Preparation",
-                description: "Specialized coaching and training program for students aspiring to join various defense services in India.",
-                icon: Medal,
-                features: ["Physical training", "Written exam preparation", "Personality development", "Interview coaching"],
-                link: "/institutions/defense-academy",
-                color: "from-indigo-500 to-purple-600"
-              },
-              {
-                title: "Secondary Education (PCM)",
-                description: "Focused programs in Physics, Chemistry, and Mathematics with specialized coaching for competitive examinations.",
-                icon: BookMarked,
-                features: ["Classes 11-12", "Exam-oriented preparation", "Regular assessments", "Expert faculty"],
-                link: "/institutions/school",
-                color: "from-purple-500 to-pink-600"
-              },
-              {
-                title: "Cricket Academy",
-                description: "Professional cricket training program that combines sports excellence with academic education.",
-                icon: Award,
-                features: ["Professional coaching", "Physical fitness", "Match exposure", "Balanced academics"],
-                link: "/institutions/cricket-academy",
-                color: "from-amber-500 to-orange-600"
-              },
-              {
-                title: "Industrial Training",
-                description: "Short-term vocational training programs designed to build practical skills required by the industry.",
-                icon: Briefcase,
-                features: ["Hands-on training", "Industry certifications", "Internship opportunities", "Job placement"],
-                link: "/academics/vocational",
-                color: "from-emerald-500 to-teal-600"
-              },
-              {
-                title: "Foundation Courses",
-                description: "Preparatory programs for students aiming to excel in IIT-JEE, NEET, and other competitive examinations.",
-                icon: BookOpen,
-                features: ["Concept building", "Problem-solving", "Mock tests", "Performance analysis"],
-                link: "/academics/foundation",
-                color: "from-cyan-500 to-blue-600"
-              }
-            ].map((program, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {programs.map((program, index) => (
               <motion.div
                 key={program.title}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-white rounded-xl overflow-hidden shadow-lg border border-gray-100 group hover:shadow-xl transition-shadow duration-300"
+                className="bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden"
               >
-                <div className="h-2 w-full bg-gradient-to-r ${program.color}"></div>
-                <div className="p-8">
-                  <div className={`w-14 h-14 rounded-lg bg-gradient-to-br ${program.color} flex items-center justify-center mb-6 text-white`}>
-                    <program.icon className="w-7 h-7" />
+                <div className={`p-6 bg-gradient-to-br ${program.color} text-white`}>
+                  <div className="flex items-center">
+                    <div className={`h-12 w-12 rounded-full bg-white/20 flex items-center justify-center mr-4 ${program.shadowColor}`}>
+                      <program.icon className="h-6 w-6" />
+                    </div>
+                    <h3 className="text-xl font-bold">{program.title}</h3>
                   </div>
-                  
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">{program.title}</h3>
-                  <p className="text-gray-600 mb-6">{program.description}</p>
-                  
-                  <div className="space-y-2 mb-6">
-                    {program.features.map((feature, i) => (
-                      <div key={i} className="flex items-center">
-                        <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                        <span className="text-sm text-gray-600">{feature}</span>
-                      </div>
+                  <p className="mt-2 text-white/90 text-sm">{program.description}</p>
+                </div>
+                <div className="p-6">
+                  <ul className="space-y-3">
+                    {program.courses.map((course) => (
+                      <li key={course} className="flex items-start">
+                        <ChevronRight className="h-5 w-5 text-indigo-500 shrink-0 mr-2" />
+                        <span className="text-gray-700">{course}</span>
+                      </li>
                     ))}
+                  </ul>
+                  <div className="mt-6">
+                    <Link 
+                      href={`/academics/${program.title.toLowerCase().replace(/\s+/g, '-')}`}
+                      className="inline-flex items-center text-indigo-600 hover:text-indigo-800 font-medium"
+                    >
+                      Learn more
+                      <ChevronRight className="ml-1 h-4 w-4" />
+                    </Link>
                   </div>
-                  
-                  <Link
-                    href={program.link}
-                    className="inline-flex items-center text-indigo-600 font-medium hover:text-indigo-800 transition-colors"
-                  >
-                    Learn more
-                    <ArrowUpRight className="ml-1 w-4 h-4" />
-                  </Link>
                 </div>
               </motion.div>
             ))}
