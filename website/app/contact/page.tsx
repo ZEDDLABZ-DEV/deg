@@ -205,7 +205,7 @@ export default function ContactPage() {
                   channels, and our team will be happy to assist you.
                 </motion.p>
               </div>
-
+              
               <div className="space-y-8">
                 <motion.div
                   variants={fadeIn("left", "tween", 0.4, 1)}
@@ -311,7 +311,7 @@ export default function ContactPage() {
                   </div>
                 </motion.div>
               </div>
-
+              
               <motion.div variants={fadeIn("left", "tween", 0.8, 1)}>
                 <h3 className="text-lg font-semibold text-charcoal mb-5 font-serif">
                   Connect With Us
@@ -363,7 +363,7 @@ export default function ContactPage() {
                 </div>
               </motion.div>
             </motion.div>
-
+            
             <motion.div
               initial="hidden"
               whileInView="show"
@@ -392,7 +392,7 @@ export default function ContactPage() {
                   >
                     <div className="w-20 h-20 bg-gradient-to-br from-green-400 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg shadow-green-500/30">
                       <CheckCircle2 className="w-10 h-10 text-white" />
-                    </div>
+                  </div>
                   </motion.div>
                   <h3 className="text-2xl font-bold text-charcoal mb-3 font-serif">
                     Message Sent!
@@ -462,8 +462,8 @@ export default function ContactPage() {
                             </FormItem>
                           )}
                         />
-                      </div>
-
+                </div>
+                
                       <FormField
                         control={form.control}
                         name="email"
@@ -593,15 +593,15 @@ export default function ContactPage() {
                               ></path>
                             </svg>
                             Sending...
-                          </div>
+                </div>
                         ) : (
                           <div className="flex items-center">
                             Send Message{" "}
                             <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                          </div>
+                </div>
                         )}
                       </Button>
-                    </form>
+              </form>
                   </Form>
                 </>
               )}
@@ -696,4 +696,4 @@ export default function ContactPage() {
       </section>
     </div>
   );
-}
+} 
