@@ -71,7 +71,7 @@ export default function PolytechnicPage() {
                 Bhawani Polytechnic College, part of the Dildhani Education Group, is an AICTE-approved institution offering diploma programs in engineering disciplines including Electrical, Civil, and Mechanical Engineering.
               </p>
               <p className="text-deep-gray mb-6">
-                Established in 2011 in Jodhpur, Rajasthan, our college is affiliated with the Board of Technical Education, Rajasthan, and is committed to providing high-quality technical education that prepares students for successful careers in engineering and technology.
+                Established in 2011 in Makrana (pincode-341505), Rajasthan, our college is affiliated with the Board of Technical Education, Rajasthan, and is committed to providing high-quality technical education that prepares students for successful careers in engineering and technology.
               </p>
               
               <ul className="space-y-3">

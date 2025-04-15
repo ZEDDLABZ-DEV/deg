@@ -72,7 +72,7 @@ export default function CoachingPage() {
                 to help students excel in their academic pursuits and competitive examinations.
               </p>
               <p className="text-deep-gray mb-6">
-                Established in 2011 in Jodhpur, Rajasthan, our coaching institute is committed to providing high-quality education
+                Established in 2011 in Makrana (pincode-341505), Rajasthan, our coaching institute is committed to providing high-quality education
                 with experienced faculty, structured curriculum, and personalized attention to ensure every student reaches their full potential.
               </p>
               

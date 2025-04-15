@@ -193,7 +193,7 @@ export default function ContactPage() {
                     <h3 className="text-lg font-semibold text-charcoal font-serif">Our Location</h3>
                     <p className="text-deep-gray/80 mt-2 leading-relaxed">
                       Dildhani Education Group Campus<br />
-                      Jodhpur, Rajasthan<br />
+                      Makrana (pincode-341505), Rajasthan<br />
                       India
                     </p>
                   </div>
@@ -502,7 +502,7 @@ export default function ContactPage() {
               variants={fadeIn('up', 'tween', 0.3, 1)}
               className="text-xl text-indigo-100/80 max-w-3xl mx-auto"
             >
-              Visit our campus in Jodhpur, Rajasthan to experience our facilities and meet our team in person.
+              Visit our campus in Makrana (pincode-341505), Rajasthan to experience our facilities and meet our team in person.
             </motion.p>
           </motion.div>
           
@@ -514,15 +514,14 @@ export default function ContactPage() {
             className="rounded-2xl overflow-hidden h-[500px] shadow-2xl border-8 border-indigo-900/50"
           >
             <iframe 
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d114530.40773052767!2d72.99370799650309!3d26.278194347957102!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39418c4eaa06ccb7%3A0x8114ea5b0ae1eac8!2sJodhpur%2C%20Rajasthan!5e0!3m2!1sen!2sin!4v1695300045309!5m2!1sen!2sin" 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d112993.21531407554!2d74.64632508777577!3d27.029617236254064!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396c3bd95ee0b59b%3A0x75d5106e8d30316f!2sMakrana%2C%20Rajasthan%20341505!5e0!3m2!1sen!2sin!4v1715146564177!5m2!1sen!2sin" 
               width="100%" 
-              height="100%" 
-              style={{ border: 0 }} 
-              allowFullScreen 
-              loading="lazy" 
+              height="450" 
+              style={{ border: 0, borderRadius: '0.75rem' }} 
+              allowFullScreen={true} 
+              loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              title="Dildhani Education Group Campus Map"
-              className="filter grayscale hover:grayscale-0 transition-all duration-500"
+              className="filter grayscale hover:grayscale-0 transition-all duration-500 shadow-lg"
             ></iframe>
           </motion.div>
           

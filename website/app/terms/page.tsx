@@ -180,7 +180,7 @@ export default function TermsPage() {
                 Governing Law
               </h2>
               <p>
-                These Terms shall be governed by and construed in accordance with the laws of India. Any disputes arising under these Terms shall be subject to the exclusive jurisdiction of the courts in Jodhpur, Rajasthan, India.
+                These Terms shall be governed by and construed in accordance with the laws of India. Any disputes arising under these Terms shall be subject to the exclusive jurisdiction of the courts in Makrana, Rajasthan, India.
               </p>
 
               <h2 className="flex items-center text-2xl font-bold text-gray-900 mt-8 mb-4">
@@ -207,7 +207,7 @@ export default function TermsPage() {
             <div className="space-y-2 mb-6">
               <p><strong>Dildhani Education Group</strong></p>
               <p>Legal Department</p>
-              <p>Jodhpur, Rajasthan, India</p>
+              <p>Makrana, Rajasthan, India</p>
               <p>Email: <a href="mailto:legal@dildhanieducationgroup.com" className="text-blue-600 hover:text-blue-800">legal@dildhanieducationgroup.com</a></p>
               <p>Phone: <a href="tel:+918290356671" className="text-blue-600 hover:text-blue-800">+91 82903 56671</a></p>
             </div>

@@ -303,7 +303,7 @@ export default function AboutPage() {
                   <div className="absolute inset-0 bg-gradient-to-t from-gray-900/70 via-transparent to-transparent flex items-end">
                     <div className="p-8 text-white">
                       <p className="text-xl font-bold">Excellence in Education</p>
-                      <p className="text-blue-100">Jodhpur, Rajasthan</p>
+                      <p className="text-blue-100">Makrana (pincode-341505), Rajasthan</p>
                     </div>
                   </div>
                 </div>

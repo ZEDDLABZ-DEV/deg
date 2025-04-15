@@ -38,7 +38,7 @@ const footerLinks = [
     links: [
       { name: "info@dildhanieducationgroup.com", href: "mailto:info@dildhanieducationgroup.com", icon: Mail },
       { name: "+91 82903 56671", href: "tel:+918290356671", icon: Phone },
-      { name: "Jodhpur, Rajasthan, India", href: "https://maps.google.com/?q=Dildhani+Education+Group+Jodhpur", icon: MapPin },
+      { name: "Makrana (pincode-341505), Rajasthan, India", href: "https://maps.google.com/?q=Dildhani+Education+Group+Makrana+Rajasthan", icon: MapPin },
     ],
   },
 ]
