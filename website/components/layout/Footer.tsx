@@ -1,7 +1,7 @@
 "use client"
 
 import Link from "next/link"
-import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin, ArrowUp, FileText } from "lucide-react"
+import { Mail, Phone, MapPin, ArrowUp, FileText } from "lucide-react"
 import { motion } from "framer-motion"
 import { useState, useEffect } from "react"
 import { LucideIcon } from "lucide-react"
@@ -18,13 +18,6 @@ interface FooterSection {
   title: string;
   links: FooterLink[];
 }
-
-const socialLinks = [
-  { icon: Facebook, href: "https://facebook.com/DildhaniEducationGroup", label: "Facebook", color: "hover:bg-blue-600" },
-  { icon: Instagram, href: "https://instagram.com/DildhaniEducationGroup", label: "Instagram", color: "hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500" },
-  { icon: Linkedin, href: "https://linkedin.com/company/DildhaniEducationGroup", label: "LinkedIn", color: "hover:bg-blue-700" },
-  { icon: Twitter, href: "https://twitter.com/DildhaniEdu", label: "Twitter", color: "hover:bg-sky-500" },
-]
 
 const footerLinks: FooterSection[] = [
   {
@@ -58,7 +51,7 @@ const footerLinks: FooterSection[] = [
   {
     title: "Contact",
     links: [
-      { name: "info@dildhanieducationgroup.com", href: "mailto:info@dildhanieducationgroup.com", icon: Mail },
+      { name: "info.bite11@gmail.com", href: "mailto:info.bite11@gmail.com", icon: Mail },
       { name: "+91 82903 56671", href: "tel:+918290356671", icon: Phone },
       { name: "Makrana (pincode-341505), Rajasthan, India", href: "https://maps.google.com/?q=Dildhani+Education+Group+Makrana+Rajasthan", icon: MapPin },
     ],
@@ -95,7 +88,7 @@ export function Footer() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Grid layout for footer sections */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8">
-            {/* Branding and newsletter */}
+            {/* Branding and description */}
             <div className="lg:col-span-4">
               <Link href="/" className="inline-block">
                 <h2 className="text-2xl font-bold text-white">Dildhani Education Group</h2>
@@ -103,27 +96,6 @@ export function Footer() {
               <p className="mt-4 text-indigo-100 max-w-xs">
                 A group of premier educational institutions dedicated to providing quality education and nurturing future leaders.
               </p>
-              
-              <div className="flex space-x-3 mt-6">
-                {socialLinks.map((social) => (
-                  <motion.a
-                    key={social.label}
-                    href={social.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    initial={{ opacity: 0.8 }}
-                    whileHover={{ 
-                      opacity: 1, 
-                      y: -5,
-                      transition: { duration: 0.2 }
-                    }}
-                    className={`flex items-center justify-center w-9 h-9 rounded-full bg-white/10 ${social.color} backdrop-blur-sm text-white transition-all duration-300 hover:shadow-lg hover:shadow-indigo-500/20`}
-                    aria-label={social.label}
-                  >
-                    <social.icon className="w-4 h-4" />
-                  </motion.a>
-                ))}
-              </div>
               
               {/* Newsletter subscription */}
               <div className="pt-6">

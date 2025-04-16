@@ -317,6 +317,101 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* Director's Message Section */}
+      <section className="py-24 bg-gradient-to-b from-indigo-50 to-white relative overflow-hidden">
+        <div className="absolute top-0 left-0 w-full h-20 bg-white"></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="text-center mb-16"
+          >
+            <div className="inline-block mb-4">
+              <div className="px-3 py-1 rounded-full bg-indigo-100 text-indigo-600 text-sm font-medium">
+                From the Director's Office
+              </div>
+            </div>
+            
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 tracking-tight">
+              <span className="relative inline-block">
+                Director's Message
+                <motion.div 
+                  initial={{ width: 0 }}
+                  whileInView={{ width: "100%" }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.8, delay: 0.3 }}
+                  className="absolute -bottom-2 left-0 h-1 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full"
+                />
+              </span>
+            </h2>
+          </motion.div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="lg:col-span-4 order-2 lg:order-1"
+            >
+              <div className="p-1 rounded-xl bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-500 shadow-xl">
+                <div className="relative rounded-xl overflow-hidden">
+                  <div className="aspect-w-4 aspect-h-5 relative h-[500px]">
+                    <Image 
+                      src="/images/principal.jpg" 
+                      alt="Harshvardhan Singh Rathore - Director" 
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 768px) 100vw, 33vw"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div className="text-center mt-6">
+                <h3 className="text-xl font-bold text-gray-900">Harshvardhan Singh Rathore</h3>
+                <p className="text-indigo-600 font-medium">Director, Dildhani Education Group</p>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="lg:col-span-8 order-1 lg:order-2"
+            >
+              <div className="space-y-6 text-lg text-gray-600 leading-relaxed relative">
+                <div className="absolute -top-10 -left-6 text-9xl font-serif text-indigo-100">"</div>
+                
+                <p className="relative z-10">
+                  Welcome to Dildhani Education Group. As the Director, it is my privilege to lead an institution committed to educational excellence and holistic development.
+                </p>
+                
+                <p>
+                  Our mission is to nurture not just academic brilliance but to shape individuals with strong character, innovative thinking, and the resilience needed to thrive in today's competitive world. We believe that true education goes beyond textbooks and examinations – it's about inspiring young minds to discover their potential and pursue their passions with dedication.
+                </p>
+                
+                <p>
+                  At Dildhani Education Group, we have created an ecosystem where traditional values meet modern educational approaches. Our diverse institutions cater to various educational needs while maintaining the highest standards of quality and integrity.
+                </p>
+                
+                <p>
+                  I invite you to join us on this journey of learning and growth. Together, we can build a brighter future for our students and contribute to the development of our society and nation.
+                </p>
+                
+                <div className="relative z-10 pt-4">
+                  <p className="font-semibold text-indigo-700">Harshvardhan Singh Rathore</p>
+                </div>
+                
+                <div className="absolute -bottom-10 -right-6 text-9xl font-serif text-indigo-100">"</div>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
       {/* Timeline Section - professional addition */}
       <section className="py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -458,10 +553,10 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
-                name: "Dr. Rajesh Kapoor",
-                role: "Principal Director",
+                name: "Harshvardhan Singh Rathore",
+                role: "Director",
                 image: "/images/principal.jpg",
-                bio: "With over 25 years of experience in education, Dr. Kapoor leads our group with a vision for academic excellence and innovation."
+                bio: "With extensive experience in educational leadership, Mr. Rathore guides our institutions with a vision for excellence and innovation."
               },
               {
                 name: "Prof. Anita Sharma",

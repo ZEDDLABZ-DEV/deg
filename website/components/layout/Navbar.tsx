@@ -40,9 +40,6 @@ export function Navbar() {
               <span className="text-lg md:text-2xl font-bold text-primary hidden sm:inline-block transition-all duration-300">
                 Dildhani Education Group
               </span>
-              <span className="text-lg font-bold text-primary sm:hidden transition-all duration-300">
-                DEG
-              </span>
             </Link>
           </div>
           
