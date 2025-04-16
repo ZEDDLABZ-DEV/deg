@@ -4,6 +4,20 @@ import Link from "next/link"
 import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin, ArrowUp, FileText } from "lucide-react"
 import { motion } from "framer-motion"
 import { useState, useEffect } from "react"
+import { LucideIcon } from "lucide-react"
+
+// Define interfaces for type safety
+interface FooterLink {
+  name: string;
+  href: string;
+  icon?: LucideIcon;
+  isExternal?: boolean;
+}
+
+interface FooterSection {
+  title: string;
+  links: FooterLink[];
+}
 
 const socialLinks = [
   { icon: Facebook, href: "https://facebook.com/DildhaniEducationGroup", label: "Facebook", color: "hover:bg-blue-600" },
@@ -12,7 +26,7 @@ const socialLinks = [
   { icon: Twitter, href: "https://twitter.com/DildhaniEdu", label: "Twitter", color: "hover:bg-sky-500" },
 ]
 
-const footerLinks = [
+const footerLinks: FooterSection[] = [
   {
     title: "Quick Links",
     links: [
@@ -151,7 +165,7 @@ export function Footer() {
                           rel="noopener noreferrer"
                           className="text-indigo-100 hover:text-amber-300 transition-colors flex items-center gap-2 group"
                         >
-                          {'icon' in link && link.icon && 
+                          {link.icon && 
                             <span className="text-indigo-300 group-hover:text-amber-300 transition-colors">
                               <link.icon className="w-4 h-4" />
                             </span>
@@ -166,7 +180,7 @@ export function Footer() {
                           href={link.href}
                           className="text-indigo-100 hover:text-amber-300 transition-colors flex items-center gap-2 group"
                         >
-                          {'icon' in link && link.icon && 
+                          {link.icon && 
                             <span className="text-indigo-300 group-hover:text-amber-300 transition-colors">
                               <link.icon className="w-4 h-4" />
                             </span>
