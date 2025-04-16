@@ -1,7 +1,7 @@
 "use client"
 
 import Link from "next/link"
-import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin, ArrowUp } from "lucide-react"
+import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin, ArrowUp, FileText } from "lucide-react"
 import { motion } from "framer-motion"
 import { useState, useEffect } from "react"
 
@@ -31,6 +31,14 @@ const footerLinks = [
       { name: "Adarsh Senior Secondary School", href: "/institutions/school" },
       { name: "Cricket Academy", href: "/institutions/cricket-academy" },
       { name: "Kaptan Girls Hostel", href: "/institutions/hostel" },
+    ],
+  },
+  {
+    title: "Documents",
+    links: [
+      { name: "Compliances", href: "/compliances.pdf", icon: FileText, isExternal: true },
+      { name: "Fee Structure", href: "/FEE_STRUCTURE-1.pdf", icon: FileText, isExternal: true },
+      { name: "Staff List", href: "/Staff_List_Dildhani_Group_of_Institutes (1).pdf", icon: FileText, isExternal: true },
     ],
   },
   {
@@ -69,31 +77,20 @@ export function Footer() {
       </div>
       
       {/* Main footer content */}
-      <div className="relative bg-gradient-to-b from-indigo-950 via-indigo-900 to-indigo-950 text-white pt-24 pb-12">
-        {/* Background pattern */}
-        <div className="absolute inset-0 opacity-5">
-          <div className="absolute inset-y-0 left-0 w-1/2 bg-white/5"></div>
-          <div className="absolute top-0 right-0 h-96 w-1/3 bg-white/5 rounded-bl-full"></div>
-          <div className="absolute bottom-0 right-1/4 h-32 w-32 bg-white/5 rounded-full"></div>
-          <div className="absolute top-1/3 left-1/4 h-24 w-24 bg-white/5 rounded-full"></div>
-        </div>
-        
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
-            {/* Brand Section */}
-            <div className="space-y-6">
-              <div className="flex flex-col">
-                <h3 className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-amber-300 font-serif mb-1">
-                  Dildhani Education Group
-                </h3>
-                <div className="w-20 h-1 bg-gradient-to-r from-amber-400 to-transparent rounded-full mb-4"></div>
-              </div>
-              
-              <p className="text-indigo-100 leading-relaxed">
-                Shaping future leaders through excellence in education since 2011. AICTE recognized and affiliated with the Board of Technical Education, Rajasthan.
+      <div className="bg-indigo-900 pt-24 pb-12 text-white relative z-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Grid layout for footer sections */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8">
+            {/* Branding and newsletter */}
+            <div className="lg:col-span-4">
+              <Link href="/" className="inline-block">
+                <h2 className="text-2xl font-bold text-white">Dildhani Education Group</h2>
+              </Link>
+              <p className="mt-4 text-indigo-100 max-w-xs">
+                A group of premier educational institutions dedicated to providing quality education and nurturing future leaders.
               </p>
               
-              <div className="flex space-x-3">
+              <div className="flex space-x-3 mt-6">
                 {socialLinks.map((social) => (
                   <motion.a
                     key={social.label}
@@ -115,7 +112,7 @@ export function Footer() {
               </div>
               
               {/* Newsletter subscription */}
-              <div className="pt-2">
+              <div className="pt-6">
                 <h4 className="text-sm uppercase tracking-wider text-indigo-300 font-semibold mb-3">
                   Stay Updated
                 </h4>
@@ -134,7 +131,7 @@ export function Footer() {
 
             {/* Footer Links - modernized with animations */}
             {footerLinks.map((section) => (
-              <div key={section.title}>
+              <div key={section.title} className="lg:col-span-2">
                 <h4 className="text-lg font-semibold mb-6 text-amber-300 font-serif relative inline-block">
                   {section.title}
                   <span className="absolute -bottom-2 left-0 w-12 h-0.5 bg-gradient-to-r from-amber-400 to-transparent rounded-full"></span>
@@ -147,20 +144,39 @@ export function Footer() {
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ duration: 0.2, delay: index * 0.05 }}
                     >
-                      <Link
-                        href={link.href}
-                        className="text-indigo-100 hover:text-amber-300 transition-colors flex items-center gap-2 group"
-                      >
-                        {'icon' in link && link.icon && 
-                          <span className="text-indigo-300 group-hover:text-amber-300 transition-colors">
-                            <link.icon className="w-4 h-4" />
+                      {link.isExternal ? (
+                        <a
+                          href={link.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-indigo-100 hover:text-amber-300 transition-colors flex items-center gap-2 group"
+                        >
+                          {'icon' in link && link.icon && 
+                            <span className="text-indigo-300 group-hover:text-amber-300 transition-colors">
+                              <link.icon className="w-4 h-4" />
+                            </span>
+                          }
+                          <span className="relative overflow-hidden">
+                            {link.name}
+                            <span className="absolute left-0 bottom-0 w-full h-[1px] bg-amber-300 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-right group-hover:origin-left duration-300"></span>
                           </span>
-                        }
-                        <span className="relative overflow-hidden">
-                          {link.name}
-                          <span className="absolute left-0 bottom-0 w-full h-[1px] bg-amber-300 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-right group-hover:origin-left duration-300"></span>
-                        </span>
-                      </Link>
+                        </a>
+                      ) : (
+                        <Link
+                          href={link.href}
+                          className="text-indigo-100 hover:text-amber-300 transition-colors flex items-center gap-2 group"
+                        >
+                          {'icon' in link && link.icon && 
+                            <span className="text-indigo-300 group-hover:text-amber-300 transition-colors">
+                              <link.icon className="w-4 h-4" />
+                            </span>
+                          }
+                          <span className="relative overflow-hidden">
+                            {link.name}
+                            <span className="absolute left-0 bottom-0 w-full h-[1px] bg-amber-300 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-right group-hover:origin-left duration-300"></span>
+                          </span>
+                        </Link>
+                      )}
                     </motion.li>
                   ))}
                 </ul>

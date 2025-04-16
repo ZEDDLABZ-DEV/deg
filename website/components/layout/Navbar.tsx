@@ -4,6 +4,7 @@ import { cn } from "@/lib/utils"
 import { motion } from "framer-motion"
 import { Menu, X } from "lucide-react"
 import Link from "next/link"
+import Image from "next/image"
 import { useState } from "react"
 
 const navItems = [
@@ -25,9 +26,23 @@ export function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          <div className="flex-shrink-0">
-            <Link href="/" className="text-2xl font-bold text-primary">
-              Dildhani Education Group
+          <div className="flex items-center flex-shrink-0">
+            <Link href="/" className="flex items-center gap-2">
+              <div className="relative w-10 h-10 md:w-12 md:h-12 transition-all duration-300">
+                <Image 
+                  src="/icons/logo.jpg" 
+                  alt="Dildhani Education Group Logo" 
+                  width={48}
+                  height={48}
+                  className="rounded-md object-contain"
+                />
+              </div>
+              <span className="text-lg md:text-2xl font-bold text-primary hidden sm:inline-block transition-all duration-300">
+                Dildhani Education Group
+              </span>
+              <span className="text-lg font-bold text-primary sm:hidden transition-all duration-300">
+                DEG
+              </span>
             </Link>
           </div>
           
