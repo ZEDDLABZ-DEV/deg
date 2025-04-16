@@ -1,10 +1,10 @@
-"use client"
+"use client";
 
-import Link from "next/link"
-import { Mail, Phone, MapPin, ArrowUp, FileText } from "lucide-react"
-import { motion } from "framer-motion"
-import { useState, useEffect } from "react"
-import { LucideIcon } from "lucide-react"
+import Link from "next/link";
+import { Mail, Phone, MapPin, ArrowUp, FileText } from "lucide-react";
+import { motion } from "framer-motion";
+import { useState, useEffect } from "react";
+import { LucideIcon } from "lucide-react";
 
 // Define interfaces for type safety
 interface FooterLink {
@@ -33,7 +33,10 @@ const footerLinks: FooterSection[] = [
   {
     title: "Our Institutions",
     links: [
-      { name: "Bhawani Polytechnic College", href: "/institutions/polytechnic" },
+      {
+        name: "Bhawani Polytechnic College",
+        href: "/institutions/polytechnic",
+      },
       { name: "Kaptan Officer Academy", href: "/institutions/defense-academy" },
       { name: "Adarsh Senior Secondary School", href: "/institutions/school" },
       { name: "Cricket Academy", href: "/institutions/cricket-academy" },
@@ -43,46 +46,78 @@ const footerLinks: FooterSection[] = [
   {
     title: "Documents",
     links: [
-      { name: "Compliances", href: "/compliances.pdf", icon: FileText, isExternal: true },
-      { name: "Fee Structure", href: "/FEE_STRUCTURE-1.pdf", icon: FileText, isExternal: true },
-      { name: "Staff List", href: "/Staff_List_Dildhani_Group_of_Institutes (1).pdf", icon: FileText, isExternal: true },
+      {
+        name: "Compliances",
+        href: "/compliances.pdf",
+        icon: FileText,
+        isExternal: true,
+      },
+      {
+        name: "Fee Structure",
+        href: "/FEE_STRUCTURE-1.pdf",
+        icon: FileText,
+        isExternal: true,
+      },
+      {
+        name: "Staff List",
+        href: "/Staff_List_Dildhani_Group_of_Institutes (1).pdf",
+        icon: FileText,
+        isExternal: true,
+      },
     ],
   },
   {
     title: "Contact",
     links: [
-      { name: "info.bite11@gmail.com", href: "mailto:info.bite11@gmail.com", icon: Mail },
+      {
+        name: "info.bite11@gmail.com",
+        href: "mailto:info.bite11@gmail.com",
+        icon: Mail,
+      },
       { name: "+91 82903 56671", href: "tel:+918290356671", icon: Phone },
-      { name: "Makrana (pincode-341505), Rajasthan, India", href: "https://maps.google.com/?q=Dildhani+Education+Group+Makrana+Rajasthan", icon: MapPin },
+      {
+        name: "Makrana (pincode-341505), Rajasthan, India",
+        href: "https://maps.google.com/?q=Dildhani+Education+Group+Makrana+Rajasthan",
+        icon: MapPin,
+      },
     ],
   },
-]
+];
 
 export function Footer() {
-  const [showBackToTop, setShowBackToTop] = useState(false)
-  
+  const [showBackToTop, setShowBackToTop] = useState(false);
+
   useEffect(() => {
     const handleScroll = () => {
-      setShowBackToTop(window.scrollY > 300)
-    }
-    
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
-  
+      setShowBackToTop(window.scrollY > 300);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' })
-  }
-  
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
     <footer className="relative overflow-hidden">
       {/* Decorative top wave */}
       <div className="absolute top-0 left-0 w-full overflow-hidden leading-0 transform">
-        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none" className="relative block w-full h-12 text-indigo-900">
-          <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" fill="currentColor"></path>
+        <svg
+          data-name="Layer 1"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1200 120"
+          preserveAspectRatio="none"
+          className="relative block w-full h-12 text-indigo-900"
+        >
+          <path
+            d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+            fill="currentColor"
+          ></path>
         </svg>
       </div>
-      
+
       {/* Main footer content */}
       <div className="bg-indigo-900 pt-24 pb-12 text-white relative z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -91,28 +126,14 @@ export function Footer() {
             {/* Branding and description */}
             <div className="lg:col-span-4">
               <Link href="/" className="inline-block">
-                <h2 className="text-2xl font-bold text-white">Dildhani Education Group</h2>
+                <h2 className="text-2xl font-bold text-white">
+                  Dildhani Education Group
+                </h2>
               </Link>
               <p className="mt-4 text-indigo-100 max-w-xs">
-                A group of premier educational institutions dedicated to providing quality education and nurturing future leaders.
+                A group of premier educational institutions dedicated to
+                providing quality education and nurturing future leaders.
               </p>
-              
-              {/* Newsletter subscription */}
-              <div className="pt-6">
-                <h4 className="text-sm uppercase tracking-wider text-indigo-300 font-semibold mb-3">
-                  Stay Updated
-                </h4>
-                <div className="flex">
-                  <input 
-                    type="email" 
-                    placeholder="Your email" 
-                    className="w-full px-4 py-2 text-sm bg-white/10 rounded-l-md text-white placeholder-indigo-300 backdrop-blur-sm focus:outline-none focus:ring-1 focus:ring-amber-400 border-r border-transparent"
-                  />
-                  <button className="px-4 py-2 bg-gradient-to-r from-amber-500 to-amber-400 text-indigo-900 font-medium rounded-r-md hover:from-amber-400 hover:to-amber-300 transition-all duration-300">
-                    Subscribe
-                  </button>
-                </div>
-              </div>
             </div>
 
             {/* Footer Links - modernized with animations */}
@@ -124,7 +145,7 @@ export function Footer() {
                 </h4>
                 <ul className="space-y-3">
                   {section.links.map((link, index) => (
-                    <motion.li 
+                    <motion.li
                       key={link.name}
                       initial={{ opacity: 0, x: -10 }}
                       animate={{ opacity: 1, x: 0 }}
@@ -137,11 +158,11 @@ export function Footer() {
                           rel="noopener noreferrer"
                           className="text-indigo-100 hover:text-amber-300 transition-colors flex items-center gap-2 group"
                         >
-                          {link.icon && 
+                          {link.icon && (
                             <span className="text-indigo-300 group-hover:text-amber-300 transition-colors">
                               <link.icon className="w-4 h-4" />
                             </span>
-                          }
+                          )}
                           <span className="relative overflow-hidden">
                             {link.name}
                             <span className="absolute left-0 bottom-0 w-full h-[1px] bg-amber-300 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-right group-hover:origin-left duration-300"></span>
@@ -152,11 +173,11 @@ export function Footer() {
                           href={link.href}
                           className="text-indigo-100 hover:text-amber-300 transition-colors flex items-center gap-2 group"
                         >
-                          {link.icon && 
+                          {link.icon && (
                             <span className="text-indigo-300 group-hover:text-amber-300 transition-colors">
                               <link.icon className="w-4 h-4" />
                             </span>
-                          }
+                          )}
                           <span className="relative overflow-hidden">
                             {link.name}
                             <span className="absolute left-0 bottom-0 w-full h-[1px] bg-amber-300 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-right group-hover:origin-left duration-300"></span>
@@ -175,15 +196,22 @@ export function Footer() {
             <div className="flex flex-col md:flex-row justify-between items-center">
               <div className="flex items-center space-x-2">
                 <p className="text-indigo-200 text-sm">
-                  © {new Date().getFullYear()} Dildhani Education Group. All rights reserved.
+                  © {new Date().getFullYear()} Dildhani Education Group. All
+                  rights reserved.
                 </p>
               </div>
-              
+
               <div className="mt-4 md:mt-0 flex space-x-6 text-xs text-indigo-300">
-                <Link href="/privacy-policy" className="hover:text-amber-300 transition-colors">
+                <Link
+                  href="/privacy-policy"
+                  className="hover:text-amber-300 transition-colors"
+                >
                   Privacy Policy
                 </Link>
-                <Link href="/terms" className="hover:text-amber-300 transition-colors">
+                <Link
+                  href="/terms"
+                  className="hover:text-amber-300 transition-colors"
+                >
                   Terms of Service
                 </Link>
               </div>
@@ -191,15 +219,15 @@ export function Footer() {
           </div>
         </div>
       </div>
-      
+
       {/* Back to top button */}
       <motion.button
         onClick={scrollToTop}
         initial={{ opacity: 0, y: 20 }}
-        animate={{ 
-          opacity: showBackToTop ? 1 : 0, 
+        animate={{
+          opacity: showBackToTop ? 1 : 0,
           y: showBackToTop ? 0 : 20,
-          pointerEvents: showBackToTop ? 'auto' : 'none'
+          pointerEvents: showBackToTop ? "auto" : "none",
         }}
         transition={{ duration: 0.3 }}
         className="fixed bottom-8 right-8 p-3 bg-amber-400 text-indigo-900 rounded-full shadow-lg hover:bg-amber-300 transition-colors z-50 focus:outline-none"
@@ -208,5 +236,5 @@ export function Footer() {
         <ArrowUp className="w-5 h-5" />
       </motion.button>
     </footer>
-  )
-} 
+  );
+}
