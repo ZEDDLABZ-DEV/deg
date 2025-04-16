@@ -7,17 +7,17 @@ import Link from "next/link"
 import { 
   ChevronRight, 
   Award, 
-  Book, 
+  Dumbbell, 
   Users, 
-  Lightbulb, 
+  Heart, 
   Target, 
   Clock, 
-  Building,
-  GraduationCap,
-  BookOpen
+  Shield,
+  Calendar,
+  Trophy
 } from "lucide-react"
 
-export default function PolytechnicPage() {
+export default function CricketAcademyPage() {
   const containerRef = useRef(null)
   const { scrollYProgress } = useScroll({
     target: containerRef,
@@ -39,8 +39,8 @@ export default function PolytechnicPage() {
           style={{ y: backgroundY }}
         >
           <Image 
-            src="/images/more_images/83afd1_8b2e5266f3be46ec9c610cdc9a0253a8~mv2.jpg.jpeg" 
-            alt="Bhawani Polytechnic College Campus" 
+            src="/images/more_images/83afd1_7308011757bf48b495446e75c31cf7eb~mv2.jpeg" 
+            alt="Cricket Academy" 
             fill
             className="object-cover"
             sizes="100vw"
@@ -102,16 +102,16 @@ export default function PolytechnicPage() {
                   <ChevronRight className="h-4 w-4 text-white/60" />
                   <Link href="/institutions" className="hover:text-blue-200 transition-colors">Institutions</Link>
                   <ChevronRight className="h-4 w-4 text-white/60" />
-                  <span>Polytechnic</span>
+                  <span>Cricket Academy</span>
                 </div>
               </div>
             </div>
             
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 text-white tracking-tight leading-tight">
               <span className="inline-block relative">
-                Bhawani
+                Cricket
                 <span className="relative ml-2">
-                  <span className="relative z-10">Polytechnic</span>
+                  <span className="relative z-10">Academy</span>
                   <motion.span 
                     initial={{ width: 0 }}
                     animate={{ width: "100%" }}
@@ -120,11 +120,10 @@ export default function PolytechnicPage() {
                   />
                 </span>
               </span>
-              <span className="block mt-2">College</span>
             </h1>
             
             <p className="text-xl md:text-2xl text-blue-50 max-w-3xl mx-auto mt-6 leading-relaxed font-light">
-              Empowering students with technical skills and knowledge for a brighter future
+              Developing cricket talent with professional coaching and world-class facilities
             </p>
             
             <motion.div 
@@ -162,40 +161,28 @@ export default function PolytechnicPage() {
         </motion.div>
       </section>
 
-      {/* Accreditations Section */}
+      {/* Quick Stats */}
       <section className="py-10 border-y border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-wrap items-center justify-center gap-10 md:gap-16">
-            <motion.div 
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5 }}
-              className="text-center"
-            >
-              <div className="text-gray-500 text-sm font-medium mb-2">Accredited By</div>
-              <div className="flex flex-wrap justify-center gap-10 md:gap-16">
-                <div className="grayscale hover:grayscale-0 transition-all duration-300 opacity-80 hover:opacity-100">
-                  <div className="h-12 flex items-center">
-                    <span className="text-indigo-950 font-bold flex items-center gap-2">
-                      <GraduationCap className="w-6 h-6 text-indigo-600" /> AICTE
-                    </span>
-                  </div>
-                </div>
-                <div className="grayscale hover:grayscale-0 transition-all duration-300 opacity-80 hover:opacity-100">
-                  <div className="h-12 flex items-center">
-                    <span className="text-indigo-950 font-bold flex items-center gap-2">
-                      <GraduationCap className="w-6 h-6 text-indigo-600" /> BTE Rajasthan
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {stats.map((stat, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="text-center"
+              >
+                <p className="text-4xl font-bold text-indigo-600">{stat.value}</p>
+                <p className="text-gray-500 text-sm mt-1">{stat.label}</p>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* About the College */}
+      {/* About the Academy */}
       <section id="about" className="py-24 bg-gradient-to-b from-white to-blue-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -206,7 +193,7 @@ export default function PolytechnicPage() {
               transition={{ duration: 0.5 }}
             >
               <h2 className="text-sm font-semibold text-indigo-600 tracking-wide uppercase mb-2">About Us</h2>
-              <h3 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight">Excellence in Technical Education</h3>
+              <h3 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight">Nurturing Cricket Talent</h3>
               <div className="mt-2 mx-auto w-24 h-1 bg-gradient-to-r from-indigo-500 to-indigo-300 rounded-full"></div>
             </motion.div>
           </div>
@@ -221,8 +208,8 @@ export default function PolytechnicPage() {
             >
               <div className="rounded-2xl overflow-hidden shadow-xl">
                 <Image 
-                  src="/images/more_images/83afd1_bac3206c269b406a97df5f78340a78b6~mv2.jpeg" 
-                  alt="Bhawani Polytechnic College" 
+                  src="/images/more_images/83afd1_0cfc464d5171461faea0ecd7962405d7~mv2.jpeg" 
+                  alt="Cricket Academy Training" 
                   width={600}
                   height={400}
                   className="w-full h-auto object-cover"
@@ -230,7 +217,7 @@ export default function PolytechnicPage() {
               </div>
               <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-indigo-600 rounded-full flex items-center justify-center text-white font-bold z-10">
                 <div className="text-center">
-                  <div className="text-3xl">10+</div>
+                  <div className="text-3xl">8+</div>
                   <div className="text-xs uppercase tracking-wider">Years of Excellence</div>
                 </div>
               </div>
@@ -242,31 +229,31 @@ export default function PolytechnicPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.4 }}
             >
-              <h4 className="text-2xl font-semibold text-gray-900 mb-4">Building Futures with Technical Excellence</h4>
+              <h4 className="text-2xl font-semibold text-gray-900 mb-4">Developing Cricket Champions</h4>
               <p className="text-gray-600 mb-6 leading-relaxed">
-                Bhawani Polytechnic College, established under the Dildhani Education Group, is a premier technical institution dedicated to providing quality technical education. Our college is recognized by AICTE and affiliated with the Board of Technical Education, Rajasthan.
+                The Cricket Academy under Dildhani Education Group is dedicated to identifying and nurturing cricket talent in the region. With state-of-the-art facilities and expert coaching, we aim to develop skilled cricketers at all levels.
               </p>
               <p className="text-gray-600 mb-6 leading-relaxed">
-                We offer diploma programs in various engineering disciplines with state-of-the-art laboratories, workshops, and modern infrastructure. Our focus is on practical training, industry exposure, and holistic development of students.
+                Our comprehensive training programs focus on technical skills, tactical understanding, physical fitness, and mental strength - the four pillars of cricketing excellence. We welcome players of all ages and skill levels, from beginners to advanced.
               </p>
 
               <div className="grid grid-cols-2 gap-4 mt-8">
                 <div className="flex items-start">
                   <div className="flex-shrink-0 h-10 w-10 rounded-md bg-indigo-100 flex items-center justify-center">
-                    <BookOpen className="h-5 w-5 text-indigo-600" />
+                    <Trophy className="h-5 w-5 text-indigo-600" />
                   </div>
                   <div className="ml-4">
-                    <h5 className="text-lg font-medium text-gray-900">Quality Education</h5>
-                    <p className="mt-1 text-sm text-gray-500">AICTE approved curriculum</p>
+                    <h5 className="text-lg font-medium text-gray-900">Expert Coaching</h5>
+                    <p className="mt-1 text-sm text-gray-500">Professional trainers</p>
                   </div>
                 </div>
                 <div className="flex items-start">
                   <div className="flex-shrink-0 h-10 w-10 rounded-md bg-indigo-100 flex items-center justify-center">
-                    <Building className="h-5 w-5 text-indigo-600" />
+                    <Target className="h-5 w-5 text-indigo-600" />
                   </div>
                   <div className="ml-4">
                     <h5 className="text-lg font-medium text-gray-900">Modern Facilities</h5>
-                    <p className="mt-1 text-sm text-gray-500">Latest equipment & labs</p>
+                    <p className="mt-1 text-sm text-gray-500">Advanced training equipment</p>
                   </div>
                 </div>
               </div>
@@ -286,7 +273,7 @@ export default function PolytechnicPage() {
               transition={{ duration: 0.5 }}
             >
               <h2 className="text-sm font-semibold text-indigo-600 tracking-wide uppercase mb-2">Our Programs</h2>
-              <h3 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight">Diploma Engineering Programs</h3>
+              <h3 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight">Training Programs</h3>
               <div className="mt-2 mx-auto w-24 h-1 bg-gradient-to-r from-indigo-500 to-indigo-300 rounded-full"></div>
             </motion.div>
           </div>
@@ -314,15 +301,15 @@ export default function PolytechnicPage() {
                   <h4 className="text-xl font-semibold text-gray-900 mb-2">{program.title}</h4>
                   <p className="text-gray-600 mb-4">{program.description}</p>
                   <div className="flex flex-wrap gap-2 mb-4">
-                    {program.tags.map(tag => (
-                      <span key={tag} className="px-2 py-1 bg-indigo-100 text-indigo-800 text-xs font-medium rounded">
-                        {tag}
+                    {program.skills.map(skill => (
+                      <span key={skill} className="px-2 py-1 bg-indigo-100 text-indigo-800 text-xs font-medium rounded">
+                        {skill}
                       </span>
                     ))}
                   </div>
                   <div className="mt-4 flex justify-between items-center">
                     <div className="text-sm text-gray-500 flex items-center">
-                      <Clock className="h-4 w-4 mr-1" />
+                      <Calendar className="h-4 w-4 mr-1" />
                       <span>{program.duration}</span>
                     </div>
                     <Link href="#contact" className="text-indigo-600 hover:text-indigo-800 text-sm font-medium flex items-center">
@@ -347,7 +334,7 @@ export default function PolytechnicPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
             >
-              <h2 className="text-sm font-semibold text-indigo-600 tracking-wide uppercase mb-2">Campus Facilities</h2>
+              <h2 className="text-sm font-semibold text-indigo-600 tracking-wide uppercase mb-2">Our Facilities</h2>
               <h3 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight">World-Class Infrastructure</h3>
               <div className="mt-2 mx-auto w-24 h-1 bg-gradient-to-r from-indigo-500 to-indigo-300 rounded-full"></div>
             </motion.div>
@@ -391,14 +378,14 @@ export default function PolytechnicPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
             >
-              <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4">Ready to Start Your Technical Journey?</h2>
-              <p className="text-blue-100 mb-8">Join Bhawani Polytechnic College and become a skilled technical professional.</p>
+              <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4">Ready to Begin Your Cricket Journey?</h2>
+              <p className="text-blue-100 mb-8">Join our academy and take the first step towards cricketing excellence.</p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   href="/admissions"
                   className="px-8 py-3.5 bg-white text-indigo-700 font-medium rounded-md hover:shadow-lg transition-all duration-300"
                 >
-                  Apply Now
+                  Join Now
                 </Link>
                 <Link
                   href="/contact"
@@ -416,59 +403,66 @@ export default function PolytechnicPage() {
 }
 
 // Sample data
+const stats = [
+  { value: "500+", label: "Trainees" },
+  { value: "12", label: "Expert Coaches" },
+  { value: "8", label: "Training Nets" },
+  { value: "25+", label: "Tournament Wins" }
+];
+
 const programs = [
   {
-    title: "Civil Engineering",
-    description: "Learn to design, construct and maintain infrastructure projects like buildings, roads, and bridges.",
-    image: "/images/more_images/83afd1_e272790fdc8f442e8fce0f46e0cad890~mv2.jpeg",
-    duration: "3 Years",
-    tags: ["Infrastructure", "Construction", "Design"]
-  },
-  {
-    title: "Mechanical Engineering",
-    description: "Study the design, manufacturing and maintenance of mechanical systems and machines.",
-    image: "/images/more_images/83afd1_7308011757bf48b495446e75c31cf7eb~mv2.jpeg",
-    duration: "3 Years",
-    tags: ["Manufacturing", "Design", "Automation"]
-  },
-  {
-    title: "Electrical Engineering",
-    description: "Focus on electrical systems, power generation, distribution and electrical equipment.",
+    title: "Junior Cricket Program",
+    description: "Introduction to cricket fundamentals for young beginners aged 6-12 years.",
     image: "/images/more_images/83afd1_d8295c77a1c3423e881f3dd0c2c7a9da~mv2.jpeg",
-    duration: "3 Years",
-    tags: ["Power Systems", "Electronics", "Control"]
+    duration: "Weekend Sessions",
+    skills: ["Batting", "Bowling", "Fielding", "Game Rules"]
+  },
+  {
+    title: "Advanced Training",
+    description: "High-intensity training for serious players looking to compete at higher levels.",
+    image: "/images/more_images/83afd1_4f226c8429914af7b58e26b9cd98e3ae~mv2.jpeg",
+    duration: "5 Days/Week",
+    skills: ["Technical Skills", "Match Strategy", "Physical Fitness"]
+  },
+  {
+    title: "Professional Development",
+    description: "Elite program for talented cricketers with potential for state and national level.",
+    image: "/images/more_images/83afd1_b5ccad43f0654accb97baa4b7d097b73~mv2.jpeg",
+    duration: "Full-time",
+    skills: ["Advanced Techniques", "Mental Training", "Match Performance"]
   }
 ];
 
 const facilities = [
   {
-    title: "Modern Laboratories",
-    description: "Well-equipped labs with latest tools and technology for hands-on learning experience.",
-    icon: Lightbulb
+    title: "Cricket Nets",
+    description: "Multiple practice nets with various pitch types for all-round batting and bowling practice.",
+    icon: Shield
   },
   {
-    title: "Digital Library",
-    description: "Access to digital resources, journals, and e-books for research and learning.",
-    icon: Book
+    title: "Fitness Center",
+    description: "Modern gym equipped with specialized training equipment for cricket-specific fitness development.",
+    icon: Dumbbell
   },
   {
-    title: "Industry Partnerships",
-    description: "Collaborations with leading industries for internships and placements.",
-    icon: Users
-  },
-  {
-    title: "Sports Facilities",
-    description: "Indoor and outdoor sports facilities for physical fitness and recreation.",
+    title: "Video Analysis",
+    description: "Advanced video analysis system to study and improve technique and performance.",
     icon: Target
   },
   {
-    title: "Workshops",
-    description: "Specialized workshops for practical training in various engineering disciplines.",
-    icon: Building
+    title: "Sports Medicine",
+    description: "On-site physiotherapy and injury prevention services for players' wellbeing.",
+    icon: Heart
   },
   {
-    title: "Placement Cell",
-    description: "Dedicated placement cell to assist students with job opportunities and career guidance.",
-    icon: Award
+    title: "Tournament Exposure",
+    description: "Regular participation in local, regional and national level tournaments.",
+    icon: Trophy
+  },
+  {
+    title: "Coaching Team",
+    description: "Experienced coaches with backgrounds in first-class and international cricket.",
+    icon: Users
   }
 ]; 

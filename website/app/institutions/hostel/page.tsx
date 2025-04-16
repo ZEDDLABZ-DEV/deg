@@ -6,18 +6,18 @@ import { useRef } from "react"
 import Link from "next/link"
 import { 
   ChevronRight, 
-  Award, 
-  Book, 
+  Home, 
+  ShieldCheck, 
   Users, 
-  Lightbulb, 
-  Target, 
-  Clock, 
-  Building,
-  GraduationCap,
-  BookOpen
+  Wifi, 
+  BookOpen, 
+  Coffee, 
+  Utensils,
+  Bed,
+  Clock
 } from "lucide-react"
 
-export default function PolytechnicPage() {
+export default function HostelPage() {
   const containerRef = useRef(null)
   const { scrollYProgress } = useScroll({
     target: containerRef,
@@ -39,8 +39,8 @@ export default function PolytechnicPage() {
           style={{ y: backgroundY }}
         >
           <Image 
-            src="/images/more_images/83afd1_8b2e5266f3be46ec9c610cdc9a0253a8~mv2.jpg.jpeg" 
-            alt="Bhawani Polytechnic College Campus" 
+            src="/images/more_images/83afd1_bac3206c269b406a97df5f78340a78b6~mv2.jpeg" 
+            alt="Kaptan Girls Hostel" 
             fill
             className="object-cover"
             sizes="100vw"
@@ -102,16 +102,16 @@ export default function PolytechnicPage() {
                   <ChevronRight className="h-4 w-4 text-white/60" />
                   <Link href="/institutions" className="hover:text-blue-200 transition-colors">Institutions</Link>
                   <ChevronRight className="h-4 w-4 text-white/60" />
-                  <span>Polytechnic</span>
+                  <span>Girls Hostel</span>
                 </div>
               </div>
             </div>
             
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 text-white tracking-tight leading-tight">
               <span className="inline-block relative">
-                Bhawani
+                Kaptan
                 <span className="relative ml-2">
-                  <span className="relative z-10">Polytechnic</span>
+                  <span className="relative z-10">Girls</span>
                   <motion.span 
                     initial={{ width: 0 }}
                     animate={{ width: "100%" }}
@@ -120,11 +120,11 @@ export default function PolytechnicPage() {
                   />
                 </span>
               </span>
-              <span className="block mt-2">College</span>
+              <span className="block mt-2">Hostel</span>
             </h1>
             
             <p className="text-xl md:text-2xl text-blue-50 max-w-3xl mx-auto mt-6 leading-relaxed font-light">
-              Empowering students with technical skills and knowledge for a brighter future
+              A safe, comfortable and nurturing residential facility for female students
             </p>
             
             <motion.div 
@@ -134,10 +134,10 @@ export default function PolytechnicPage() {
               className="mt-10"
             >
               <a 
-                href="#programs" 
+                href="#amenities" 
                 className="inline-flex items-center gap-2 px-7 py-3.5 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-medium rounded-full hover:shadow-lg hover:shadow-blue-500/30 transition-all duration-300 hover:-translate-y-1"
               >
-                Explore Programs
+                Explore Amenities
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
                 </svg>
@@ -162,40 +162,28 @@ export default function PolytechnicPage() {
         </motion.div>
       </section>
 
-      {/* Accreditations Section */}
+      {/* Quick Facts */}
       <section className="py-10 border-y border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-wrap items-center justify-center gap-10 md:gap-16">
-            <motion.div 
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5 }}
-              className="text-center"
-            >
-              <div className="text-gray-500 text-sm font-medium mb-2">Accredited By</div>
-              <div className="flex flex-wrap justify-center gap-10 md:gap-16">
-                <div className="grayscale hover:grayscale-0 transition-all duration-300 opacity-80 hover:opacity-100">
-                  <div className="h-12 flex items-center">
-                    <span className="text-indigo-950 font-bold flex items-center gap-2">
-                      <GraduationCap className="w-6 h-6 text-indigo-600" /> AICTE
-                    </span>
-                  </div>
-                </div>
-                <div className="grayscale hover:grayscale-0 transition-all duration-300 opacity-80 hover:opacity-100">
-                  <div className="h-12 flex items-center">
-                    <span className="text-indigo-950 font-bold flex items-center gap-2">
-                      <GraduationCap className="w-6 h-6 text-indigo-600" /> BTE Rajasthan
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {facts.map((fact, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="text-center"
+              >
+                <p className="text-4xl font-bold text-indigo-600">{fact.value}</p>
+                <p className="text-gray-500 text-sm mt-1">{fact.label}</p>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* About the College */}
+      {/* About the Hostel */}
       <section id="about" className="py-24 bg-gradient-to-b from-white to-blue-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -205,8 +193,8 @@ export default function PolytechnicPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
             >
-              <h2 className="text-sm font-semibold text-indigo-600 tracking-wide uppercase mb-2">About Us</h2>
-              <h3 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight">Excellence in Technical Education</h3>
+              <h2 className="text-sm font-semibold text-indigo-600 tracking-wide uppercase mb-2">About Our Hostel</h2>
+              <h3 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight">A Home Away From Home</h3>
               <div className="mt-2 mx-auto w-24 h-1 bg-gradient-to-r from-indigo-500 to-indigo-300 rounded-full"></div>
             </motion.div>
           </div>
@@ -221,8 +209,8 @@ export default function PolytechnicPage() {
             >
               <div className="rounded-2xl overflow-hidden shadow-xl">
                 <Image 
-                  src="/images/more_images/83afd1_bac3206c269b406a97df5f78340a78b6~mv2.jpeg" 
-                  alt="Bhawani Polytechnic College" 
+                  src="/images/more_images/83afd1_50d7361c1d02434fb259474c5916bb45~mv2.jpeg" 
+                  alt="Kaptan Girls Hostel" 
                   width={600}
                   height={400}
                   className="w-full h-auto object-cover"
@@ -230,8 +218,8 @@ export default function PolytechnicPage() {
               </div>
               <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-indigo-600 rounded-full flex items-center justify-center text-white font-bold z-10">
                 <div className="text-center">
-                  <div className="text-3xl">10+</div>
-                  <div className="text-xs uppercase tracking-wider">Years of Excellence</div>
+                  <div className="text-3xl">24/7</div>
+                  <div className="text-xs uppercase tracking-wider">Security & Support</div>
                 </div>
               </div>
             </motion.div>
@@ -242,31 +230,31 @@ export default function PolytechnicPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.4 }}
             >
-              <h4 className="text-2xl font-semibold text-gray-900 mb-4">Building Futures with Technical Excellence</h4>
+              <h4 className="text-2xl font-semibold text-gray-900 mb-4">Safe and Supportive Environment</h4>
               <p className="text-gray-600 mb-6 leading-relaxed">
-                Bhawani Polytechnic College, established under the Dildhani Education Group, is a premier technical institution dedicated to providing quality technical education. Our college is recognized by AICTE and affiliated with the Board of Technical Education, Rajasthan.
+                Kaptan Girls Hostel, operated by the Dildhani Education Group, provides a secure, comfortable, and nurturing residential facility exclusively for female students pursuing education at our various institutions.
               </p>
               <p className="text-gray-600 mb-6 leading-relaxed">
-                We offer diploma programs in various engineering disciplines with state-of-the-art laboratories, workshops, and modern infrastructure. Our focus is on practical training, industry exposure, and holistic development of students.
+                Our hostel is designed to create a supportive environment where students can focus on their academic pursuits while enjoying the comfort of a well-maintained living space with all necessary amenities and security measures.
               </p>
 
               <div className="grid grid-cols-2 gap-4 mt-8">
                 <div className="flex items-start">
                   <div className="flex-shrink-0 h-10 w-10 rounded-md bg-indigo-100 flex items-center justify-center">
-                    <BookOpen className="h-5 w-5 text-indigo-600" />
+                    <ShieldCheck className="h-5 w-5 text-indigo-600" />
                   </div>
                   <div className="ml-4">
-                    <h5 className="text-lg font-medium text-gray-900">Quality Education</h5>
-                    <p className="mt-1 text-sm text-gray-500">AICTE approved curriculum</p>
+                    <h5 className="text-lg font-medium text-gray-900">24/7 Security</h5>
+                    <p className="mt-1 text-sm text-gray-500">CCTV surveillance</p>
                   </div>
                 </div>
                 <div className="flex items-start">
                   <div className="flex-shrink-0 h-10 w-10 rounded-md bg-indigo-100 flex items-center justify-center">
-                    <Building className="h-5 w-5 text-indigo-600" />
+                    <Users className="h-5 w-5 text-indigo-600" />
                   </div>
                   <div className="ml-4">
-                    <h5 className="text-lg font-medium text-gray-900">Modern Facilities</h5>
-                    <p className="mt-1 text-sm text-gray-500">Latest equipment & labs</p>
+                    <h5 className="text-lg font-medium text-gray-900">Dedicated Staff</h5>
+                    <p className="mt-1 text-sm text-gray-500">Round-the-clock support</p>
                   </div>
                 </div>
               </div>
@@ -275,8 +263,8 @@ export default function PolytechnicPage() {
         </div>
       </section>
 
-      {/* Programs Section */}
-      <section id="programs" className="py-24 bg-indigo-50">
+      {/* Amenities Section */}
+      <section id="amenities" className="py-24 bg-indigo-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <motion.div
@@ -285,51 +273,28 @@ export default function PolytechnicPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
             >
-              <h2 className="text-sm font-semibold text-indigo-600 tracking-wide uppercase mb-2">Our Programs</h2>
-              <h3 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight">Diploma Engineering Programs</h3>
+              <h2 className="text-sm font-semibold text-indigo-600 tracking-wide uppercase mb-2">Hostel Amenities</h2>
+              <h3 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight">Modern Facilities</h3>
               <div className="mt-2 mx-auto w-24 h-1 bg-gradient-to-r from-indigo-500 to-indigo-300 rounded-full"></div>
             </motion.div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {programs.map((program, index) => (
+            {amenities.map((amenity, index) => (
               <motion.div
-                key={program.title}
+                key={amenity.title}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
+                className="bg-white rounded-xl overflow-hidden border border-gray-100 hover:shadow-lg transition-all duration-300"
               >
-                <div className="h-48 overflow-hidden">
-                  <Image 
-                    src={program.image} 
-                    alt={program.title}
-                    width={400}
-                    height={300}
-                    className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500"
-                  />
-                </div>
                 <div className="p-6">
-                  <h4 className="text-xl font-semibold text-gray-900 mb-2">{program.title}</h4>
-                  <p className="text-gray-600 mb-4">{program.description}</p>
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {program.tags.map(tag => (
-                      <span key={tag} className="px-2 py-1 bg-indigo-100 text-indigo-800 text-xs font-medium rounded">
-                        {tag}
-                      </span>
-                    ))}
+                  <div className="w-12 h-12 rounded-lg bg-indigo-100 flex items-center justify-center mb-4">
+                    <amenity.icon className="h-6 w-6 text-indigo-600" />
                   </div>
-                  <div className="mt-4 flex justify-between items-center">
-                    <div className="text-sm text-gray-500 flex items-center">
-                      <Clock className="h-4 w-4 mr-1" />
-                      <span>{program.duration}</span>
-                    </div>
-                    <Link href="#contact" className="text-indigo-600 hover:text-indigo-800 text-sm font-medium flex items-center">
-                      Learn more
-                      <ChevronRight className="h-4 w-4 ml-1" />
-                    </Link>
-                  </div>
+                  <h4 className="text-xl font-semibold text-gray-900 mb-2">{amenity.title}</h4>
+                  <p className="text-gray-600">{amenity.description}</p>
                 </div>
               </motion.div>
             ))}
@@ -337,7 +302,7 @@ export default function PolytechnicPage() {
         </div>
       </section>
 
-      {/* Facilities Section */}
+      {/* Accommodation Options */}
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -347,28 +312,47 @@ export default function PolytechnicPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
             >
-              <h2 className="text-sm font-semibold text-indigo-600 tracking-wide uppercase mb-2">Campus Facilities</h2>
-              <h3 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight">World-Class Infrastructure</h3>
+              <h2 className="text-sm font-semibold text-indigo-600 tracking-wide uppercase mb-2">Accommodation</h2>
+              <h3 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight">Room Options</h3>
               <div className="mt-2 mx-auto w-24 h-1 bg-gradient-to-r from-indigo-500 to-indigo-300 rounded-full"></div>
             </motion.div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {facilities.map((facility, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {roomOptions.map((option, index) => (
               <motion.div
-                key={facility.title}
+                key={option.type}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-white rounded-xl overflow-hidden border border-gray-100 hover:shadow-lg transition-all duration-300"
+                className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
               >
+                <div className="h-48 overflow-hidden">
+                  <Image 
+                    src={option.image} 
+                    alt={option.type}
+                    width={400}
+                    height={300}
+                    className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
                 <div className="p-6">
-                  <div className="w-12 h-12 rounded-lg bg-indigo-100 flex items-center justify-center mb-4">
-                    <facility.icon className="h-6 w-6 text-indigo-600" />
+                  <div className="flex justify-between items-center mb-4">
+                    <h4 className="text-xl font-semibold text-gray-900">{option.type}</h4>
+                    <span className="bg-indigo-100 text-indigo-800 px-2 py-1 rounded text-sm font-medium">
+                      {option.capacity}
+                    </span>
                   </div>
-                  <h4 className="text-xl font-semibold text-gray-900 mb-2">{facility.title}</h4>
-                  <p className="text-gray-600">{facility.description}</p>
+                  <p className="text-gray-600 mb-4">{option.description}</p>
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {option.features.map(feature => (
+                      <span key={feature} className="flex items-center text-sm text-gray-600">
+                        <span className="w-1.5 h-1.5 bg-indigo-500 rounded-full mr-2"></span>
+                        {feature}
+                      </span>
+                    ))}
+                  </div>
                 </div>
               </motion.div>
             ))}
@@ -391,8 +375,8 @@ export default function PolytechnicPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
             >
-              <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4">Ready to Start Your Technical Journey?</h2>
-              <p className="text-blue-100 mb-8">Join Bhawani Polytechnic College and become a skilled technical professional.</p>
+              <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4">Book Your Accommodation Today</h2>
+              <p className="text-blue-100 mb-8">Limited seats available. Secure your place in our comfortable and safe hostel.</p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   href="/admissions"
@@ -416,59 +400,66 @@ export default function PolytechnicPage() {
 }
 
 // Sample data
-const programs = [
+const facts = [
+  { value: "150+", label: "Room Capacity" },
+  { value: "24/7", label: "Security" },
+  { value: "3", label: "Meals Daily" },
+  { value: "100%", label: "Student Satisfaction" }
+];
+
+const amenities = [
   {
-    title: "Civil Engineering",
-    description: "Learn to design, construct and maintain infrastructure projects like buildings, roads, and bridges.",
-    image: "/images/more_images/83afd1_e272790fdc8f442e8fce0f46e0cad890~mv2.jpeg",
-    duration: "3 Years",
-    tags: ["Infrastructure", "Construction", "Design"]
+    title: "Clean Accommodation",
+    description: "Well-maintained, hygienic rooms with regular cleaning services.",
+    icon: Home
   },
   {
-    title: "Mechanical Engineering",
-    description: "Study the design, manufacturing and maintenance of mechanical systems and machines.",
-    image: "/images/more_images/83afd1_7308011757bf48b495446e75c31cf7eb~mv2.jpeg",
-    duration: "3 Years",
-    tags: ["Manufacturing", "Design", "Automation"]
+    title: "Nutritious Meals",
+    description: "Three balanced, healthy meals prepared daily in our clean kitchen.",
+    icon: Utensils
   },
   {
-    title: "Electrical Engineering",
-    description: "Focus on electrical systems, power generation, distribution and electrical equipment.",
-    image: "/images/more_images/83afd1_d8295c77a1c3423e881f3dd0c2c7a9da~mv2.jpeg",
-    duration: "3 Years",
-    tags: ["Power Systems", "Electronics", "Control"]
+    title: "Wi-Fi Connectivity",
+    description: "High-speed internet access throughout the hostel premises.",
+    icon: Wifi
+  },
+  {
+    title: "Study Areas",
+    description: "Dedicated quiet spaces for focused academic work and group studies.",
+    icon: BookOpen
+  },
+  {
+    title: "Recreation Room",
+    description: "Common area with indoor games and entertainment facilities.",
+    icon: Coffee
+  },
+  {
+    title: "24/7 Security",
+    description: "Round-the-clock security with CCTV surveillance and controlled access.",
+    icon: ShieldCheck
   }
 ];
 
-const facilities = [
+const roomOptions = [
   {
-    title: "Modern Laboratories",
-    description: "Well-equipped labs with latest tools and technology for hands-on learning experience.",
-    icon: Lightbulb
+    type: "Standard Room",
+    capacity: "3-4 Students",
+    description: "Comfortable shared rooms with essential furnishings and storage space.",
+    image: "/images/more_images/83afd1_b5ccad43f0654accb97baa4b7d097b73~mv2.jpeg",
+    features: ["Single Beds", "Study Tables", "Wardrobes", "Attached Bathroom"]
   },
   {
-    title: "Digital Library",
-    description: "Access to digital resources, journals, and e-books for research and learning.",
-    icon: Book
+    type: "Premium Room",
+    capacity: "2 Students",
+    description: "Spacious rooms with enhanced comfort and additional amenities.",
+    image: "/images/more_images/83afd1_d8295c77a1c3423e881f3dd0c2c7a9da~mv2.jpeg",
+    features: ["Larger Beds", "Extra Storage", "Air Conditioning", "Attached Bathroom"]
   },
   {
-    title: "Industry Partnerships",
-    description: "Collaborations with leading industries for internships and placements.",
-    icon: Users
-  },
-  {
-    title: "Sports Facilities",
-    description: "Indoor and outdoor sports facilities for physical fitness and recreation.",
-    icon: Target
-  },
-  {
-    title: "Workshops",
-    description: "Specialized workshops for practical training in various engineering disciplines.",
-    icon: Building
-  },
-  {
-    title: "Placement Cell",
-    description: "Dedicated placement cell to assist students with job opportunities and career guidance.",
-    icon: Award
+    type: "Single Occupancy",
+    capacity: "1 Student",
+    description: "Private rooms offering maximum comfort and personal space.",
+    image: "/images/more_images/83afd1_4f226c8429914af7b58e26b9cd98e3ae~mv2.jpeg",
+    features: ["Privacy", "Personal Study Area", "Enhanced Storage", "Premium Furnishings"]
   }
 ]; 

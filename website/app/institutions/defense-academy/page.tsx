@@ -7,17 +7,17 @@ import Link from "next/link"
 import { 
   ChevronRight, 
   Award, 
-  Book, 
+  Shield, 
   Users, 
-  Lightbulb, 
+  Flame, 
   Target, 
   Clock, 
-  Building,
-  GraduationCap,
-  BookOpen
+  Flag,
+  Compass,
+  TrendingUp
 } from "lucide-react"
 
-export default function PolytechnicPage() {
+export default function DefenseAcademyPage() {
   const containerRef = useRef(null)
   const { scrollYProgress } = useScroll({
     target: containerRef,
@@ -39,8 +39,8 @@ export default function PolytechnicPage() {
           style={{ y: backgroundY }}
         >
           <Image 
-            src="/images/more_images/83afd1_8b2e5266f3be46ec9c610cdc9a0253a8~mv2.jpg.jpeg" 
-            alt="Bhawani Polytechnic College Campus" 
+            src="/images/more_images/83afd1_a470b6e8b1724464a2d05b223cb937a1~mv2.jpeg" 
+            alt="Kaptan Officer Academy" 
             fill
             className="object-cover"
             sizes="100vw"
@@ -102,16 +102,16 @@ export default function PolytechnicPage() {
                   <ChevronRight className="h-4 w-4 text-white/60" />
                   <Link href="/institutions" className="hover:text-blue-200 transition-colors">Institutions</Link>
                   <ChevronRight className="h-4 w-4 text-white/60" />
-                  <span>Polytechnic</span>
+                  <span>Defense Academy</span>
                 </div>
               </div>
             </div>
             
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 text-white tracking-tight leading-tight">
               <span className="inline-block relative">
-                Bhawani
+                Kaptan
                 <span className="relative ml-2">
-                  <span className="relative z-10">Polytechnic</span>
+                  <span className="relative z-10">Officer</span>
                   <motion.span 
                     initial={{ width: 0 }}
                     animate={{ width: "100%" }}
@@ -120,11 +120,11 @@ export default function PolytechnicPage() {
                   />
                 </span>
               </span>
-              <span className="block mt-2">College</span>
+              <span className="block mt-2">Academy</span>
             </h1>
             
             <p className="text-xl md:text-2xl text-blue-50 max-w-3xl mx-auto mt-6 leading-relaxed font-light">
-              Empowering students with technical skills and knowledge for a brighter future
+              Transforming aspirants into dedicated officers for defense and civil services
             </p>
             
             <motion.div 
@@ -162,40 +162,7 @@ export default function PolytechnicPage() {
         </motion.div>
       </section>
 
-      {/* Accreditations Section */}
-      <section className="py-10 border-y border-gray-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-wrap items-center justify-center gap-10 md:gap-16">
-            <motion.div 
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5 }}
-              className="text-center"
-            >
-              <div className="text-gray-500 text-sm font-medium mb-2">Accredited By</div>
-              <div className="flex flex-wrap justify-center gap-10 md:gap-16">
-                <div className="grayscale hover:grayscale-0 transition-all duration-300 opacity-80 hover:opacity-100">
-                  <div className="h-12 flex items-center">
-                    <span className="text-indigo-950 font-bold flex items-center gap-2">
-                      <GraduationCap className="w-6 h-6 text-indigo-600" /> AICTE
-                    </span>
-                  </div>
-                </div>
-                <div className="grayscale hover:grayscale-0 transition-all duration-300 opacity-80 hover:opacity-100">
-                  <div className="h-12 flex items-center">
-                    <span className="text-indigo-950 font-bold flex items-center gap-2">
-                      <GraduationCap className="w-6 h-6 text-indigo-600" /> BTE Rajasthan
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
-      {/* About the College */}
+      {/* About the Academy */}
       <section id="about" className="py-24 bg-gradient-to-b from-white to-blue-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -206,7 +173,7 @@ export default function PolytechnicPage() {
               transition={{ duration: 0.5 }}
             >
               <h2 className="text-sm font-semibold text-indigo-600 tracking-wide uppercase mb-2">About Us</h2>
-              <h3 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight">Excellence in Technical Education</h3>
+              <h3 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight">Excellence in Defense Training</h3>
               <div className="mt-2 mx-auto w-24 h-1 bg-gradient-to-r from-indigo-500 to-indigo-300 rounded-full"></div>
             </motion.div>
           </div>
@@ -221,8 +188,8 @@ export default function PolytechnicPage() {
             >
               <div className="rounded-2xl overflow-hidden shadow-xl">
                 <Image 
-                  src="/images/more_images/83afd1_bac3206c269b406a97df5f78340a78b6~mv2.jpeg" 
-                  alt="Bhawani Polytechnic College" 
+                  src="/images/more_images/83afd1_50d7361c1d02434fb259474c5916bb45~mv2.jpeg" 
+                  alt="Kaptan Officer Academy" 
                   width={600}
                   height={400}
                   className="w-full h-auto object-cover"
@@ -230,8 +197,8 @@ export default function PolytechnicPage() {
               </div>
               <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-indigo-600 rounded-full flex items-center justify-center text-white font-bold z-10">
                 <div className="text-center">
-                  <div className="text-3xl">10+</div>
-                  <div className="text-xs uppercase tracking-wider">Years of Excellence</div>
+                  <div className="text-3xl">95%</div>
+                  <div className="text-xs uppercase tracking-wider">Success Rate</div>
                 </div>
               </div>
             </motion.div>
@@ -242,31 +209,31 @@ export default function PolytechnicPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.4 }}
             >
-              <h4 className="text-2xl font-semibold text-gray-900 mb-4">Building Futures with Technical Excellence</h4>
+              <h4 className="text-2xl font-semibold text-gray-900 mb-4">Building Leaders for Tomorrow</h4>
               <p className="text-gray-600 mb-6 leading-relaxed">
-                Bhawani Polytechnic College, established under the Dildhani Education Group, is a premier technical institution dedicated to providing quality technical education. Our college is recognized by AICTE and affiliated with the Board of Technical Education, Rajasthan.
+                Kaptan Officer Academy, a premier institution under the Dildhani Education Group, is committed to preparing candidates for various defense and civil services examinations. Our comprehensive training programs are designed to nurture disciplined, dedicated, and skilled individuals ready to serve the nation.
               </p>
               <p className="text-gray-600 mb-6 leading-relaxed">
-                We offer diploma programs in various engineering disciplines with state-of-the-art laboratories, workshops, and modern infrastructure. Our focus is on practical training, industry exposure, and holistic development of students.
+                With experienced faculty comprising ex-defense personnel and civil service officers, we provide unparalleled guidance and mentorship to help our students achieve their goals.
               </p>
 
               <div className="grid grid-cols-2 gap-4 mt-8">
                 <div className="flex items-start">
                   <div className="flex-shrink-0 h-10 w-10 rounded-md bg-indigo-100 flex items-center justify-center">
-                    <BookOpen className="h-5 w-5 text-indigo-600" />
+                    <Shield className="h-5 w-5 text-indigo-600" />
                   </div>
                   <div className="ml-4">
-                    <h5 className="text-lg font-medium text-gray-900">Quality Education</h5>
-                    <p className="mt-1 text-sm text-gray-500">AICTE approved curriculum</p>
+                    <h5 className="text-lg font-medium text-gray-900">Expert Mentors</h5>
+                    <p className="mt-1 text-sm text-gray-500">Ex-defense personnel</p>
                   </div>
                 </div>
                 <div className="flex items-start">
                   <div className="flex-shrink-0 h-10 w-10 rounded-md bg-indigo-100 flex items-center justify-center">
-                    <Building className="h-5 w-5 text-indigo-600" />
+                    <Target className="h-5 w-5 text-indigo-600" />
                   </div>
                   <div className="ml-4">
-                    <h5 className="text-lg font-medium text-gray-900">Modern Facilities</h5>
-                    <p className="mt-1 text-sm text-gray-500">Latest equipment & labs</p>
+                    <h5 className="text-lg font-medium text-gray-900">Focused Training</h5>
+                    <p className="mt-1 text-sm text-gray-500">Exam-oriented approach</p>
                   </div>
                 </div>
               </div>
@@ -286,7 +253,7 @@ export default function PolytechnicPage() {
               transition={{ duration: 0.5 }}
             >
               <h2 className="text-sm font-semibold text-indigo-600 tracking-wide uppercase mb-2">Our Programs</h2>
-              <h3 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight">Diploma Engineering Programs</h3>
+              <h3 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight">Preparation Courses</h3>
               <div className="mt-2 mx-auto w-24 h-1 bg-gradient-to-r from-indigo-500 to-indigo-300 rounded-full"></div>
             </motion.div>
           </div>
@@ -337,7 +304,7 @@ export default function PolytechnicPage() {
         </div>
       </section>
 
-      {/* Facilities Section */}
+      {/* Features Section */}
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -347,16 +314,16 @@ export default function PolytechnicPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
             >
-              <h2 className="text-sm font-semibold text-indigo-600 tracking-wide uppercase mb-2">Campus Facilities</h2>
-              <h3 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight">World-Class Infrastructure</h3>
+              <h2 className="text-sm font-semibold text-indigo-600 tracking-wide uppercase mb-2">Our Approach</h2>
+              <h3 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight">Comprehensive Training</h3>
               <div className="mt-2 mx-auto w-24 h-1 bg-gradient-to-r from-indigo-500 to-indigo-300 rounded-full"></div>
             </motion.div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {facilities.map((facility, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index) => (
               <motion.div
-                key={facility.title}
+                key={feature.title}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -365,11 +332,59 @@ export default function PolytechnicPage() {
               >
                 <div className="p-6">
                   <div className="w-12 h-12 rounded-lg bg-indigo-100 flex items-center justify-center mb-4">
-                    <facility.icon className="h-6 w-6 text-indigo-600" />
+                    <feature.icon className="h-6 w-6 text-indigo-600" />
                   </div>
-                  <h4 className="text-xl font-semibold text-gray-900 mb-2">{facility.title}</h4>
-                  <p className="text-gray-600">{facility.description}</p>
+                  <h4 className="text-xl font-semibold text-gray-900 mb-2">{feature.title}</h4>
+                  <p className="text-gray-600">{feature.description}</p>
                 </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Success Stories */}
+      <section className="py-24 bg-indigo-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+            >
+              <h2 className="text-sm font-semibold text-indigo-600 tracking-wide uppercase mb-2">Success Stories</h2>
+              <h3 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight">Our Alumni</h3>
+              <div className="mt-2 mx-auto w-24 h-1 bg-gradient-to-r from-indigo-500 to-indigo-300 rounded-full"></div>
+            </motion.div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {testimonials.map((testimonial, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="bg-white p-6 rounded-xl shadow-md"
+              >
+                <div className="flex items-center mb-4">
+                  <div className="h-12 w-12 rounded-full overflow-hidden mr-4">
+                    <Image 
+                      src={testimonial.image} 
+                      alt={testimonial.name}
+                      width={48}
+                      height={48}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div>
+                    <h4 className="text-lg font-semibold text-gray-900">{testimonial.name}</h4>
+                    <p className="text-indigo-600 text-sm">{testimonial.position}</p>
+                  </div>
+                </div>
+                <p className="text-gray-600 italic">"{testimonial.quote}"</p>
               </motion.div>
             ))}
           </div>
@@ -391,14 +406,14 @@ export default function PolytechnicPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
             >
-              <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4">Ready to Start Your Technical Journey?</h2>
-              <p className="text-blue-100 mb-8">Join Bhawani Polytechnic College and become a skilled technical professional.</p>
+              <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4">Ready to Serve the Nation?</h2>
+              <p className="text-blue-100 mb-8">Join Kaptan Officer Academy and embark on a journey to become a defense officer.</p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   href="/admissions"
                   className="px-8 py-3.5 bg-white text-indigo-700 font-medium rounded-md hover:shadow-lg transition-all duration-300"
                 >
-                  Apply Now
+                  Enroll Now
                 </Link>
                 <Link
                   href="/contact"
@@ -418,57 +433,68 @@ export default function PolytechnicPage() {
 // Sample data
 const programs = [
   {
-    title: "Civil Engineering",
-    description: "Learn to design, construct and maintain infrastructure projects like buildings, roads, and bridges.",
-    image: "/images/more_images/83afd1_e272790fdc8f442e8fce0f46e0cad890~mv2.jpeg",
-    duration: "3 Years",
-    tags: ["Infrastructure", "Construction", "Design"]
+    title: "NDA Preparation",
+    description: "Comprehensive training program for National Defence Academy entrance examination.",
+    image: "/images/more_images/83afd1_4f226c8429914af7b58e26b9cd98e3ae~mv2.jpeg",
+    duration: "6-12 Months",
+    tags: ["Written Exam", "SSB Interview", "Physical Training"]
   },
   {
-    title: "Mechanical Engineering",
-    description: "Study the design, manufacturing and maintenance of mechanical systems and machines.",
+    title: "CDS Preparation",
+    description: "Specialized coaching for Combined Defence Services examination for joining Army, Navy, and Air Force.",
     image: "/images/more_images/83afd1_7308011757bf48b495446e75c31cf7eb~mv2.jpeg",
-    duration: "3 Years",
-    tags: ["Manufacturing", "Design", "Automation"]
+    duration: "4-8 Months",
+    tags: ["English", "Mathematics", "General Knowledge"]
   },
   {
-    title: "Electrical Engineering",
-    description: "Focus on electrical systems, power generation, distribution and electrical equipment.",
-    image: "/images/more_images/83afd1_d8295c77a1c3423e881f3dd0c2c7a9da~mv2.jpeg",
-    duration: "3 Years",
-    tags: ["Power Systems", "Electronics", "Control"]
+    title: "SSC Preparation",
+    description: "Focused coaching for Staff Selection Commission examinations for various government positions.",
+    image: "/images/more_images/83afd1_0cfc464d5171461faea0ecd7962405d7~mv2.jpeg",
+    duration: "6 Months",
+    tags: ["Reasoning", "General Awareness", "Quantitative Aptitude"]
   }
 ];
 
-const facilities = [
+const features = [
   {
-    title: "Modern Laboratories",
-    description: "Well-equipped labs with latest tools and technology for hands-on learning experience.",
-    icon: Lightbulb
+    title: "Physical Training",
+    description: "Rigorous physical conditioning to meet the fitness requirements of defense services.",
+    icon: Flame
   },
   {
-    title: "Digital Library",
-    description: "Access to digital resources, journals, and e-books for research and learning.",
-    icon: Book
-  },
-  {
-    title: "Industry Partnerships",
-    description: "Collaborations with leading industries for internships and placements.",
-    icon: Users
-  },
-  {
-    title: "Sports Facilities",
-    description: "Indoor and outdoor sports facilities for physical fitness and recreation.",
+    title: "Mock Tests",
+    description: "Regular practice tests modeled on actual exams to assess preparation level.",
     icon: Target
   },
   {
-    title: "Workshops",
-    description: "Specialized workshops for practical training in various engineering disciplines.",
-    icon: Building
+    title: "Personality Development",
+    description: "Training to enhance communication skills, leadership qualities, and confidence.",
+    icon: TrendingUp
   },
   {
-    title: "Placement Cell",
-    description: "Dedicated placement cell to assist students with job opportunities and career guidance.",
-    icon: Award
+    title: "Interview Preparation",
+    description: "Extensive coaching for SSB and other interview processes with mock sessions.",
+    icon: Users
+  }
+];
+
+const testimonials = [
+  {
+    name: "Lt. Amit Sharma",
+    position: "Indian Army",
+    quote: "The training at Kaptan Officer Academy was instrumental in my success at the SSB interview. The mentors provided excellent guidance throughout my preparation journey.",
+    image: "/images/more_images/83afd1_d8295c77a1c3423e881f3dd0c2c7a9da~mv2.jpeg"
+  },
+  {
+    name: "Cadet Priya Singh",
+    position: "NDA Graduate",
+    quote: "From physical training to written exam preparation, Kaptan Officer Academy covered all aspects of NDA preparation. I'm grateful for their comprehensive approach.",
+    image: "/images/more_images/83afd1_b5ccad43f0654accb97baa4b7d097b73~mv2.jpeg"
+  },
+  {
+    name: "Officer Rahul Mehra",
+    position: "Border Security Force",
+    quote: "The personalized attention and expert guidance at the academy helped me overcome my weaknesses and build on my strengths. Proud to be an alumnus!",
+    image: "/images/more_images/83afd1_a470b6e8b1724464a2d05b223cb937a1~mv2.jpeg"
   }
 ]; 
