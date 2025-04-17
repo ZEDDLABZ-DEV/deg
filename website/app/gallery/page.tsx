@@ -9,54 +9,37 @@ interface GalleryImage {
   src: string;
   alt: string;
   category: string;
+  width?: number;
+  height?: number;
+  aspectRatio?: number;
 }
 
 export default function GalleryPage() {
-  const [filteredImages, setFilteredImages] = useState<GalleryImage[]>([]);
+  const [images, setImages] = useState<GalleryImage[]>([]);
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const [isLoading, setIsLoading] = useState(true);
 
-  // Prepare gallery images
+  // Fetch gallery images from API
   useEffect(() => {
-    // Showcase images
-    const showcaseImages = [
-      "/images/showcase/83afd1_80f6fde1ef8743c48dccfcbd40d35abc~mv2.jpg_1.jpeg",
-      "/images/showcase/83afd1_b7e1813b4faf4cc5a36d79a7c6a26a81~mv2_2.jpeg",
-      "/images/showcase/83afd1_15e02e8c902047f3881ee5e64edf1912~mv2_2.jpeg",
-      "/images/showcase/83afd1_f628312b180348ccbeb31f5d062cd5cc~mv2_2.jpeg",
-      "/images/showcase/83afd1_4884a6f3dc6e4352b1237a29fa31eb59~mv2_1.png",
-      "/images/showcase/a3c153_3592f141741849e8b2cb99afa8e3a412~mv2.jpg_1.jpeg",
-      "/images/showcase/83afd1_c30463f0c33b4713a1e268b6262855bdf000.jpg.jpeg",
-      "/images/showcase/file_1.jpeg",
-      "/images/showcase/file.jpeg",
-    ].map((src) => ({ src, alt: "Showcase event", category: "showcase" }));
+    const fetchImages = async () => {
+      try {
+        setIsLoading(true);
+        const response = await fetch('/api/gallery-images');
+        
+        if (!response.ok) {
+          throw new Error('Failed to fetch images');
+        }
+        
+        const data = await response.json();
+        setImages(data.images);
+      } catch (error) {
+        console.error('Error loading gallery images:', error);
+      } finally {
+        setIsLoading(false);
+      }
+    };
 
-    // Infrastructure images
-    const infrastructureImages = [
-      "/images/infrastructure/1.jpg",
-      "/images/infrastructure/2.jpg",
-      "/images/infrastructure/3.jpg",
-      "/images/infrastructure/4.jpg",
-    ].map((src) => ({
-      src,
-      alt: "Campus infrastructure",
-      category: "infrastructure",
-    }));
-
-    // More images
-    const moreImages = [
-      "/images/more_images/83afd1_a470b6e8b1724464a2d05b223cb937a1~mv2_1.jpeg",
-      "/images/more_images/83afd1_d8295c77a1c3423e881f3dd0c2c7a9da~mv2_1.jpeg",
-      "/images/more_images/83afd1_b5ccad43f0654accb97baa4b7d097b73~mv2_1.jpeg",
-      "/images/more_images/83afd1_8b2e5266f3be46ec9c610cdc9a0253a8~mv2.jpg.jpeg",
-      "/images/more_images/83afd1_bac3206c269b406a97df5f78340a78b6~mv2_1.jpeg",
-    ].map((src) => ({ src, alt: "Student activities", category: "more" }));
-
-    const allImages = [
-      ...showcaseImages,
-      ...infrastructureImages,
-      ...moreImages,
-    ];
-    setFilteredImages(allImages);
+    fetchImages();
   }, []);
 
   // Image modal functions
@@ -68,6 +51,23 @@ export default function GalleryPage() {
   const closeImageModal = () => {
     setSelectedImage(null);
     document.body.style.overflow = "auto";
+  };
+
+  // Function to determine grid span based on aspect ratio
+  const getGridSpan = (aspectRatio?: number): string => {
+    if (!aspectRatio) return "col-span-1 row-span-1";
+    
+    // Wide images (landscape)
+    if (aspectRatio > 1.7) return "col-span-2 row-span-1";
+    
+    // Tall images (portrait)
+    if (aspectRatio < 0.7) return "col-span-1 row-span-2";
+    
+    // Very large or panoramic images
+    if (aspectRatio > 2.5) return "col-span-3 row-span-1";
+    
+    // Square-ish images
+    return "col-span-1 row-span-1";
   };
 
   return (
@@ -86,18 +86,26 @@ export default function GalleryPage() {
         </p>
       </motion.div>
 
-      {/* Gallery grid */}
-      {filteredImages.length > 0 ? (
+      {/* Loading state */}
+      {isLoading && (
+        <div className="text-center py-16">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-indigo-700 mx-auto"></div>
+          <p className="mt-4 text-gray-600">Loading gallery images...</p>
+        </div>
+      )}
+
+      {/* Bento Grid Gallery */}
+      {!isLoading && images.length > 0 ? (
         <motion.div
-          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"
+          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 auto-rows-[200px]"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 0.5, staggerChildren: 0.1 }}
+          transition={{ duration: 0.5 }}
         >
-          {filteredImages.map((image, index) => (
+          {images.map((image, index) => (
             <motion.div
               key={`${image.src}-${index}`}
-              className="relative group overflow-hidden rounded-lg shadow-md aspect-square cursor-pointer"
+              className={`relative group overflow-hidden rounded-lg shadow-md cursor-pointer ${getGridSpan(image.aspectRatio)}`}
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.3, delay: index * 0.05 }}
@@ -122,14 +130,14 @@ export default function GalleryPage() {
             </motion.div>
           ))}
         </motion.div>
-      ) : (
+      ) : !isLoading && (
         <div className="text-center py-16">
           <ImageIcon className="mx-auto h-12 w-12 text-gray-400" />
           <h3 className="mt-2 text-lg font-medium text-gray-900">
             No images found
           </h3>
           <p className="mt-1 text-gray-500">
-            Try changing your search criteria.
+            Add images to the gallery or infrastructure folders.
           </p>
         </div>
       )}
