@@ -62,7 +62,7 @@ export default function GalleryPage() {
   // Image modal functions
   const openImageModal = (imageSrc: string) => {
     setSelectedImage(imageSrc);
-    document.body.style.overflow = "hidden";
+    document.body.style.overflow = "hidden";   
   };
 
   const closeImageModal = () => {
