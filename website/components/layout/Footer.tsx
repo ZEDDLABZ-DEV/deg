@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Mail, Phone, MapPin, ArrowUp, FileText } from "lucide-react";
+import { Mail, Phone, MapPin, ArrowUp, FileText, Image } from "lucide-react";
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 import { LucideIcon } from "lucide-react";
@@ -26,6 +26,7 @@ const footerLinks: FooterSection[] = [
       { name: "Home", href: "/" },
       { name: "About", href: "/about" },
       { name: "Academics", href: "/academics" },
+      { name: "Gallery", href: "/gallery", icon: Image },
       { name: "Admissions", href: "/admissions" },
       { name: "Contact", href: "/contact" },
     ],
