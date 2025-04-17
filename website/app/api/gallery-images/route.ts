@@ -20,11 +20,34 @@ export async function GET() {
     const getImageDimensions = async (filePath: string): Promise<{ width: number; height: number } | null> => {
       try {
         if (fs.existsSync(filePath)) {
-          const metadata = await sharp(filePath).metadata();
-          return { 
-            width: metadata.width || 0, 
-            height: metadata.height || 0 
-          };
+          // Try to read the file to ensure it's accessible and valid
+          try {
+            fs.accessSync(filePath, fs.constants.R_OK);
+            const fileStats = fs.statSync(filePath);
+            
+            // Ensure it's actually a file and has content
+            if (!fileStats.isFile() || fileStats.size === 0) {
+              console.warn(`Skipping invalid file: ${filePath} (not a file or zero size)`);
+              return null;
+            }
+            
+            const metadata = await sharp(filePath).metadata();
+            
+            // Basic validation of image dimensions
+            if (!metadata.width || !metadata.height || 
+                metadata.width <= 0 || metadata.height <= 0) {
+              console.warn(`Skipping image with invalid dimensions: ${filePath}`);
+              return null;
+            }
+            
+            return { 
+              width: metadata.width, 
+              height: metadata.height 
+            };
+          } catch (err) {
+            console.error(`Error accessing file ${filePath}:`, err);
+            return null;
+          }
         }
         return null;
       } catch (error) {
@@ -68,25 +91,35 @@ export async function GET() {
         }
       }
     }
+
+    // Additional verification step: check that all image paths can be resolved
+    const verifyImagePath = (imagePath: string): boolean => {
+      const fullPath = path.join(publicDir, imagePath.replace(/^\//, ''));
+      return fs.existsSync(fullPath) && fs.statSync(fullPath).isFile();
+    };
     
     // Format the response
-    const formattedGalleryImages = galleryImages.map(({ src, width, height }) => ({
-      src,
-      alt: "Gallery image",
-      category: "gallery",
-      width,
-      height,
-      aspectRatio: width / height
-    }));
+    const formattedGalleryImages = galleryImages
+      .filter(({ src }) => verifyImagePath(src))
+      .map(({ src, width, height }) => ({
+        src,
+        alt: "Gallery image",
+        category: "gallery",
+        width,
+        height,
+        aspectRatio: width / height
+      }));
     
-    const formattedInfrastructureImages = infrastructureImages.map(({ src, width, height }) => ({
-      src,
-      alt: "Infrastructure image",
-      category: "infrastructure",
-      width,
-      height,
-      aspectRatio: width / height
-    }));
+    const formattedInfrastructureImages = infrastructureImages
+      .filter(({ src }) => verifyImagePath(src))
+      .map(({ src, width, height }) => ({
+        src,
+        alt: "Infrastructure image",
+        category: "infrastructure",
+        width,
+        height,
+        aspectRatio: width / height
+      }));
     
     return NextResponse.json({
       images: [...formattedGalleryImages, ...formattedInfrastructureImages]

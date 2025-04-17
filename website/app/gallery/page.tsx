@@ -18,6 +18,7 @@ export default function GalleryPage() {
   const [images, setImages] = useState<GalleryImage[]>([]);
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState(true);
+  const [failedImages, setFailedImages] = useState<Set<string>>(new Set());
 
   // Fetch gallery images from API
   useEffect(() => {
@@ -41,6 +42,19 @@ export default function GalleryPage() {
 
     fetchImages();
   }, []);
+
+  // Handle image loading error
+  const handleImageError = (src: string) => {
+    setFailedImages(prev => {
+      const updated = new Set(prev);
+      updated.add(src);
+      return updated;
+    });
+    console.error(`Failed to load image: ${src}`);
+  };
+
+  // Filter out failed images
+  const filteredImages = images.filter(img => !failedImages.has(img.src));
 
   // Image modal functions
   const openImageModal = (imageSrc: string) => {
@@ -95,14 +109,14 @@ export default function GalleryPage() {
       )}
 
       {/* Bento Grid Gallery */}
-      {!isLoading && images.length > 0 ? (
+      {!isLoading && filteredImages.length > 0 ? (
         <motion.div
           className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 auto-rows-[200px]"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5 }}
         >
-          {images.map((image, index) => (
+          {filteredImages.map((image, index) => (
             <motion.div
               key={`${image.src}-${index}`}
               className={`relative group overflow-hidden rounded-lg shadow-md cursor-pointer ${getGridSpan(image.aspectRatio)}`}
@@ -119,6 +133,8 @@ export default function GalleryPage() {
                   fill
                   className="object-cover transition-transform duration-300 group-hover:scale-110"
                   sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                  onError={() => handleImageError(image.src)}
+                  priority={index < 8} // Load first 8 images with priority
                 />
                 <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-30 transition-opacity duration-300" />
                 <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -155,6 +171,11 @@ export default function GalleryPage() {
               fill
               className="object-contain"
               sizes="100vw"
+              onError={() => {
+                closeImageModal();
+                handleImageError(selectedImage);
+              }}
+              priority
             />
             <button
               className="absolute top-4 right-4 bg-white rounded-full p-2 text-gray-900 hover:bg-gray-200 transition-colors"
