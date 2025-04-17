@@ -37,7 +37,7 @@ export function Navbar() {
                   className="rounded-md object-contain"
                 />
               </div>
-              <span className="text-lg md:text-2xl font-bold text-primary hidden sm:inline-block transition-all duration-300">
+              <span className="text-lg md:text-2xl font-bold text-primary transition-all duration-300">
                 Dildhani Education Group
               </span>
             </Link>
