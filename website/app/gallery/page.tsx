@@ -14,6 +14,16 @@ interface GalleryImage {
   aspectRatio?: number;
 }
 
+// Fisher-Yates shuffle algorithm for randomizing array
+function shuffleArray<T>(array: T[]): T[] {
+  const newArray = [...array];
+  for (let i = newArray.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [newArray[i], newArray[j]] = [newArray[j], newArray[i]];
+  }
+  return newArray;
+}
+
 export default function GalleryPage() {
   const [images, setImages] = useState<GalleryImage[]>([]);
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
@@ -32,7 +42,8 @@ export default function GalleryPage() {
         }
         
         const data = await response.json();
-        setImages(data.images);
+        // Randomize images before setting state
+        setImages(shuffleArray(data.images));
       } catch (error) {
         console.error('Error loading gallery images:', error);
       } finally {
@@ -200,6 +211,23 @@ export default function GalleryPage() {
           </div>
         </div>
       )}
+
+      {/* Randomize button */}
+      <div className="flex justify-center mt-8">
+        <button
+          onClick={() => setImages(prevImages => shuffleArray(prevImages))}
+          className="px-4 py-2 bg-indigo-600 text-white rounded-md hover:bg-indigo-700 transition-colors shadow-md flex items-center gap-2"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M2 18h1.4c1.3 0 2.5-.7 3.2-1.8l7-10.4c.7-1.1 1.9-1.8 3.2-1.8H22" />
+            <path d="m18 2 4 4-4 4" />
+            <path d="M2 6h1.9c1.5 0 2.9.9 3.6 2.2" />
+            <path d="M22 18h-5.2c-1.3 0-2.5-.7-3.2-1.8l-.8-1.2" />
+            <path d="m18 14 4 4-4 4" />
+          </svg>
+          Shuffle Gallery
+        </button>
+      </div>
     </div>
   );
 }
