@@ -292,10 +292,10 @@ export default function AboutPage() {
                 <div className="relative rounded-xl overflow-hidden">
                   <div className="relative h-[500px] w-full">
                     <Image 
-                      src="/images/about/director.jpg" 
-                      alt="Harshwardhan Singh Rathore - Director" 
+                      src="/images/about/ourstory.jpg" 
+                      alt="Dildhani Education Group Campus" 
                       fill
-                      className="object-contain object-center"
+                      className="object-cover object-center"
                       sizes="(max-width: 768px) 100vw, 33vw"
                       priority
                     />
