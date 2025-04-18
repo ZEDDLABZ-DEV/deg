@@ -209,7 +209,7 @@ export default function HostelPage() {
             >
               <div className="rounded-2xl overflow-hidden shadow-xl">
                 <Image 
-                  src="/images/more_images/83afd1_50d7361c1d02434fb259474c5916bb45~mv2.jpeg" 
+                  src="/images/girls-hostel/1.jpg" 
                   alt="Kaptan Girls Hostel" 
                   width={600}
                   height={400}
@@ -295,64 +295,6 @@ export default function HostelPage() {
                   </div>
                   <h4 className="text-xl font-semibold text-gray-900 mb-2">{amenity.title}</h4>
                   <p className="text-gray-600">{amenity.description}</p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Accommodation Options */}
-      <section className="py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5 }}
-            >
-              <h2 className="text-sm font-semibold text-indigo-600 tracking-wide uppercase mb-2">Accommodation</h2>
-              <h3 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight">Room Options</h3>
-              <div className="mt-2 mx-auto w-24 h-1 bg-gradient-to-r from-indigo-500 to-indigo-300 rounded-full"></div>
-            </motion.div>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {roomOptions.map((option, index) => (
-              <motion.div
-                key={option.type}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
-              >
-                <div className="h-48 overflow-hidden">
-                  <Image 
-                    src={option.image} 
-                    alt={option.type}
-                    width={400}
-                    height={300}
-                    className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500"
-                  />
-                </div>
-                <div className="p-6">
-                  <div className="flex justify-between items-center mb-4">
-                    <h4 className="text-xl font-semibold text-gray-900">{option.type}</h4>
-                    <span className="bg-indigo-100 text-indigo-800 px-2 py-1 rounded text-sm font-medium">
-                      {option.capacity}
-                    </span>
-                  </div>
-                  <p className="text-gray-600 mb-4">{option.description}</p>
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {option.features.map(feature => (
-                      <span key={feature} className="flex items-center text-sm text-gray-600">
-                        <span className="w-1.5 h-1.5 bg-indigo-500 rounded-full mr-2"></span>
-                        {feature}
-                      </span>
-                    ))}
-                  </div>
                 </div>
               </motion.div>
             ))}
