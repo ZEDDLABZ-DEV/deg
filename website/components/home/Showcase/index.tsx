@@ -8,121 +8,121 @@ import { Sparkles, X, ChevronLeft, ChevronRight, Grid } from "lucide-react"
 // Array of showcase images with proper paths
 const showcaseImages = [
   {
-    src: "/images/showcase/file.jpeg",
+    src: "/images/gallery/file.jpeg",
     alt: "College campus building with modern architecture",
     width: 5,
     height: 3
   },
   {
-    src: "/images/showcase/83afd1_b7e1813b4faf4cc5a36d79a7c6a26a81~mv2_2.jpeg",
+    src: "/images/gallery/83afd1_f628312b180348ccbeb31f5d062cd5cc~mv2.jpeg",
     alt: "Students collaborating in a classroom setting",
     width: 4,
     height: 3
   },
   {
-    src: "/images/showcase/83afd1_f628312b180348ccbeb31f5d062cd5cc~mv2_2.jpeg",
+    src: "/images/gallery/83afd1_15e02e8c902047f3881ee5e64edf1912~mv2.jpeg",
     alt: "Advanced laboratory equipment for practical learning",
     width: 4,
     height: 3
   },
   {
-    src: "/images/more_images/83afd1_8b2e5266f3be46ec9c610cdc9a0253a8~mv2.jpg.jpeg",
+    src: "/images/gallery/83afd1_0cfc464d5171461faea0ecd7962405d7~mv2.jpeg",
     alt: "Student graduation ceremony with caps and gowns",
     width: 4,
     height: 3
   },
   {
-    src: "/images/showcase/83afd1_80f6fde1ef8743c48dccfcbd40d35abc~mv2.jpg_1.jpeg",
+    src: "/images/gallery/83afd1_80f6fde1ef8743c48dccfcbd40d35abc~mv2.jpg_1.jpeg",
     alt: "Modern library with extensive study resources",
     width: 4,
     height: 3
   },
   {
-    src: "/images/more_images/83afd1_d82db51ba27a40629ed67314b0b940a0~mv2.jpg_1.jpeg",
+    src: "/images/gallery/83afd1_d82db51ba27a40629ed67314b0b940a0~mv2.jpg.jpeg",
     alt: "Hands-on engineering workshop for students",
     width: 4,
     height: 3
   },
   {
-    src: "/images/showcase/file_1.jpeg",
+    src: "/images/gallery/file.jpeg",
     alt: "Cultural program showcasing student talent",
     width: 4,
     height: 3
   },
   {
-    src: "/images/more_images/83afd1_bac3206c269b406a97df5f78340a78b6~mv2_1.jpeg",
+    src: "/images/gallery/83afd1_bac3206c269b406a97df5f78340a78b6~mv2_1.jpeg",
     alt: "Professor teaching a small group of engaged students",
     width: 4,
     height: 3
   },
   {
-    src: "/images/more_images/83afd1_a470b6e8b1724464a2d05b223cb937a1~mv2_1.jpeg",
+    src: "/images/gallery/83afd1_a470b6e8b1724464a2d05b223cb937a1~mv2_1.jpeg",
     alt: "Interactive digital learning session in progress",
     width: 4,
     height: 3
   },
   {
-    src: "/images/more_images/83afd1_4f226c8429914af7b58e26b9cd98e3ae~mv2_1.jpeg",
+    src: "/images/gallery/83afd1_4f226c8429914af7b58e26b9cd98e3ae~mv2.jpeg",
     alt: "Research equipment in the science department",
     width: 4,
     height: 3
   },
   {
-    src: "/images/more_images/83afd1_50d7361c1d02434fb259474c5916bb45~mv2_1.jpeg",
+    src: "/images/gallery/83afd1_7308011757bf48b495446e75c31cf7eb~mv2.jpeg",
     alt: "Tree-lined campus walkway during spring",
     width: 4,
     height: 3
   },
   {
-    src: "/images/showcase/83afd1_15e02e8c902047f3881ee5e64edf1912~mv2_2.jpeg",
+    src: "/images/gallery/83afd1_15e02e8c902047f3881ee5e64edf1912~mv2.jpeg",
     alt: "Graduation day celebrations with friends and family",
     width: 4,
     height: 3
   },
   {
-    src: "/images/more_images/83afd1_e272790fdc8f442e8fce0f46e0cad890~mv2_1.jpeg",
+    src: "/images/gallery/83afd1_e272790fdc8f442e8fce0f46e0cad890~mv2_1.jpeg",
     alt: "Computer programming lab with students at workstations",
     width: 4,
     height: 3
   },
   {
-    src: "/images/more_images/83afd1_7308011757bf48b495446e75c31cf7eb~mv2_1.jpeg",
+    src: "/images/gallery/83afd1_7308011757bf48b495446e75c31cf7eb~mv2_1.jpeg",
     alt: "Student study group collaborating on a project",
     width: 4,
     height: 3
   },
   {
-    src: "/images/more_images/83afd1_0cfc464d5171461faea0ecd7962405d7~mv2_1.jpeg",
+    src: "/images/gallery/83afd1_0cfc464d5171461faea0ecd7962405d7~mv2_1.jpeg",
     alt: "State-of-the-art auditorium during a lecture",
     width: 4,
     height: 3
   },
   {
-    src: "/images/more_images/83afd1_b5ccad43f0654accb97baa4b7d097b73~mv2_1.jpeg",
+    src: "/images/gallery/83afd1_b5ccad43f0654accb97baa4b7d097b73~mv2.jpeg",
     alt: "Chemistry laboratory with safety equipment",
     width: 4,
     height: 3
   },
   {
-    src: "/images/showcase/83afd1_b3357d2affca49519a7647de3867da43~mv2_1.jpeg",
+    src: "/images/gallery/83afd1_b3357d2affca49519a7647de3867da43~mv2_1.jpeg",
     alt: "Technical workshop with industry-standard tools",
     width: 4,
     height: 3
   },
   {
-    src: "/images/showcase/83afd1_bac3206c269b406a97df5f78340a78b6~mv2_1.jpeg",
+    src: "/images/gallery/83afd1_bac3206c269b406a97df5f78340a78b6~mv2_1.jpeg",
     alt: "Faculty member providing personalized guidance",
     width: 4,
     height: 3
   },
   {
-    src: "/images/more_images/83afd1_d8295c77a1c3423e881f3dd0c2c7a9da~mv2_1.jpeg",
+    src: "/images/gallery/83afd1_d8295c77a1c3423e881f3dd0c2c7a9da~mv2.jpeg",
     alt: "Student art exhibition showcasing creativity",
     width: 4,
     height: 3
   },
   {
-    src: "/images/showcase/83afd1_4884a6f3dc6e4352b1237a29fa31eb59~mv2_1.png",
+    src: "/images/gallery/83afd1_4884a6f3dc6e4352b1237a29fa31eb59~mv2_1.png",
     alt: "Aerial view of campus infrastructure and grounds",
     width: 4,
     height: 3
@@ -246,9 +246,15 @@ export function Showcase() {
               onMouseLeave={() => setActiveImage(null)}
               onClick={() => openLightbox(index)}
             >
-              <div className={`relative ${
-                (index === 0 || index === 3) ? 'h-80 sm:h-[450px]' : 'h-64'
-              } w-full overflow-hidden group`}>
+              <div 
+                className={`relative ${
+                  (index === 0 || index === 3) ? 'h-80 sm:h-[450px]' : 'h-64'
+                } w-full overflow-hidden group`}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  openLightbox(index);
+                }}
+              >
                 <Image
                   src={image.src}
                   alt={image.alt}
@@ -257,21 +263,6 @@ export function Showcase() {
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-indigo-900/80 via-indigo-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                
-                <motion.div 
-                  className="absolute bottom-0 left-0 right-0 p-4 text-white transform translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300"
-                  animate={{ y: activeImage === index ? 0 : 20, opacity: activeImage === index ? 1 : 0 }}
-                >
-                  <p className="text-lg font-semibold">{image.alt}</p>
-                  <div className="mt-2 flex items-center text-sm text-blue-100/80">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mr-2">
-                      <path d="M15 3h6v6"></path>
-                      <path d="M10 14L21 3"></path>
-                      <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path>
-                    </svg>
-                    Click to enlarge
-                  </div>
-                </motion.div>
               </div>
             </motion.div>
           ))}
@@ -359,13 +350,6 @@ export function Showcase() {
                       className="object-contain"
                       sizes="100vw"
                     />
-                  </div>
-                  
-                  <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent">
-                    <p className="text-xl font-semibold text-white">{showcaseImages[currentImageIndex].alt}</p>
-                    <p className="text-sm text-gray-300">
-                      {currentImageIndex + 1} / {showcaseImages.length}
-                    </p>
                   </div>
                 </div>
               </motion.div>

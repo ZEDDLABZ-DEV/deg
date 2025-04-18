@@ -12,26 +12,18 @@ export function Infrastructure() {
     {
       src: "/images/infrastructure/1.jpg",
       alt: "Campus Building Front View",
-      title: "Modern Campus",
-      description: "State-of-the-art facilities designed for optimal learning environments"
     },
     {
       src: "/images/infrastructure/2.jpg",
       alt: "Advanced Laboratory",
-      title: "Specialized Labs",
-      description: "Well-equipped laboratories for practical learning and experimentation"
     },
     {
       src: "/images/infrastructure/3.jpg",
       alt: "Computer Lab",
-      title: "Digital Resources",
-      description: "Modern computer labs with the latest technology and software"
     },
     {
       src: "/images/infrastructure/4.jpg",
       alt: "Student Facilities",
-      title: "Student Amenities",
-      description: "Recreational and support facilities for holistic development"
     }
   ]
 
@@ -87,24 +79,7 @@ export function Infrastructure() {
                 sizes="(max-width: 768px) 100vw, 1200px"
                 priority
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent">
-                <div className="absolute bottom-0 left-0 p-6 md:p-10 w-full">
-                  <motion.div
-                    key={activeImage}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5 }}
-                    className="max-w-3xl"
-                  >
-                    <h3 className="text-2xl md:text-3xl font-bold text-white mb-2">
-                      {infrastructureImages[activeImage].title}
-                    </h3>
-                    <p className="text-blue-100 text-lg">
-                      {infrastructureImages[activeImage].description}
-                    </p>
-                  </motion.div>
-                </div>
-              </div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent"></div>
             </div>
           </motion.div>
         </div>
