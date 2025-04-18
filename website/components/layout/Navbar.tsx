@@ -60,7 +60,7 @@ export function Navbar() {
                   Dildhani Education Group
                 </span>
                 <span className="text-[10px] sm:text-xs text-gray-600 hidden sm:block">
-                  Near railway bridge manglana road, dildhani (Makrana)
+                  Near Railway Bridge, Mangalana Road, Dildhani (Makrana)
                 </span>
               </div>
             </Link>
