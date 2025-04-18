@@ -149,7 +149,6 @@ export function Schools() {
               className="bg-white rounded-2xl overflow-hidden shadow-lg group relative isolate"
             >
               <div className="h-64 relative overflow-hidden">
-                <div className={`absolute inset-0 bg-gradient-to-br ${school.gradient} opacity-80 z-10 transition-opacity duration-500 group-hover:opacity-90`}></div>
                 <Image
                   alt={school.name}
                   className="object-cover group-hover:scale-110 transition duration-700 ease-in-out"
