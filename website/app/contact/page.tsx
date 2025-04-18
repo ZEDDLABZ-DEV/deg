@@ -1,9 +1,8 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
 import { fadeIn, staggerContainer } from "@/lib/motion";
 import { motion } from "framer-motion";
-import { ArrowRight, Clock, Mail, MapPin, Phone, Sparkles } from "lucide-react";
+import { Clock, Mail, MapPin, Phone, Sparkles } from "lucide-react";
 import Image from "next/image";
 
 export default function ContactPage() {
@@ -296,26 +295,6 @@ export default function ContactPage() {
               referrerPolicy="no-referrer-when-downgrade"
               className="shadow-lg shadow-indigo-500/10"
             ></iframe>
-          </motion.div>
-
-          {/* Call to action section */}
-          <motion.div
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true }}
-            variants={fadeIn("up", "tween", 0.5, 1)}
-            className="max-w-4xl mx-auto mt-16 text-center"
-          >
-            <h3 className="text-2xl font-bold mb-4 font-serif">
-              Ready to Visit Us?
-            </h3>
-            <p className="text-indigo-100/80 mb-8">
-              Schedule a campus tour to explore our facilities and meet with our
-              faculty members.
-            </p>
-            <Button className="bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white px-8 py-3 rounded-full shadow-lg shadow-teal-500/30">
-              Schedule a Visit <ArrowRight className="ml-2 h-4 w-4" />
-            </Button>
           </motion.div>
         </div>
       </section>
