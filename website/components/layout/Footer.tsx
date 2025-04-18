@@ -1,7 +1,15 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowUp, FileText, LucideIcon, Mail, MapPin, Phone } from "lucide-react";
+import {
+  ArrowUp,
+  FileText,
+  LucideIcon,
+  Mail,
+  MapPin,
+  Phone,
+} from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
@@ -136,8 +144,10 @@ export function Footer() {
               <div className="bg-indigo-800/50 backdrop-blur-sm rounded-xl p-6 border border-indigo-700/50 shadow-lg">
                 <div className="flex items-center gap-4 mb-4">
                   <div className="relative w-14 h-14 rounded-full overflow-hidden border-2 border-white/20 flex-shrink-0">
-                    <img 
-                      src="/icons/logo.jpg" 
+                    <Image
+                      width={500}
+                      height={500}
+                      src="/icons/logo.jpg"
                       alt="Dildhani Education Group Logo"
                       className="object-cover w-full h-full"
                     />
@@ -152,10 +162,12 @@ export function Footer() {
                   A group of premier educational institutions dedicated to
                   providing quality education and nurturing future leaders.
                 </p>
-                
+
                 <div className="mt-4 pt-4 border-t border-indigo-700/50">
                   <p className="text-sm text-indigo-200 flex items-center">
-                    <span className="bg-amber-500/20 px-2 py-1 rounded text-amber-300 font-medium text-xs mr-2">EST. 2005</span>
+                    <span className="bg-amber-500/20 px-2 py-1 rounded text-amber-300 font-medium text-xs mr-2">
+                      EST. 2005
+                    </span>
                     Excellence in Education
                   </p>
                 </div>
@@ -182,7 +194,7 @@ export function Footer() {
                           href={link.href}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="text-indigo-100 hover:text-amber-300 transition-colors flex items-center gap-2 group"
+                          className="text-indigo-100 hover:text-amber-300 transition-colors flex items-center gap-2 group whitespace-nowrap"
                         >
                           {link.icon && (
                             <span className="text-indigo-300 group-hover:text-amber-300 transition-colors">

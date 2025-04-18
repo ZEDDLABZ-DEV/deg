@@ -28,7 +28,7 @@ export default function CoachingPage() {
         {/* Background Image with Parallax */}
         <motion.div className="absolute inset-0 z-0" style={{ y: backgroundY }}>
           <Image
-            src="/images/school6.jpg"
+            src="/images/gallery/83afd1_8fbca8bfdafb4b1cb2f2b1a0cb78da85~mv2.jpeg"
             alt="Kaptan Coaching Centre"
             fill
             className="object-cover"
@@ -291,7 +291,7 @@ export default function CoachingPage() {
                 <div className="relative rounded-lg overflow-hidden">
                   <div className="aspect-w-4 aspect-h-3 relative h-[500px]">
                     <Image 
-                      src="/images/school6.jpg" 
+                      src="/images/coaching/1.png" 
                       alt="Kaptan Coaching Centre" 
                       fill
                       className="object-cover"
