@@ -153,23 +153,21 @@ export function Testimonials() {
           <p className="text-gray-600 italic max-w-3xl mx-auto">
             &ldquo;Our mission is to provide quality education that transforms lives and creates opportunities for our students to excel in their chosen paths.&rdquo;
           </p>
-          <div className="mt-4 flex items-center justify-center">
-            <div className="w-12 h-12 rounded-full overflow-hidden mr-4 bg-indigo-50 flex items-center justify-center">
-              <ImageWithFallback 
-                src="/images/about/director.jpg" 
-                alt="Dr. Rajesh Kapoor" 
-                width={48} 
-                height={48}
-                fallback={
-                  <div className="flex items-center justify-center w-full h-full bg-indigo-100">
-                    <User className="h-6 w-6 text-indigo-500" />
-                  </div>
-                }
-              />
+          <div className="mt-6 flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-6">
+            <div className="flex-shrink-0">
+              <div className="relative h-24 w-24 rounded-full overflow-hidden border-2 border-indigo-500 shadow-lg">
+                <ImageWithFallback
+                  src="/images/about/director.jpg"
+                  width={96}
+                  height={96}
+                  className="rounded-full object-cover h-full w-full hover:scale-105 transition-transform duration-300"
+                  alt="Harshvardhan Singh Rathore"
+                />
+              </div>
             </div>
-            <div className="text-left">
-              <p className="font-bold text-gray-900">Dr. Rajesh Kapoor</p>
-              <p className="text-sm text-gray-500">Principal Director, Dildhani Education Group</p>
+            <div className="text-center md:text-left">
+              <h4 className="text-lg font-semibold text-gray-900">Harshvardhan Singh Rathore</h4>
+              <p className="text-sm text-gray-600">Director, Dildhani Education Group</p>
             </div>
           </div>
         </motion.div>

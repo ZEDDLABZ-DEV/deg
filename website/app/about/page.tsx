@@ -288,23 +288,17 @@ export default function AboutPage() {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="relative"
             >
-              <div className="p-1 rounded-xl bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-500 shadow-xl relative">
-                <div className="relative rounded-lg overflow-hidden">
-                  <div className="aspect-w-16 aspect-h-9 relative h-[450px]">
+              <div className="p-1 rounded-xl bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-500 shadow-xl">
+                <div className="relative rounded-xl overflow-hidden">
+                  <div className="relative h-[500px] w-full">
                     <Image 
-                      src="/images/about.jpg" 
-                      alt="Dildhani Education Group Campus" 
+                      src="/images/about/director.jpg" 
+                      alt="Harshvardhan Singh Rathore - Director" 
                       fill
-                      className="object-cover"
-                      sizes="(max-width: 768px) 100vw, 50vw"
+                      className="object-contain object-center"
+                      sizes="(max-width: 768px) 100vw, 33vw"
+                      priority
                     />
-                  </div>
-                  
-                  <div className="absolute inset-0 bg-gradient-to-t from-gray-900/70 via-transparent to-transparent flex items-end">
-                    <div className="p-8 text-white">
-                      <p className="text-xl font-bold">Excellence in Education</p>
-                      <p className="text-blue-100">Makrana (pincode-341505), Rajasthan</p>
-                    </div>
                   </div>
                 </div>
               </div>
@@ -348,40 +342,18 @@ export default function AboutPage() {
             </h2>
           </motion.div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-              className="lg:col-span-4 order-2 lg:order-1"
-            >
-              <div className="p-1 rounded-xl bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-500 shadow-xl">
-                <div className="relative rounded-xl overflow-hidden">
-                  <div className="aspect-w-4 aspect-h-5 relative h-[500px]">
-                    <Image 
-                      src="/images/about/director.jpg" 
-                      alt="Harshvardhan Singh Rathore - Director" 
-                      fill
-                      className="object-cover"
-                      sizes="(max-width: 768px) 100vw, 33vw"
-                    />
-                  </div>
-                </div>
+          <div className="flex flex-col lg:flex-row gap-8 items-center">
+            <div className="w-full lg:w-1/2">
+              <div className="relative overflow-hidden rounded-xl shadow-xl border-4 border-indigo-500/30 aspect-square">
+                <Image
+                  src="/images/about/director.jpg"
+                  alt="Director's Message"
+                  fill
+                  className="object-cover object-center hover:scale-105 transition-transform duration-500"
+                />
               </div>
-              <div className="text-center mt-6">
-                <h3 className="text-xl font-bold text-gray-900">Harshvardhan Singh Rathore</h3>
-                <p className="text-indigo-600 font-medium">Director, Dildhani Education Group</p>
-              </div>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="lg:col-span-8 order-1 lg:order-2"
-            >
+            </div>
+            <div className="w-full lg:w-1/2">
               <div className="space-y-6 text-lg text-gray-600 leading-relaxed relative">
                 <div className="absolute -top-10 -left-6 text-9xl font-serif text-indigo-100">"</div>
                 
@@ -407,7 +379,7 @@ export default function AboutPage() {
                 
                 <div className="absolute -bottom-10 -right-6 text-9xl font-serif text-indigo-100">"</div>
               </div>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -553,10 +525,10 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
-                name: "Dr. Rajesh Kapoor",
-                role: "Principal Director",
+                name: "Harshvardhan Singh Rathore",
+                role: "Director",
                 image: "/images/about/director.jpg",
-                bio: "With over 25 years of experience in education, Dr. Kapoor leads our group with a vision for academic excellence and innovation."
+                bio: "With extensive experience in educational leadership, Mr. Rathore guides our institution with a vision for academic excellence and holistic development."
               },
               {
                 name: "Prof. Anita Sharma",
