@@ -293,7 +293,7 @@ export default function AboutPage() {
                   <div className="relative h-[500px] w-full">
                     <Image 
                       src="/images/about/director.jpg" 
-                      alt="Harshvardhan Singh Rathore - Director" 
+                      alt="Harshwardhan Singh Rathore - Director" 
                       fill
                       className="object-contain object-center"
                       sizes="(max-width: 768px) 100vw, 33vw"
@@ -374,7 +374,7 @@ export default function AboutPage() {
                 </p>
                 
                 <div className="relative z-10 pt-4">
-                  <p className="font-semibold text-indigo-700">Harshvardhan Singh Rathore</p>
+                  <p className="font-semibold text-indigo-700">Harshwardhan Singh Rathore</p>
                 </div>
                 
                 <div className="absolute -bottom-10 -right-6 text-9xl font-serif text-indigo-100">"</div>
@@ -525,7 +525,7 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
-                name: "Harshvardhan Singh Rathore",
+                name: "Harshwardhan Singh Rathore",
                 role: "Director",
                 image: "/images/about/director.jpg",
                 bio: "With extensive experience in educational leadership, Mr. Rathore guides our institution with a vision for academic excellence and holistic development."

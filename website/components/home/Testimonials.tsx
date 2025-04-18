@@ -161,12 +161,12 @@ export function Testimonials() {
                   width={96}
                   height={96}
                   className="rounded-full object-cover h-full w-full hover:scale-105 transition-transform duration-300"
-                  alt="Harshvardhan Singh Rathore"
+                  alt="Harshwardhan Singh Rathore"
                 />
               </div>
             </div>
             <div className="text-center md:text-left">
-              <h4 className="text-lg font-semibold text-gray-900">Harshvardhan Singh Rathore</h4>
+              <h4 className="text-lg font-semibold text-gray-900">Harshwardhan Singh Rathore</h4>
               <p className="text-sm text-gray-600">Director, Dildhani Education Group</p>
             </div>
           </div>
