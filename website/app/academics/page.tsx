@@ -597,6 +597,153 @@ export default function AcademicsPage() {
         </div>
       </section>
 
+      {/* School Facilities Section */}
+      <section className="py-24 bg-gradient-to-b from-indigo-50 to-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="text-center mb-16"
+          >
+            <div className="inline-block mb-4">
+              <div className="px-3 py-1 rounded-full bg-indigo-100 text-indigo-600 text-sm font-medium">
+                Our Facilities
+              </div>
+            </div>
+
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 tracking-tight">
+              <span className="relative inline-block">
+                State-of-the-Art School Facilities
+                <motion.div
+                  initial={{ width: 0 }}
+                  whileInView={{ width: "100%" }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.8, delay: 0.3 }}
+                  className="absolute -bottom-2 left-0 h-1 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full"
+                />
+              </span>
+            </h2>
+
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-10">
+              Our campuses are equipped with modern facilities to provide an optimal learning environment
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+              className="group"
+            >
+              <div className="relative overflow-hidden rounded-xl shadow-lg">
+                <div className="aspect-w-16 aspect-h-12 h-80 w-full">
+                  <Image
+                    src="/images/adarshschool/junior_school.jpg"
+                    alt="Junior School Building"
+                    fill
+                    className="object-cover transition-transform duration-700 group-hover:scale-110"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  />
+                </div>
+                <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-gray-900/50 to-transparent">
+                  <div className="absolute bottom-0 left-0 p-6">
+                    <h3 className="text-xl font-bold text-white mb-2">Junior School</h3>
+                    <p className="text-gray-200">Nurturing early childhood development in a supportive environment</p>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="group"
+            >
+              <div className="relative overflow-hidden rounded-xl shadow-lg">
+                <div className="aspect-w-16 aspect-h-12 h-80 w-full">
+                  <Image
+                    src="/images/adarshschool/middle_school.webp"
+                    alt="Middle School Building"
+                    fill
+                    className="object-cover transition-transform duration-700 group-hover:scale-110"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  />
+                </div>
+                <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-gray-900/50 to-transparent">
+                  <div className="absolute bottom-0 left-0 p-6">
+                    <h3 className="text-xl font-bold text-white mb-2">Middle School</h3>
+                    <p className="text-gray-200">Building critical thinking skills in a collaborative setting</p>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+              className="group"
+            >
+              <div className="relative overflow-hidden rounded-xl shadow-lg">
+                <div className="aspect-w-16 aspect-h-12 h-80 w-full">
+                  <Image
+                    src="/images/adarshschool/high_school.jpg"
+                    alt="High School Building"
+                    fill
+                    className="object-cover transition-transform duration-700 group-hover:scale-110"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  />
+                </div>
+                <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-gray-900/50 to-transparent">
+                  <div className="absolute bottom-0 left-0 p-6">
+                    <h3 className="text-xl font-bold text-white mb-2">High School</h3>
+                    <p className="text-gray-200">Preparing students for higher education and career readiness</p>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.6 }}
+            className="mt-14 relative overflow-hidden rounded-xl shadow-lg group"
+          >
+            <div className="aspect-w-21 aspect-h-9 h-96 w-full">
+              <Image
+                src="/images/adarshschool/2nd_hero.webp"
+                alt="Adarsh School Campus"
+                fill
+                className="object-cover transition-transform duration-700 group-hover:scale-105"
+                sizes="100vw"
+              />
+            </div>
+            <div className="absolute inset-0 bg-gradient-to-r from-indigo-900/80 to-transparent flex items-center">
+              <div className="p-10 max-w-lg">
+                <h3 className="text-2xl font-bold text-white mb-4">Campus Excellence</h3>
+                <p className="text-gray-200 mb-6">Our modern campus provides an inspiring environment for academic achievement and holistic development with comprehensive facilities that support various educational activities.</p>
+                <Link
+                  href="/institutions/school"
+                  className="inline-flex items-center gap-2 px-6 py-3 bg-white text-indigo-700 font-medium rounded-full hover:bg-blue-50 transition-colors group-hover:bg-indigo-50"
+                >
+                  Explore Our School
+                  <ChevronRight className="h-5 w-5" />
+                </Link>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-16 bg-gradient-to-br from-indigo-900 to-indigo-800 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

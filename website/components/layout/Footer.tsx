@@ -133,15 +133,33 @@ export function Footer() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8">
             {/* Branding and description */}
             <div className="lg:col-span-4">
-              <Link href="/" className="inline-block">
-                <h2 className="text-2xl font-bold text-white">
-                  Dildhani Education Group
-                </h2>
-              </Link>
-              <p className="mt-4 text-indigo-100 max-w-xs">
-                A group of premier educational institutions dedicated to
-                providing quality education and nurturing future leaders.
-              </p>
+              <div className="bg-indigo-800/50 backdrop-blur-sm rounded-xl p-6 border border-indigo-700/50 shadow-lg">
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="relative w-14 h-14 rounded-full overflow-hidden border-2 border-white/20 flex-shrink-0">
+                    <img 
+                      src="/icons/logo.jpg" 
+                      alt="Dildhani Education Group Logo"
+                      className="object-cover w-full h-full"
+                    />
+                  </div>
+                  <Link href="/" className="inline-block">
+                    <h2 className="text-2xl font-bold text-white">
+                      Dildhani Education Group
+                    </h2>
+                  </Link>
+                </div>
+                <p className="text-indigo-100 max-w-xs">
+                  A group of premier educational institutions dedicated to
+                  providing quality education and nurturing future leaders.
+                </p>
+                
+                <div className="mt-4 pt-4 border-t border-indigo-700/50">
+                  <p className="text-sm text-indigo-200 flex items-center">
+                    <span className="bg-amber-500/20 px-2 py-1 rounded text-amber-300 font-medium text-xs mr-2">EST. 2005</span>
+                    Excellence in Education
+                  </p>
+                </div>
+              </div>
             </div>
 
             {/* Footer Links - modernized with animations */}
