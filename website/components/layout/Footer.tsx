@@ -77,8 +77,8 @@ const footerLinks: FooterSection[] = [
       },
       { name: "+91 82903 56671", href: "tel:+918290356671", icon: Phone },
       {
-        name: "Makrana (pincode-341505), Rajasthan, India",
-        href: "https://maps.google.com/?q=Dildhani+Education+Group+Makrana+Rajasthan",
+        name: "Dildhani Institute Of Technical Education Sansthan, Makrana, Rajasthan, India",
+        href: "https://maps.google.com/maps?q=Dildhani+Institute+Of+Technical+Education+Sansthan",
         icon: MapPin,
       },
     ],

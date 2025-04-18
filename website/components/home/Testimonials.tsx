@@ -156,7 +156,7 @@ export function Testimonials() {
           <div className="mt-4 flex items-center justify-center">
             <div className="w-12 h-12 rounded-full overflow-hidden mr-4 bg-indigo-50 flex items-center justify-center">
               <ImageWithFallback 
-                src="/images/principal.jpg" 
+                src="/images/about/director.jpg" 
                 alt="Dr. Rajesh Kapoor" 
                 width={48} 
                 height={48}

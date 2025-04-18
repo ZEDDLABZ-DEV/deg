@@ -360,7 +360,7 @@ export default function AboutPage() {
                 <div className="relative rounded-xl overflow-hidden">
                   <div className="aspect-w-4 aspect-h-5 relative h-[500px]">
                     <Image 
-                      src="/images/principal.jpg" 
+                      src="/images/about/director.jpg" 
                       alt="Harshvardhan Singh Rathore - Director" 
                       fill
                       className="object-cover"
@@ -553,10 +553,10 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
-                name: "Harshvardhan Singh Rathore",
-                role: "Director",
-                image: "/images/principal.jpg",
-                bio: "With extensive experience in educational leadership, Mr. Rathore guides our institutions with a vision for excellence and innovation."
+                name: "Dr. Rajesh Kapoor",
+                role: "Principal Director",
+                image: "/images/about/director.jpg",
+                bio: "With over 25 years of experience in education, Dr. Kapoor leads our group with a vision for academic excellence and innovation."
               },
               {
                 name: "Prof. Anita Sharma",

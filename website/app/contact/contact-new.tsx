@@ -192,8 +192,8 @@ export default function ContactPage() {
                   <div>
                     <h3 className="text-lg font-semibold text-charcoal font-serif">Our Location</h3>
                     <p className="text-deep-gray/80 mt-2 leading-relaxed">
-                      Dildhani Education Group Campus<br />
-                      Makrana (pincode-341505), Rajasthan<br />
+                      Dildhani Institute Of Technical Education Sansthan<br />
+                      Makrana, Rajasthan<br />
                       India
                     </p>
                   </div>
@@ -502,7 +502,7 @@ export default function ContactPage() {
               variants={fadeIn('up', 'tween', 0.3, 1)}
               className="text-xl text-indigo-100/80 max-w-3xl mx-auto"
             >
-              Visit our campus in Makrana (pincode-341505), Rajasthan to experience our facilities and meet our team in person.
+              Visit our Dildhani Institute Of Technical Education Sansthan campus in Makrana, Rajasthan to experience our facilities and meet our team in person.
             </motion.p>
           </motion.div>
           
@@ -514,7 +514,7 @@ export default function ContactPage() {
             className="rounded-2xl overflow-hidden h-[500px] shadow-2xl border-8 border-indigo-900/50"
           >
             <iframe 
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d112993.21531407554!2d74.64632508777577!3d27.029617236254064!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396c3bd95ee0b59b%3A0x75d5106e8d30316f!2sMakrana%2C%20Rajasthan%20341505!5e0!3m2!1sen!2sin!4v1715146564177!5m2!1sen!2sin" 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3554.2841374994537!2d74.76362897544328!3d27.021186076582655!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396b9cc6615a2777%3A0xefd410fd11ef1e14!2sDildhani%20Institute%20Of%20Technical%20Education%20Sansthan!5e0!3m2!1sen!2sin!4v1744288889415!5m2!1sen!2sin" 
               width="100%" 
               height="450" 
               style={{ border: 0, borderRadius: '0.75rem' }} 
