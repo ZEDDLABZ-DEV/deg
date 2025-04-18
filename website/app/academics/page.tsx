@@ -385,17 +385,6 @@ export default function AcademicsPage() {
                       </li>
                     ))}
                   </ul>
-                  <div className="mt-6">
-                    <Link
-                      href={`/academics/${program.title
-                        .toLowerCase()
-                        .replace(/\s+/g, "-")}`}
-                      className="inline-flex items-center text-indigo-600 hover:text-indigo-800 font-medium"
-                    >
-                      Learn more
-                      <ChevronRight className="ml-1 h-4 w-4" />
-                    </Link>
-                  </div>
                 </div>
               </motion.div>
             ))}
@@ -561,46 +550,46 @@ export default function AcademicsPage() {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="relative order-1 md:order-2"
             >
-              <div className="grid grid-cols-2 gap-4">
-                <div className="space-y-4">
-                  <div className="p-1 rounded-xl bg-gradient-to-r from-blue-500 to-indigo-600 shadow-lg">
-                    <Image
-                      src="/images/library.jpg"
-                      alt="Modern library at Dildhani Education Group"
-                      width={300}
-                      height={400}
-                      className="object-cover rounded-lg h-64 w-full"
-                    />
+              <div className="bg-gradient-to-br from-indigo-500 via-purple-500 to-blue-500 p-6 md:p-8 rounded-2xl shadow-xl text-white h-full">
+                <div className="mb-8">
+                  <div className="w-16 h-16 bg-white/20 rounded-xl flex items-center justify-center mb-4">
+                    <GraduationCap className="h-8 w-8 text-white" />
                   </div>
-                  <div className="p-1 rounded-xl bg-gradient-to-r from-purple-500 to-pink-600 shadow-lg">
-                    <Image
-                      src="/images/computer-lab.jpg"
-                      alt="Computer lab at Dildhani Education Group"
-                      width={300}
-                      height={200}
-                      className="object-cover rounded-lg h-40 w-full"
-                    />
-                  </div>
+                  <h3 className="text-2xl font-bold mb-2">Modern Campus</h3>
+                  <p className="text-blue-50">
+                    Our infrastructure is designed to create an immersive
+                    learning experience for students of all ages.
+                  </p>
                 </div>
-                <div className="space-y-4 mt-8">
-                  <div className="p-1 rounded-xl bg-gradient-to-r from-amber-500 to-orange-600 shadow-lg">
-                    <Image
-                      src="/images/science-lab.jpg"
-                      alt="Science lab at Dildhani Education Group"
-                      width={300}
-                      height={200}
-                      className="object-cover rounded-lg h-40 w-full"
-                    />
-                  </div>
-                  <div className="p-1 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-600 shadow-lg">
-                    <Image
-                      src="/images/smart-classroom.jpg"
-                      alt="Smart classroom at Dildhani Education Group"
-                      width={300}
-                      height={400}
-                      className="object-cover rounded-lg h-64 w-full"
-                    />
-                  </div>
+
+                <div className="space-y-4">
+                  {[
+                    "State-of-the-art classrooms with interactive technology",
+                    "Well-stocked libraries with research resources",
+                    "Computer labs with latest hardware and software",
+                    "Science laboratories with modern equipment",
+                    "Sports facilities for physical development",
+                    "Dedicated spaces for extracurricular activities",
+                  ].map((feature, index) => (
+                    <div key={index} className="flex items-center">
+                      <div className="flex-shrink-0 mr-3">
+                        <div className="w-6 h-6 rounded-full bg-white/25 flex items-center justify-center">
+                          <svg
+                            className="w-3 h-3 text-white"
+                            fill="currentColor"
+                            viewBox="0 0 20 20"
+                          >
+                            <path
+                              fillRule="evenodd"
+                              d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                              clipRule="evenodd"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+                      <span className="text-blue-50">{feature}</span>
+                    </div>
+                  ))}
                 </div>
               </div>
             </motion.div>
