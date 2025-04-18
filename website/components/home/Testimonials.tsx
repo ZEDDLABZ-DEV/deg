@@ -154,7 +154,7 @@ export function Testimonials() {
             &ldquo;Our mission is to provide quality education that transforms lives and creates opportunities for our students to excel in their chosen paths.&rdquo;
           </p>
           <div className="mt-6 flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-6">
-            <div className="flex-shrink-0">
+            <div className="flex-shrink-0 flex justify-center">
               <div className="relative h-24 w-24 rounded-full overflow-hidden border-2 border-indigo-500 shadow-lg">
                 <ImageWithFallback
                   src="/images/about/director.jpg"

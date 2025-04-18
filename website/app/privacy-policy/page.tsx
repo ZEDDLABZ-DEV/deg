@@ -187,8 +187,8 @@ export default function PrivacyPolicyPage() {
               <p><strong>Dildhani Education Group</strong></p>
               <p>Privacy Office</p>
               <p>Makrana, Rajasthan, India</p>
-              <p>Email: <a href="mailto:privacy@dildhanieducationgroup.com" className="text-indigo-600 hover:text-indigo-800">privacy@dildhanieducationgroup.com</a></p>
-              <p>Phone: <a href="tel:+918290356671" className="text-indigo-600 hover:text-indigo-800">+91 82903 56671</a></p>
+              <p>Email: <a href="mailto:info.bite11@gmail.com" className="text-indigo-600 hover:text-indigo-800">info.bite11@gmail.com</a></p>
+              <p>Phone: <a href="tel:+918290356671" className="text-indigo-600 hover:text-indigo-800">+91 8290356671</a></p>
             </div>
             <div className="flex space-x-4">
               <Link 

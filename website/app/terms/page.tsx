@@ -208,8 +208,8 @@ export default function TermsPage() {
               <p><strong>Dildhani Education Group</strong></p>
               <p>Legal Department</p>
               <p>Makrana, Rajasthan, India</p>
-              <p>Email: <a href="mailto:legal@dildhanieducationgroup.com" className="text-blue-600 hover:text-blue-800">legal@dildhanieducationgroup.com</a></p>
-              <p>Phone: <a href="tel:+918290356671" className="text-blue-600 hover:text-blue-800">+91 82903 56671</a></p>
+              <p>Email: <a href="mailto:info.bite11@gmail.com" className="text-blue-600 hover:text-blue-800">info.bite11@gmail.com</a></p>
+              <p>Phone: <a href="tel:+918290356671" className="text-blue-600 hover:text-blue-800">+91 8290356671</a></p>
             </div>
             <div className="flex space-x-4">
               <Link 

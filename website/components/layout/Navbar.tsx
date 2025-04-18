@@ -38,9 +38,14 @@ export function Navbar() {
                   className="rounded-md object-contain"
                 />
               </div>
-              <span className="text-lg md:text-2xl font-bold text-primary transition-all duration-300">
-                Dildhani Education Group
-              </span>
+              <div>
+                <span className="text-lg md:text-2xl font-bold text-primary transition-all duration-300 block">
+                  Dildhani Education Group
+                </span>
+                <span className="text-xs text-gray-600 hidden md:block">
+                  Near railway bridge manglana road, dildhani (Makrana)
+                </span>
+              </div>
             </Link>
           </div>
           

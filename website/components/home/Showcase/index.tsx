@@ -263,7 +263,6 @@ export function Showcase() {
                   animate={{ y: activeImage === index ? 0 : 20, opacity: activeImage === index ? 1 : 0 }}
                 >
                   <p className="text-lg font-semibold">{image.alt}</p>
-                  <p className="text-sm text-blue-100">Dildhani Education Group</p>
                   <div className="mt-2 flex items-center text-sm text-blue-100/80">
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mr-2">
                       <path d="M15 3h6v6"></path>

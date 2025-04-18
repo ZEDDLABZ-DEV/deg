@@ -28,6 +28,7 @@ const footerLinks: FooterSection[] = [
       { name: "Academics", href: "/academics" },
       { name: "Gallery", href: "/gallery", icon: Image },
       { name: "Admissions", href: "/admissions" },
+      { name: "Alumni", href: "/alumni" },
       { name: "Contact", href: "/contact" },
     ],
   },
@@ -75,7 +76,9 @@ const footerLinks: FooterSection[] = [
         href: "mailto:info.bite11@gmail.com",
         icon: Mail,
       },
-      { name: "+91 82903 56671", href: "tel:+918290356671", icon: Phone },
+      { name: "+91 8290356671", href: "tel:+918290356671", icon: Phone },
+      { name: "+91 9142670007", href: "tel:+919142670007", icon: Phone },
+      { name: "+91 9142970007", href: "tel:+919142970007", icon: Phone },
       {
         name: "Dildhani Institute Of Technical Education Sansthan, Makrana, Rajasthan, India",
         href: "https://maps.google.com/maps?q=Dildhani+Institute+Of+Technical+Education+Sansthan",

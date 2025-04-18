@@ -8,18 +8,11 @@ import {
   ChevronRight, 
   GraduationCap, 
   BookOpen, 
-  Users, 
-  Briefcase,
   Clock,
   Brain,
-  Award,
-  BookMarked,
   Medal,
   FileText,
-  CheckCircle,
   CalendarClock,
-  ArrowUpRight,
-  Sparkles,
   ClipboardList
 } from "lucide-react"
 
@@ -461,7 +454,7 @@ export default function AcademicsPage() {
           >
             <div className="inline-block mb-4">
               <div className="px-3 py-1 rounded-full bg-indigo-100 text-indigo-600 text-sm font-medium">
-                Meet Our Team
+                Our Faculty
               </div>
             </div>
             
@@ -478,90 +471,32 @@ export default function AcademicsPage() {
               </span>
             </h2>
             
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Our distinguished faculty brings decades of experience and expertise
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+              Our distinguished faculty brings decades of experience and expertise to create an enriching educational environment.
             </p>
-          </motion.div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              {
-                name: "Dr. Priya Sharma",
-                role: "Head of Engineering Department",
-                image: "/images/faculty1.jpg",
-                credentials: "Ph.D. in Mechanical Engineering, IIT Delhi",
-                experience: "15+ years of teaching and research experience"
-              },
-              {
-                name: "Prof. Rajesh Mehta",
-                role: "Mathematics Department",
-                image: "/images/faculty2.jpg",
-                credentials: "M.Sc. Mathematics, Rajasthan University",
-                experience: "20+ years specializing in competitive exam preparation"
-              },
-              {
-                name: "Dr. Suman Gupta",
-                role: "Head of Sciences",
-                image: "/images/faculty3.jpg",
-                credentials: "Ph.D. in Physics, Delhi University",
-                experience: "Author of 5 textbooks and 25+ research papers"
-              }
-            ].map((faculty, index) => (
-              <motion.div
-                key={faculty.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-white rounded-xl overflow-hidden shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300"
-              >
-                <div className="relative h-64">
-                  <Image
-                    src={faculty.image}
-                    alt={faculty.name}
-                    fill
-                    className="object-cover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-gray-900/90 via-gray-900/50 to-transparent"></div>
-                  <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-                    <h3 className="text-xl font-bold">{faculty.name}</h3>
-                    <p className="text-blue-200">{faculty.role}</p>
-                  </div>
-                </div>
-                <div className="p-6">
-                  <div className="space-y-2">
-                    <div className="flex items-start">
-                      <GraduationCap className="w-5 h-5 text-indigo-600 mr-2 mt-0.5 flex-shrink-0" />
-                      <p className="text-gray-700 text-sm">{faculty.credentials}</p>
-                    </div>
-                    <div className="flex items-start">
-                      <Users className="w-5 h-5 text-indigo-600 mr-2 mt-0.5 flex-shrink-0" />
-                      <p className="text-gray-700 text-sm">{faculty.experience}</p>
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-          
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.3 }}
-            className="mt-12 text-center"
-          >
-            <Link 
-              href="/faculty"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-white text-indigo-700 font-medium rounded-full border border-indigo-200 hover:bg-indigo-50 transition-colors duration-300"
-            >
-              View All Faculty
-              <ChevronRight className="w-4 h-4" />
-            </Link>
+            
+            <div className="bg-white p-8 rounded-xl shadow-md max-w-3xl mx-auto">
+              <div className="flex items-center justify-center mb-6">
+                <GraduationCap className="w-10 h-10 text-indigo-600" />
+              </div>
+              <p className="text-gray-700 text-lg leading-relaxed">
+                At Dildhani Education Group, our faculty members are experts in their respective fields with extensive academic and industry experience. Our teachers are committed to delivering quality education using innovative teaching methodologies and providing personalized attention to each student.
+              </p>
+              <div className="mt-6 text-center">
+                <Link 
+                  href="/Staff_List_Dildhani_Group_of_Institutes (1).pdf"
+                  target="_blank"
+                  className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-indigo-600 to-indigo-700 text-white font-medium rounded-full hover:from-indigo-700 hover:to-indigo-800 transition-colors"
+                >
+                  <FileText className="h-5 w-5" />
+                  View Faculty List
+                </Link>
+              </div>
+            </div>
           </motion.div>
         </div>
       </section>
-
+      
       {/* Learning Resources Section */}
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

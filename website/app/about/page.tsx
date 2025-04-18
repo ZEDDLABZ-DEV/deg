@@ -538,7 +538,7 @@ export default function AboutPage() {
               },
               {
                 name: "Col. Vikram Singh (Retd.)",
-                role: "Director, Defense Academy",
+                role: "Founder of Dildhani Education Group",
                 image: "/images/team2.jpg",
                 bio: "Colonel Singh brings decades of military experience to prepare students for successful careers in defense services."
               }
