@@ -1,93 +1,12 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import {
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage,
-} from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
-import { Textarea } from "@/components/ui/textarea";
 import { fadeIn, staggerContainer } from "@/lib/motion";
-import { zodResolver } from "@hookform/resolvers/zod";
 import { motion } from "framer-motion";
-import {
-  ArrowRight,
-  CheckCircle2,
-  Clock,
-  Facebook,
-  Instagram,
-  Linkedin,
-  Mail,
-  MapPin,
-  Phone,
-  Sparkles,
-  Twitter,
-} from "lucide-react";
+import { ArrowRight, Clock, Mail, MapPin, Phone, Sparkles } from "lucide-react";
 import Image from "next/image";
-import { useState } from "react";
-import { useForm } from "react-hook-form";
-import { toast } from "sonner";
-import { z } from "zod";
-
-const formSchema = z.object({
-  firstName: z.string().min(2, "First name must be at least 2 characters"),
-  lastName: z.string().min(2, "Last name must be at least 2 characters"),
-  email: z.string().email("Please enter a valid email address"),
-  phone: z.string().min(10, "Please enter a valid phone number"),
-  subject: z.string().min(1, "Please select a subject"),
-  message: z.string().min(10, "Message must be at least 10 characters"),
-});
 
 export default function ContactPage() {
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSuccess, setIsSuccess] = useState(false);
-
-  const form = useForm<z.infer<typeof formSchema>>({
-    resolver: zodResolver(formSchema),
-    defaultValues: {
-      firstName: "",
-      lastName: "",
-      email: "",
-      phone: "",
-      subject: "",
-      message: "",
-    },
-  });
-
-  async function onSubmit(values: z.infer<typeof formSchema>) {
-    setIsSubmitting(true);
-
-    try {
-      // In a real application, this would be an API call
-      await new Promise((resolve) => setTimeout(resolve, 1500)); // Simulate API call
-
-      console.log(values);
-      setIsSuccess(true);
-      form.reset();
-
-      toast.success("Message Sent Successfully", {
-        description: "Thank you for contacting us. We'll respond shortly.",
-      });
-    } catch {
-      toast.error("Something went wrong", {
-        description: "Your message couldn't be sent. Please try again.",
-      });
-    } finally {
-      setIsSubmitting(false);
-    }
-  }
-
   return (
     <div className="overflow-hidden">
       {/* Header Section */}
@@ -200,12 +119,12 @@ export default function ContactPage() {
                   variants={fadeIn("left", "tween", 0.3, 1)}
                   className="text-xl text-deep-gray/80 leading-relaxed"
                 >
-                  Whether you&apos;re a prospective student, parent, or partner, we
-                  welcome your inquiries. Reach out through any of the following
-                  channels, and our team will be happy to assist you.
+                  Whether you&apos;re a prospective student, parent, or partner,
+                  we welcome your inquiries. Reach out through any of the
+                  following channels, and our team will be happy to assist you.
                 </motion.p>
               </div>
-              
+
               <div className="space-y-8">
                 <motion.div
                   variants={fadeIn("left", "tween", 0.4, 1)}
@@ -311,300 +230,6 @@ export default function ContactPage() {
                   </div>
                 </motion.div>
               </div>
-              
-              <motion.div variants={fadeIn("left", "tween", 0.8, 1)}>
-                <h3 className="text-lg font-semibold text-charcoal mb-5 font-serif">
-                  Connect With Us
-                </h3>
-                <div className="flex space-x-5">
-                  {[
-                    {
-                      icon: Facebook,
-                      href: "https://facebook.com/DildhaniEducationGroup",
-                      label: "Facebook",
-                      colors: "from-blue-400 to-blue-600",
-                      shadow: "shadow-blue-500/30",
-                    },
-                    {
-                      icon: Instagram,
-                      href: "https://instagram.com/DildhaniEducationGroup",
-                      label: "Instagram",
-                      colors: "from-pink-400 to-fuchsia-600",
-                      shadow: "shadow-pink-500/30",
-                    },
-                    {
-                      icon: Twitter,
-                      href: "https://twitter.com/DildhaniEdu",
-                      label: "Twitter",
-                      colors: "from-cyan-400 to-blue-500",
-                      shadow: "shadow-blue-500/30",
-                    },
-                    {
-                      icon: Linkedin,
-                      href: "https://linkedin.com/company/DildhaniEducationGroup",
-                      label: "LinkedIn",
-                      colors: "from-blue-500 to-indigo-600",
-                      shadow: "shadow-indigo-500/30",
-                    },
-                  ].map((social) => (
-                    <motion.a
-                      key={social.label}
-                      href={social.href}
-                      whileHover={{ y: -5, scale: 1.1 }}
-                      whileTap={{ scale: 0.95 }}
-                      className={`h-12 w-12 rounded-full bg-gradient-to-br ${social.colors} flex items-center justify-center ${social.shadow} text-white hover:shadow-lg transition-all duration-300`}
-                      aria-label={social.label}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <social.icon className="w-5 h-5" />
-                    </motion.a>
-                  ))}
-                </div>
-              </motion.div>
-            </motion.div>
-            
-            <motion.div
-              initial="hidden"
-              whileInView="show"
-              viewport={{ once: true, amount: 0.25 }}
-              variants={fadeIn("right", "tween", 0.3, 1)}
-              className="bg-white p-8 rounded-2xl shadow-xl border border-purple-100 relative backdrop-blur-sm"
-            >
-              <div className="absolute -top-4 -left-4 h-24 w-24 bg-gradient-to-br from-purple-600 to-indigo-700 rounded-br-3xl opacity-10"></div>
-              <div className="absolute -bottom-4 -right-4 h-24 w-24 bg-gradient-to-br from-teal-500 to-emerald-600 rounded-tl-3xl opacity-10"></div>
-
-              {isSuccess ? (
-                <motion.div
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  className="text-center py-16"
-                >
-                  <motion.div
-                    initial={{ scale: 0.5, opacity: 0 }}
-                    animate={{ scale: 1, opacity: 1 }}
-                    transition={{
-                      type: "spring",
-                      stiffness: 400,
-                      damping: 10,
-                      delay: 0.2,
-                    }}
-                  >
-                    <div className="w-20 h-20 bg-gradient-to-br from-green-400 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg shadow-green-500/30">
-                      <CheckCircle2 className="w-10 h-10 text-white" />
-                  </div>
-                  </motion.div>
-                  <h3 className="text-2xl font-bold text-charcoal mb-3 font-serif">
-                    Message Sent!
-                  </h3>
-                  <p className="text-deep-gray/80 mb-8 max-w-md mx-auto">
-                    Thank you for reaching out. Our team will review your
-                    message and get back to you shortly.
-                  </p>
-                  <Button
-                    onClick={() => setIsSuccess(false)}
-                    className="bg-gradient-to-r from-purple-600 to-indigo-700 hover:from-purple-700 hover:to-indigo-800 text-white px-6 py-2.5 shadow-lg shadow-purple-500/30"
-                  >
-                    Send Another Message
-                  </Button>
-                </motion.div>
-              ) : (
-                <>
-                  <h3 className="text-2xl font-bold mb-2 font-serif relative z-10 text-transparent bg-clip-text bg-gradient-to-r from-purple-700 to-indigo-700">
-                    Send Us a Message
-                  </h3>
-                  <p className="text-deep-gray/80 mb-8">
-                    Fill out the form below and we&apos;ll get back to you as soon as
-                    possible.
-                  </p>
-
-                  <Form {...form}>
-                    <form
-                      onSubmit={form.handleSubmit(onSubmit)}
-                      className="space-y-5 relative z-10"
-                    >
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-                        <FormField
-                          control={form.control}
-                          name="firstName"
-                          render={({ field }) => (
-                            <FormItem>
-                              <FormLabel className="text-deep-gray text-sm font-medium">
-                                First Name
-                              </FormLabel>
-                              <FormControl>
-                                <Input
-                                  placeholder="Your first name"
-                                  {...field}
-                                  className="w-full p-3 border border-purple-200 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-all duration-200"
-                                />
-                              </FormControl>
-                              <FormMessage className="text-red-500 text-sm" />
-                            </FormItem>
-                          )}
-                        />
-                        <FormField
-                          control={form.control}
-                          name="lastName"
-                          render={({ field }) => (
-                            <FormItem>
-                              <FormLabel className="text-deep-gray text-sm font-medium">
-                                Last Name
-                              </FormLabel>
-                              <FormControl>
-                                <Input
-                                  placeholder="Your last name"
-                                  {...field}
-                                  className="w-full p-3 border border-purple-200 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-all duration-200"
-                                />
-                              </FormControl>
-                              <FormMessage className="text-red-500 text-sm" />
-                            </FormItem>
-                          )}
-                        />
-                </div>
-                
-                      <FormField
-                        control={form.control}
-                        name="email"
-                        render={({ field }) => (
-                          <FormItem>
-                            <FormLabel className="text-deep-gray text-sm font-medium">
-                              Email
-                            </FormLabel>
-                            <FormControl>
-                              <Input
-                                type="email"
-                                placeholder="Your email address"
-                                {...field}
-                                className="w-full p-3 border border-purple-200 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-all duration-200"
-                              />
-                            </FormControl>
-                            <FormMessage className="text-red-500 text-sm" />
-                          </FormItem>
-                        )}
-                      />
-
-                      <FormField
-                        control={form.control}
-                        name="phone"
-                        render={({ field }) => (
-                          <FormItem>
-                            <FormLabel className="text-deep-gray text-sm font-medium">
-                              Phone
-                            </FormLabel>
-                            <FormControl>
-                              <Input
-                                type="tel"
-                                placeholder="Your phone number"
-                                {...field}
-                                className="w-full p-3 border border-purple-200 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-all duration-200"
-                              />
-                            </FormControl>
-                            <FormMessage className="text-red-500 text-sm" />
-                          </FormItem>
-                        )}
-                      />
-
-                      <FormField
-                        control={form.control}
-                        name="subject"
-                        render={({ field }) => (
-                          <FormItem>
-                            <FormLabel className="text-deep-gray text-sm font-medium">
-                              Subject
-                            </FormLabel>
-                            <Select
-                              onValueChange={field.onChange}
-                              defaultValue={field.value}
-                            >
-                              <FormControl>
-                                <SelectTrigger className="w-full p-3 border border-purple-200 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-all duration-200 h-auto">
-                                  <SelectValue placeholder="Select a subject" />
-                                </SelectTrigger>
-                              </FormControl>
-                              <SelectContent>
-                                <SelectItem value="admissions">
-                                  Admissions Inquiry
-                                </SelectItem>
-                                <SelectItem value="programs">
-                                  Program Information
-                                </SelectItem>
-                                <SelectItem value="visit">
-                                  Campus Visit
-                                </SelectItem>
-                                <SelectItem value="career">
-                                  Career Opportunities
-                                </SelectItem>
-                                <SelectItem value="other">Other</SelectItem>
-                              </SelectContent>
-                            </Select>
-                            <FormMessage className="text-red-500 text-sm" />
-                          </FormItem>
-                        )}
-                      />
-
-                      <FormField
-                        control={form.control}
-                        name="message"
-                        render={({ field }) => (
-                          <FormItem>
-                            <FormLabel className="text-deep-gray text-sm font-medium">
-                              Message
-                            </FormLabel>
-                            <FormControl>
-                              <Textarea
-                                placeholder="Please type your message here..."
-                                className="w-full p-3 border border-purple-200 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-all duration-200 resize-none"
-                                rows={4}
-                                {...field}
-                              />
-                            </FormControl>
-                            <FormMessage className="text-red-500 text-sm" />
-                          </FormItem>
-                        )}
-                      />
-
-                      <Button
-                        type="submit"
-                        className="w-full bg-gradient-to-r from-purple-600 to-indigo-700 hover:from-purple-700 hover:to-indigo-800 text-white font-medium py-6 shadow-lg shadow-purple-500/30 flex items-center justify-center group"
-                        disabled={isSubmitting}
-                      >
-                        {isSubmitting ? (
-                          <div className="flex items-center">
-                            <svg
-                              className="animate-spin -ml-1 mr-3 h-5 w-5 text-white"
-                              xmlns="http://www.w3.org/2000/svg"
-                              fill="none"
-                              viewBox="0 0 24 24"
-                            >
-                              <circle
-                                className="opacity-25"
-                                cx="12"
-                                cy="12"
-                                r="10"
-                                stroke="currentColor"
-                                strokeWidth="4"
-                              ></circle>
-                              <path
-                                className="opacity-75"
-                                fill="currentColor"
-                                d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
-                              ></path>
-                            </svg>
-                            Sending...
-                </div>
-                        ) : (
-                          <div className="flex items-center">
-                            Send Message{" "}
-                            <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                </div>
-                        )}
-                      </Button>
-              </form>
-                  </Form>
-                </>
-              )}
             </motion.div>
           </div>
         </div>
@@ -649,8 +274,8 @@ export default function ContactPage() {
               variants={fadeIn("up", "tween", 0.3, 1)}
               className="text-xl text-indigo-100/80 max-w-3xl mx-auto"
             >
-              Visit our campus in Makrana (pincode-341505), Rajasthan to experience our
-              facilities and meet our team in person.
+              Visit our campus in Makrana (pincode-341505), Rajasthan to
+              experience our facilities and meet our team in person.
             </motion.p>
           </motion.div>
 
@@ -696,4 +321,4 @@ export default function ContactPage() {
       </section>
     </div>
   );
-} 
+}
