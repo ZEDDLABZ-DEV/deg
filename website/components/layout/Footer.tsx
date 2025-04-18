@@ -12,6 +12,8 @@ interface FooterLink {
   href: string;
   icon?: LucideIcon;
   isExternal?: boolean;
+  isPhone?: boolean;
+  isPhoneGroup?: boolean;
 }
 
 interface FooterSection {
@@ -26,7 +28,7 @@ const footerLinks: FooterSection[] = [
       { name: "Home", href: "/" },
       { name: "About", href: "/about" },
       { name: "Academics", href: "/academics" },
-      { name: "Gallery", href: "/gallery", icon: Image },
+      { name: "Gallery", href: "/gallery" },
       { name: "Admissions", href: "/admissions" },
       { name: "Alumni", href: "/alumni" },
       { name: "Contact", href: "/contact" },
@@ -76,9 +78,12 @@ const footerLinks: FooterSection[] = [
         href: "mailto:info.bite11@gmail.com",
         icon: Mail,
       },
-      { name: "+91 8290356671", href: "tel:+918290356671", icon: Phone },
-      { name: "+91 9142670007", href: "tel:+919142670007", icon: Phone },
-      { name: "+91 9142970007", href: "tel:+919142970007", icon: Phone },
+      {
+        name: "Phone Numbers",
+        href: "#",
+        icon: Phone,
+        isPhoneGroup: true,
+      },
       {
         name: "Dildhani Institute Of Technical Education Sansthan, Makrana, Rajasthan, India",
         href: "https://maps.google.com/maps?q=Dildhani+Institute+Of+Technical+Education+Sansthan",
@@ -167,10 +172,30 @@ export function Footer() {
                               <link.icon className="w-4 h-4" />
                             </span>
                           )}
-                          <span className="relative overflow-hidden">
-                            {link.name}
-                            <span className="absolute left-0 bottom-0 w-full h-[1px] bg-amber-300 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-right group-hover:origin-left duration-300"></span>
-                          </span>
+                          {!link.isPhoneGroup && (
+                            <span className="relative overflow-hidden">
+                              {link.name}
+                              <span className="absolute left-0 bottom-0 w-full h-[1px] bg-amber-300 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-right group-hover:origin-left duration-300"></span>
+                            </span>
+                          )}
+                          {link.isPhoneGroup && (
+                            <div className="flex flex-wrap items-center">
+                              <a href="tel:+918290356671" className="relative group-hover:text-amber-300">
+                                +91 8290356671
+                                <span className="absolute left-0 bottom-0 w-full h-[1px] bg-amber-300 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-right group-hover:origin-left duration-300"></span>
+                              </a>
+                              <span className="mx-1">,</span>
+                              <a href="tel:+919142670007" className="relative group-hover:text-amber-300">
+                                +91 9142670007
+                                <span className="absolute left-0 bottom-0 w-full h-[1px] bg-amber-300 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-right group-hover:origin-left duration-300"></span>
+                              </a>
+                              <span className="mx-1">,</span>
+                              <a href="tel:+919142970007" className="relative group-hover:text-amber-300">
+                                +91 9142970007
+                                <span className="absolute left-0 bottom-0 w-full h-[1px] bg-amber-300 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-right group-hover:origin-left duration-300"></span>
+                              </a>
+                            </div>
+                          )}
                         </a>
                       ) : (
                         <Link
@@ -182,10 +207,30 @@ export function Footer() {
                               <link.icon className="w-4 h-4" />
                             </span>
                           )}
-                          <span className="relative overflow-hidden">
-                            {link.name}
-                            <span className="absolute left-0 bottom-0 w-full h-[1px] bg-amber-300 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-right group-hover:origin-left duration-300"></span>
-                          </span>
+                          {!link.isPhoneGroup && (
+                            <span className="relative overflow-hidden">
+                              {link.name}
+                              <span className="absolute left-0 bottom-0 w-full h-[1px] bg-amber-300 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-right group-hover:origin-left duration-300"></span>
+                            </span>
+                          )}
+                          {link.isPhoneGroup && (
+                            <div className="flex flex-wrap items-center">
+                              <a href="tel:+918290356671" className="relative group-hover:text-amber-300">
+                                +91 8290356671
+                                <span className="absolute left-0 bottom-0 w-full h-[1px] bg-amber-300 transform scale-x-0 hover:scale-x-100 transition-transform origin-right hover:origin-left duration-300"></span>
+                              </a>
+                              <span className="mx-1">,</span>
+                              <a href="tel:+919142670007" className="relative group-hover:text-amber-300">
+                                +91 9142670007
+                                <span className="absolute left-0 bottom-0 w-full h-[1px] bg-amber-300 transform scale-x-0 hover:scale-x-100 transition-transform origin-right hover:origin-left duration-300"></span>
+                              </a>
+                              <span className="mx-1">,</span>
+                              <a href="tel:+919142970007" className="relative group-hover:text-amber-300">
+                                +91 9142970007
+                                <span className="absolute left-0 bottom-0 w-full h-[1px] bg-amber-300 transform scale-x-0 hover:scale-x-100 transition-transform origin-right hover:origin-left duration-300"></span>
+                              </a>
+                            </div>
+                          )}
                         </Link>
                       )}
                     </motion.li>
