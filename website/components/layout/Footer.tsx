@@ -1,10 +1,9 @@
 "use client";
 
-import Link from "next/link";
-import { Mail, Phone, MapPin, ArrowUp, FileText, Image } from "lucide-react";
 import { motion } from "framer-motion";
-import { useState, useEffect } from "react";
-import { LucideIcon } from "lucide-react";
+import { ArrowUp, FileText, LucideIcon, Mail, MapPin, Phone } from "lucide-react";
+import Link from "next/link";
+import { useEffect, useState } from "react";
 
 // Define interfaces for type safety
 interface FooterLink {
@@ -74,6 +73,11 @@ const footerLinks: FooterSection[] = [
     title: "Contact",
     links: [
       {
+        name: "Dildhani Institute Of Technical Education Sansthan, Makrana, Rajasthan, India",
+        href: "https://maps.google.com/maps?q=Dildhani+Institute+Of+Technical+Education+Sansthan",
+        icon: MapPin,
+      },
+      {
         name: "info.bite11@gmail.com",
         href: "mailto:info.bite11@gmail.com",
         icon: Mail,
@@ -83,11 +87,6 @@ const footerLinks: FooterSection[] = [
         href: "#",
         icon: Phone,
         isPhoneGroup: true,
-      },
-      {
-        name: "Dildhani Institute Of Technical Education Sansthan, Makrana, Rajasthan, India",
-        href: "https://maps.google.com/maps?q=Dildhani+Institute+Of+Technical+Education+Sansthan",
-        icon: MapPin,
       },
     ],
   },
@@ -180,17 +179,26 @@ export function Footer() {
                           )}
                           {link.isPhoneGroup && (
                             <div className="flex flex-wrap items-center">
-                              <a href="tel:+918290356671" className="relative group-hover:text-amber-300">
+                              <a
+                                href="tel:+918290356671"
+                                className="relative group-hover:text-amber-300"
+                              >
                                 +91 8290356671
                                 <span className="absolute left-0 bottom-0 w-full h-[1px] bg-amber-300 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-right group-hover:origin-left duration-300"></span>
                               </a>
                               <span className="mx-1">,</span>
-                              <a href="tel:+919142670007" className="relative group-hover:text-amber-300">
+                              <a
+                                href="tel:+919142670007"
+                                className="relative group-hover:text-amber-300"
+                              >
                                 +91 9142670007
                                 <span className="absolute left-0 bottom-0 w-full h-[1px] bg-amber-300 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-right group-hover:origin-left duration-300"></span>
                               </a>
                               <span className="mx-1">,</span>
-                              <a href="tel:+919142970007" className="relative group-hover:text-amber-300">
+                              <a
+                                href="tel:+919142970007"
+                                className="relative group-hover:text-amber-300"
+                              >
                                 +91 9142970007
                                 <span className="absolute left-0 bottom-0 w-full h-[1px] bg-amber-300 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-right group-hover:origin-left duration-300"></span>
                               </a>
@@ -215,17 +223,26 @@ export function Footer() {
                           )}
                           {link.isPhoneGroup && (
                             <div className="flex flex-wrap items-center">
-                              <a href="tel:+918290356671" className="relative group-hover:text-amber-300">
+                              <a
+                                href="tel:+918290356671"
+                                className="relative group-hover:text-amber-300"
+                              >
                                 +91 8290356671
                                 <span className="absolute left-0 bottom-0 w-full h-[1px] bg-amber-300 transform scale-x-0 hover:scale-x-100 transition-transform origin-right hover:origin-left duration-300"></span>
                               </a>
                               <span className="mx-1">,</span>
-                              <a href="tel:+919142670007" className="relative group-hover:text-amber-300">
+                              <a
+                                href="tel:+919142670007"
+                                className="relative group-hover:text-amber-300"
+                              >
                                 +91 9142670007
                                 <span className="absolute left-0 bottom-0 w-full h-[1px] bg-amber-300 transform scale-x-0 hover:scale-x-100 transition-transform origin-right hover:origin-left duration-300"></span>
                               </a>
                               <span className="mx-1">,</span>
-                              <a href="tel:+919142970007" className="relative group-hover:text-amber-300">
+                              <a
+                                href="tel:+919142970007"
+                                className="relative group-hover:text-amber-300"
+                              >
                                 +91 9142970007
                                 <span className="absolute left-0 bottom-0 w-full h-[1px] bg-amber-300 transform scale-x-0 hover:scale-x-100 transition-transform origin-right hover:origin-left duration-300"></span>
                               </a>
