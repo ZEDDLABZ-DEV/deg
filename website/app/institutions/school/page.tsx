@@ -37,7 +37,7 @@ export default function SchoolPage() {
         {/* Background Image with Parallax */}
         <motion.div className="absolute inset-0 z-0" style={{ y: backgroundY }}>
           <Image
-            src="/images/more_images/83afd1_e272790fdc8f442e8fce0f46e0cad890~mv2.jpeg"
+            src="/images/adarshschool/2nd_hero.webp"
             alt="Adarsh Senior Secondary School"
             fill
             className="object-cover"
@@ -244,7 +244,7 @@ export default function SchoolPage() {
             >
               <div className="rounded-2xl overflow-hidden shadow-xl">
                 <Image
-                  src="/images/more_images/83afd1_b5ccad43f0654accb97baa4b7d097b73~mv2.jpeg"
+                  src="/images/adarshschool/high_school.jpg"
                   alt="Adarsh Senior Secondary School"
                   width={600}
                   height={400}
@@ -492,8 +492,7 @@ const academics = [
     title: "Primary School",
     description:
       "Foundation years focused on developing basic skills, curiosity, and love for learning.",
-    image:
-      "/images/more_images/83afd1_d8295c77a1c3423e881f3dd0c2c7a9da~mv2.jpeg",
+    image: "/images/adarshschool/junior_school.jpg",
     ageGroup: "Ages 5-10",
     subjects: ["English", "Mathematics", "Science", "Hindi", "Social Studies"],
   },
@@ -501,8 +500,7 @@ const academics = [
     title: "Middle School",
     description:
       "Building on foundational knowledge with deeper subject exploration and critical thinking.",
-    image:
-      "/images/more_images/83afd1_4f226c8429914af7b58e26b9cd98e3ae~mv2.jpeg",
+    image: "/images/adarshschool/middle_school.webp",
     ageGroup: "Ages 11-13",
     subjects: [
       "English",
@@ -516,8 +514,7 @@ const academics = [
     title: "Senior Secondary",
     description:
       "Specialized streams preparing students for higher education and career choices.",
-    image:
-      "/images/more_images/83afd1_50d7361c1d02434fb259474c5916bb45~mv2.jpeg",
+    image: "/images/adarshschool/high_school.jpg",
     ageGroup: "Ages 14-17",
     subjects: ["Science", "Commerce", "Humanities"],
   },
