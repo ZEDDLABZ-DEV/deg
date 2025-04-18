@@ -162,6 +162,11 @@ export function Testimonials() {
                   height={96}
                   className="rounded-full object-cover h-full w-full hover:scale-105 transition-transform duration-300"
                   alt="Harshwardhan Singh Rathore"
+                  fallback={
+                    <div className="flex items-center justify-center w-full h-full bg-indigo-100">
+                      <User className="h-8 w-8 text-indigo-500" />
+                    </div>
+                  }
                 />
               </div>
             </div>

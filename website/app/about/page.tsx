@@ -324,13 +324,13 @@ export default function AboutPage() {
           >
             <div className="inline-block mb-4">
               <div className="px-3 py-1 rounded-full bg-indigo-100 text-indigo-600 text-sm font-medium">
-                From the Director's Office
+                From the Director&apos;s Office
               </div>
             </div>
             
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 tracking-tight">
               <span className="relative inline-block">
-                Director's Message
+                Director&apos;s Message
                 <motion.div 
                   initial={{ width: 0 }}
                   whileInView={{ width: "100%" }}
@@ -355,14 +355,14 @@ export default function AboutPage() {
             </div>
             <div className="w-full lg:w-1/2">
               <div className="space-y-6 text-lg text-gray-600 leading-relaxed relative">
-                <div className="absolute -top-10 -left-6 text-9xl font-serif text-indigo-100">"</div>
+                <div className="absolute -top-10 -left-6 text-9xl font-serif text-indigo-100">&ldquo;</div>
                 
                 <p className="relative z-10">
                   Welcome to Dildhani Education Group. As the Director, it is my privilege to lead an institution committed to educational excellence and holistic development.
                 </p>
                 
                 <p>
-                  Our mission is to nurture not just academic brilliance but to shape individuals with strong character, innovative thinking, and the resilience needed to thrive in today's competitive world. We believe that true education goes beyond textbooks and examinations – it's about inspiring young minds to discover their potential and pursue their passions with dedication.
+                  Our mission is to nurture not just academic brilliance but to shape individuals with strong character, innovative thinking, and the resilience needed to thrive in today&apos;s competitive world. We believe that true education goes beyond textbooks and examinations – it&apos;s about inspiring young minds to discover their potential and pursue their passions with dedication.
                 </p>
                 
                 <p>
@@ -377,7 +377,7 @@ export default function AboutPage() {
                   <p className="font-semibold text-indigo-700">Harshwardhan Singh Rathore</p>
                 </div>
                 
-                <div className="absolute -bottom-10 -right-6 text-9xl font-serif text-indigo-100">"</div>
+                <div className="absolute -bottom-10 -right-6 text-9xl font-serif text-indigo-100">&rdquo;</div>
               </div>
             </div>
           </div>
