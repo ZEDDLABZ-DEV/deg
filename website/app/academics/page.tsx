@@ -278,7 +278,7 @@ export default function AcademicsPage() {
                 <div className="relative rounded-lg overflow-hidden">
                   <div className="aspect-w-4 aspect-h-3 relative h-[500px]">
                     <Image
-                      src="/images/classroom.jpg"
+                      src="/images/academics/1.png"
                       alt="Modern classroom at Dildhani Education Group"
                       fill
                       className="object-cover"
