@@ -39,7 +39,7 @@ export default function PolytechnicPage() {
           style={{ y: backgroundY }}
         >
           <Image 
-            src="/images/more_images/83afd1_8b2e5266f3be46ec9c610cdc9a0253a8~mv2.jpg.jpeg" 
+            src="/images/institutions/polytechnic.jpg" 
             alt="Bhawani Polytechnic College Campus" 
             fill
             className="object-cover"
@@ -221,7 +221,7 @@ export default function PolytechnicPage() {
             >
               <div className="rounded-2xl overflow-hidden shadow-xl">
                 <Image 
-                  src="/images/more_images/83afd1_bac3206c269b406a97df5f78340a78b6~mv2.jpeg" 
+                  src="/images/polytechnic/here2ndsection.png" 
                   alt="Bhawani Polytechnic College" 
                   width={600}
                   height={400}
@@ -420,21 +420,21 @@ const programs = [
   {
     title: "Civil Engineering",
     description: "Learn to design, construct and maintain infrastructure projects like buildings, roads, and bridges.",
-    image: "/images/more_images/83afd1_e272790fdc8f442e8fce0f46e0cad890~mv2.jpeg",
+    image: "/images/polytechnic/civil.png",
     duration: "3 Years",
     tags: ["Infrastructure", "Construction", "Design"]
   },
   {
     title: "Mechanical Engineering",
     description: "Study the design, manufacturing and maintenance of mechanical systems and machines.",
-    image: "/images/more_images/83afd1_7308011757bf48b495446e75c31cf7eb~mv2.jpeg",
+    image: "/images/polytechnic/mechanical.png",
     duration: "3 Years",
     tags: ["Manufacturing", "Design", "Automation"]
   },
   {
     title: "Electrical Engineering",
     description: "Focus on electrical systems, power generation, distribution and electrical equipment.",
-    image: "/images/more_images/83afd1_d8295c77a1c3423e881f3dd0c2c7a9da~mv2.jpeg",
+    image: "/images/polytechnic/electric.png",
     duration: "3 Years",
     tags: ["Power Systems", "Electronics", "Control"]
   }
