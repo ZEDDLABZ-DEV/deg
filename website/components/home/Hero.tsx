@@ -8,7 +8,7 @@ import { ChevronDown } from "lucide-react"
 
 export function Hero() {
   return (
-    <section className="relative h-[90vh] flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-[90vh] md:h-[90vh] flex items-center justify-center overflow-hidden py-20 sm:py-24 md:py-28">
       {/* Background Image with Enhanced Overlay */}
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-br from-gray-900/95 via-blue-900/80 to-indigo-900/95 mix-blend-multiply" />
@@ -18,11 +18,12 @@ export function Hero() {
           className="object-cover opacity-70"
           fill
           priority
+          sizes="100vw"
         />
       </div>
 
-      {/* Enhanced Particles */}
-      <div className="absolute inset-0 z-10 opacity-30">
+      {/* Enhanced Particles - Only show on larger screens */}
+      <div className="absolute inset-0 z-10 opacity-30 hidden md:block">
         {[...Array(30)].map((_, i) => (
           <motion.div
             key={i}
@@ -46,17 +47,17 @@ export function Hero() {
         ))}
       </div>
 
-      {/* Decorative Elements */}
-      <div className="absolute top-20 left-10 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl animate-pulse" />
-      <div className="absolute bottom-20 right-10 w-64 h-64 bg-indigo-500/10 rounded-full blur-3xl animate-pulse" />
+      {/* Decorative Elements - Adjusted for better responsiveness */}
+      <div className="absolute top-1/4 left-5 sm:left-10 w-32 sm:w-48 md:w-64 h-32 sm:h-48 md:h-64 bg-blue-500/10 rounded-full blur-3xl animate-pulse" />
+      <div className="absolute bottom-1/4 right-5 sm:right-10 w-32 sm:w-48 md:w-64 h-32 sm:h-48 md:h-64 bg-indigo-500/10 rounded-full blur-3xl animate-pulse" />
 
       {/* Content */}
-      <div className="relative z-20 text-center px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
+      <div className="relative z-20 text-center px-4 sm:px-6 lg:px-8 w-full max-w-5xl mx-auto">
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, ease: "easeOut" }}
-          className="w-full backdrop-blur-sm bg-black/10 rounded-3xl p-8 md:p-12 border border-white/10"
+          className="w-full backdrop-blur-sm bg-black/10 rounded-2xl sm:rounded-3xl p-5 sm:p-8 md:p-12 border border-white/10"
         >
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -65,7 +66,7 @@ export function Hero() {
             className="max-w-3xl mx-auto"
           >
             <motion.h1 
-              className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6 leading-tight"
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6 leading-tight"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
@@ -75,7 +76,7 @@ export function Hero() {
               </span>
             </motion.h1>
             <motion.p 
-              className="text-xl text-white mb-8 drop-shadow-md max-w-2xl mx-auto"
+              className="text-base sm:text-lg md:text-xl text-white mb-6 sm:mb-8 drop-shadow-md max-w-2xl mx-auto"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
@@ -83,24 +84,24 @@ export function Hero() {
               Join our prestigious educational institutions and embark on a journey of academic excellence and personal growth.
             </motion.p>
             <motion.div 
-              className="flex flex-col sm:flex-row gap-4 justify-center"
+              className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
             >
-              <Link href="/admissions">
+              <Link href="/contact" className="w-full sm:w-auto">
                 <Button 
                   size="lg" 
-                  className="bg-gradient-to-r from-blue-600 to-indigo-700 hover:from-blue-700 hover:to-indigo-800 text-white font-medium text-base border-0 shadow-lg shadow-blue-900/20 hover:shadow-xl hover:shadow-blue-900/30 transition-all duration-300"
+                  className="w-full sm:w-auto bg-gradient-to-r from-blue-600 to-indigo-700 hover:from-blue-700 hover:to-indigo-800 text-white font-medium text-base border-0 shadow-lg shadow-blue-900/20 hover:shadow-xl hover:shadow-blue-900/30 transition-all duration-300"
                 >
-                  Apply Now
+                  Contact Us
                 </Button>
               </Link>
-              <Link href="/about">
+              <Link href="/about" className="w-full sm:w-auto">
                 <Button 
                   size="lg" 
                   variant="outline" 
-                  className="bg-white/10 text-white hover:bg-white/20 border-white/30 backdrop-blur-sm"
+                  className="w-full sm:w-auto bg-white/10 text-white hover:bg-white/20 border-white/30 backdrop-blur-sm"
                 >
                   Learn More
                 </Button>
@@ -114,7 +115,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1 }}
-          className="mt-12 grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-4xl mx-auto"
+          className="mt-8 sm:mt-10 md:mt-12 grid grid-cols-2 gap-2 sm:gap-4 max-w-4xl mx-auto"
         >
           {[
             { title: "Quality Education", value: "Since 2011" },
@@ -127,30 +128,30 @@ export function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 1 + index * 0.1 }}
-              className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/10"
+              className="bg-white/10 backdrop-blur-sm rounded-lg sm:rounded-xl p-3 sm:p-4 border border-white/10"
             >
-              <p className="text-sm text-gray-300">{stat.title}</p>
-              <p className="text-xl font-bold text-white">{stat.value}</p>
+              <p className="text-xs sm:text-sm text-gray-300">{stat.title}</p>
+              <p className="text-base sm:text-lg md:text-xl font-bold text-white">{stat.value}</p>
             </motion.div>
           ))}
         </motion.div>
       </div>
 
-      {/* Enhanced Scroll Indicator */}
+      {/* Enhanced Scroll Indicator - Hide on smaller screens */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.5 }}
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20"
+        className="absolute bottom-4 sm:bottom-6 md:bottom-8 left-1/2 transform -translate-x-1/2 z-20"
       >
         <motion.div
           animate={{ y: [0, 10, 0] }}
           transition={{ duration: 2, repeat: Infinity }}
-          className="flex flex-col items-center gap-2"
+          className="flex flex-col items-center gap-1 sm:gap-2"
         >
-          <p className="text-white/70 text-sm">Discover More</p>
-          <div className="w-10 h-10 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center border border-white/20">
-            <ChevronDown className="w-5 h-5 text-white" />
+          <p className="text-white/70 text-xs sm:text-sm">Discover More</p>
+          <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center border border-white/20">
+            <ChevronDown className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
           </div>
         </motion.div>
       </motion.div>
