@@ -161,7 +161,7 @@ export function Testimonials() {
                   width={96}
                   height={96}
                   className="rounded-full object-cover h-full w-full hover:scale-105 transition-transform duration-300"
-                  alt="Harshwardhan Singh Rathore"
+                  alt="Harshvardhan Singh Rathore"
                   fallback={
                     <div className="flex items-center justify-center w-full h-full bg-indigo-100">
                       <User className="h-8 w-8 text-indigo-500" />
@@ -171,7 +171,7 @@ export function Testimonials() {
               </div>
             </div>
             <div className="text-center md:text-left">
-              <h4 className="text-lg font-semibold text-gray-900">Harshwardhan Singh Rathore</h4>
+              <h4 className="text-lg font-semibold text-gray-900">Harshvardhan Singh Rathore</h4>
               <p className="text-sm text-gray-600">Director, Dildhani Education Group</p>
             </div>
           </div>
