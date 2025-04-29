@@ -55,7 +55,7 @@ const programs = [
       "Specialized coaching for competitive exams and career advancement",
     icon: ClipboardList,
     courses: [
-      "Defense Services",
+      "Defence Services",
       "Banking & SSC",
       "Engineering Entrance",
       "Civil Services",

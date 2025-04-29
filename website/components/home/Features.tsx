@@ -29,9 +29,9 @@ const features = [
   },
   {
     icon: Shield,
-    title: "Defense Training",
+    title: "Defence Training",
     description:
-      "Specialized coaching and physical training for students aiming for careers in defense services.",
+      "Specialized coaching and physical training for students aiming for careers in defence services.",
     color: "from-purple-600 to-indigo-600",
     iconBg: "bg-purple-100",
     iconColor: "text-purple-600",

@@ -19,10 +19,10 @@ const schools = [
   {
     id: 2,
     name: "Kaptan Officer Academy",
-    description: "Defense training academy preparing students for careers in armed forces and security services.",
+    description: "Defence training academy preparing students for careers in armed forces and security services.",
     image: "/images/institutions/kaptan-officer-academy.jpg",
     gradient: "from-slate-800 to-gray-900",
-    link: "/institutions/defense-academy",
+    link: "/institutions/defence-academy",
     icon: Shield,
     hoverColor: "bg-slate-100"
   },

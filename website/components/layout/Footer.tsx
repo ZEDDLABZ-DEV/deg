@@ -48,7 +48,7 @@ const footerLinks: FooterSection[] = [
         name: "Bhawani Polytechnic College",
         href: "/institutions/polytechnic",
       },
-      { name: "Kaptan Officer Academy", href: "/institutions/defense-academy" },
+      { name: "Kaptan Officer Academy", href: "/institutions/defence-academy" },
       { name: "Adarsh Senior Secondary School", href: "/institutions/school" },
       { name: "Cricket Academy", href: "/institutions/cricket-academy" },
       { name: "Kaptan Girls Hostel", href: "/institutions/hostel" },

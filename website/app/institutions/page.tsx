@@ -288,7 +288,7 @@ export default function InstitutionsPage() {
 
 // Icons for institutions
 const SchoolIcon = () => <School className="h-5 w-5 text-white" />
-const DefenseIcon = () => <Shield className="h-5 w-5 text-white" />
+const DefenceIcon = () => <Shield className="h-5 w-5 text-white" />
 const PolytechnicIcon = () => <BookOpen className="h-5 w-5 text-white" />
 const CricketIcon = () => <Trophy className="h-5 w-5 text-white" />
 const HostelIcon = () => <Home className="h-5 w-5 text-white" />
@@ -304,10 +304,10 @@ const institutions = [
   },
   {
     name: "Kaptan Officer Academy",
-    description: "Preparing candidates for defense and civil services",
-    href: "/institutions/defense-academy",
+    description: "Preparing candidates for defence and civil services",
+    href: "/institutions/defence-academy",
     image: "/images/more_images/83afd1_a470b6e8b1724464a2d05b223cb937a1~mv2.jpeg",
-    icon: <DefenseIcon />,
+    icon: <DefenceIcon />,
   },
   {
     name: "Adarsh Senior Secondary School",

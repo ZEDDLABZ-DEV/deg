@@ -132,9 +132,9 @@ export default function AdmissionsPage() {
               {
                 title: "Officer Academy",
                 description:
-                  "Comprehensive defense training programs preparing students for successful careers in armed forces and security services.",
+                  "Comprehensive defence training programs preparing students for successful careers in armed forces and security services.",
                 icon: BookOpen,
-                link: "/institutions/defense-academy",
+                link: "/institutions/defence-academy",
                 color: "from-teal-500/20 to-emerald-600/20",
                 iconColor: "text-emerald-600",
                 borderColor: "border-emerald-200",

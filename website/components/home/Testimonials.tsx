@@ -25,9 +25,9 @@ const testimonials = [
   {
     id: 3,
     name: "Amit Kumar",
-    role: "Defense Academy Graduate",
+    role: "Defence Academy Graduate",
     image: "/images/testimonial3.jpg",
-    quote: "The discipline and training I received at Kaptan Officer Academy prepared me for both physical and mental challenges of defense services selection.",
+    quote: "The discipline and training I received at Kaptan Officer Academy prepared me for both physical and mental challenges of defence services selection.",
     program: "Kaptan Officer Academy"
   }
 ]

@@ -440,8 +440,8 @@ export default function AboutPage() {
                 { 
                   year: "2016", 
                   title: "Diversification", 
-                  description: "Established the Kaptan Officer Academy to prepare students for careers in defense services.",
-                  highlight: "Defense Services Focus"
+                  description: "Established the Kaptan Officer Academy to prepare students for careers in defence services.",
+                  highlight: "Defence Services Focus"
                 },
                 { 
                   year: "2019", 
@@ -531,16 +531,10 @@ export default function AboutPage() {
                 bio: "With extensive experience in educational leadership, Mr. Rathore guides our institution with a vision for academic excellence and holistic development."
               },
               {
-                name: "Prof. Anita Sharma",
-                role: "Academic Dean",
-                image: "/images/team1.jpg",
-                bio: "An expert in educational psychology, Prof. Sharma oversees our academic programs and curriculum development."
-              },
-              {
                 name: "Col. Vikram Singh (Retd.)",
                 role: "Founder of Dildhani Education Group",
                 image: "/images/team2.jpg",
-                bio: "Colonel Singh brings decades of military experience to prepare students for successful careers in defense services."
+                bio: "Colonel Singh brings decades of military experience to prepare students for successful careers in defence services."
               }
             ].map((member, index) => (
               <motion.div

@@ -14,7 +14,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRef } from "react";
 
-export default function DefenseAcademyPage() {
+export default function DefenceAcademyPage() {
   const containerRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: containerRef,
@@ -115,7 +115,7 @@ export default function DefenseAcademyPage() {
                     Institutions
                   </Link>
                   <ChevronRight className="h-4 w-4 text-white/60" />
-                  <span>Defense Academy</span>
+                  <span>Defence Academy</span>
                 </div>
               </div>
             </div>
@@ -137,7 +137,7 @@ export default function DefenseAcademyPage() {
             </h1>
 
             <p className="text-xl md:text-2xl text-blue-50 max-w-3xl mx-auto mt-6 leading-relaxed font-light">
-              Transforming aspirants into dedicated officers for defense and
+              Transforming aspirants into dedicated officers for defence and
               civil services
             </p>
 
@@ -204,7 +204,7 @@ export default function DefenseAcademyPage() {
                 About Us
               </h2>
               <h3 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight">
-                Excellence in Defense Training
+                Excellence in Defence Training
               </h3>
               <div className="mt-2 mx-auto w-24 h-1 bg-gradient-to-r from-indigo-500 to-indigo-300 rounded-full"></div>
             </motion.div>
@@ -220,7 +220,7 @@ export default function DefenseAcademyPage() {
             >
               <div className="rounded-2xl overflow-hidden shadow-xl">
                 <Image
-                  src="/images/defense-academy/2nd_hero.jpg"
+                  src="/images/defence-academy/2nd_hero.jpg"
                   alt="Kaptan Officer Academy"
                   width={600}
                   height={400}
@@ -249,13 +249,13 @@ export default function DefenseAcademyPage() {
               <p className="text-gray-600 mb-6 leading-relaxed">
                 Kaptan Officer Academy, a premier institution under the Dildhani
                 Education Group, is committed to preparing candidates for
-                various defense and civil services examinations. Our
+                various defence and civil services examinations. Our
                 comprehensive training programs are designed to nurture
                 disciplined, dedicated, and skilled individuals ready to serve
                 the nation.
               </p>
               <p className="text-gray-600 mb-6 leading-relaxed">
-                With experienced faculty comprising ex-defense personnel and
+                With experienced faculty comprising ex-defence personnel and
                 civil service officers, we provide unparalleled guidance and
                 mentorship to help our students achieve their goals.
               </p>
@@ -270,7 +270,7 @@ export default function DefenseAcademyPage() {
                       Expert Mentors
                     </h5>
                     <p className="mt-1 text-sm text-gray-500">
-                      Ex-defense personnel
+                      Ex-defence personnel
                     </p>
                   </div>
                 </div>
@@ -490,7 +490,7 @@ export default function DefenseAcademyPage() {
               </h2>
               <p className="text-blue-100 mb-8">
                 Join Kaptan Officer Academy and embark on a journey to become a
-                defense officer.
+                defence officer.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
@@ -520,7 +520,7 @@ const programs = [
     title: "NDA Preparation",
     description:
       "Comprehensive training program for National Defence Academy entrance examination.",
-    image: "/images/defense-academy/NDA.jpg",
+    image: "/images/defence-academy/NDA.jpg",
     duration: "6-12 Months",
     tags: ["Written Exam", "SSB Interview", "Physical Training"],
   },
@@ -528,7 +528,7 @@ const programs = [
     title: "CDS Preparation",
     description:
       "Specialized coaching for Combined Defence Services examination for joining Army, Navy, and Air Force.",
-    image: "/images/defense-academy/CDS.webp",
+    image: "/images/defence-academy/CDS.webp",
     duration: "4-8 Months",
     tags: ["English", "Mathematics", "General Knowledge"],
   },
@@ -536,7 +536,7 @@ const programs = [
     title: "SSC Preparation",
     description:
       "Focused coaching for Staff Selection Commission examinations for various government positions.",
-    image: "/images/defense-academy/SSC.webp",
+    image: "/images/defence-academy/SSC.webp",
     duration: "6 Months",
     tags: ["Reasoning", "General Awareness", "Quantitative Aptitude"],
   },
@@ -546,7 +546,7 @@ const features = [
   {
     title: "Physical Training",
     description:
-      "Rigorous physical conditioning to meet the fitness requirements of defense services.",
+      "Rigorous physical conditioning to meet the fitness requirements of defence services.",
     icon: Flame,
   },
   {

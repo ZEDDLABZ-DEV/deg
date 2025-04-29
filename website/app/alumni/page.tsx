@@ -1,10 +1,10 @@
 "use client"
 
 import { motion, useScroll, useTransform } from "framer-motion"
+import { Award, Briefcase, ChevronRight, Medal, Users } from "lucide-react"
 import Image from "next/image"
-import { useRef } from "react"
 import Link from "next/link"
-import { ChevronRight, Award, Medal, Star, Users, Briefcase } from "lucide-react"
+import { useRef } from "react"
 
 const alumniData = [
   {
@@ -212,7 +212,7 @@ export default function AlumniPage() {
                   <div className="flex items-center justify-between mt-4 pt-4 border-t border-gray-100">
                     <div className="flex items-center text-indigo-600 text-sm font-medium">
                       <Briefcase className="h-4 w-4 mr-1" />
-                      <span>Defense Services</span>
+                      <span>Defence Services</span>
                     </div>
                   </div>
                 </div>
@@ -239,14 +239,14 @@ export default function AlumniPage() {
               <div className="inline-block px-3 py-1 rounded-full bg-indigo-100 text-indigo-700 text-sm font-medium mb-4">
                 Making Us Proud
               </div>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Our Graduates in Defense Services</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Our Graduates in Defence Services</h2>
               
               <div className="space-y-6 text-gray-600">
                 <p>
-                  Dildhani Education Group takes immense pride in our alumni who have chosen to serve the nation through defense services. Our specialized training programs and disciplined environment prepare students for successful careers in the armed forces.
+                  Dildhani Education Group takes immense pride in our alumni who have chosen to serve the nation through defence services. Our specialized training programs and disciplined environment prepare students for successful careers in the armed forces.
                 </p>
                 <p>
-                  Our graduates have demonstrated exceptional skill, dedication, and courage in their respective roles within the Army and other defense organizations. Their achievements are a testament to both their personal commitment and the quality of education they received.
+                  Our graduates have demonstrated exceptional skill, dedication, and courage in their respective roles within the Army and other defence organizations. Their achievements are a testament to both their personal commitment and the quality of education they received.
                 </p>
                 <p>
                   We continue to support our alumni throughout their careers and celebrate their contributions to national security and service.
@@ -256,7 +256,7 @@ export default function AlumniPage() {
               <div className="mt-8 grid grid-cols-2 gap-4 sm:gap-6">
                 <div className="bg-white p-4 rounded-lg shadow-sm border border-gray-100">
                   <div className="text-3xl font-bold text-indigo-600 mb-1">15+</div>
-                  <div className="text-gray-600 text-sm">Defense Services Selections</div>
+                  <div className="text-gray-600 text-sm">Defence Services Selections</div>
                 </div>
                 <div className="bg-white p-4 rounded-lg shadow-sm border border-gray-100">
                   <div className="text-3xl font-bold text-indigo-600 mb-1">100%</div>
