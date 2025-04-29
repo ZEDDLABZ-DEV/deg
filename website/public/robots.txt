@@ -1,10 +1,11 @@
-# Allow all web crawlers
+# *
 User-agent: *
 Allow: /
+Disallow: /api
+Disallow: /_next
 
-# Disallow crawling of admin or sensitive paths
-Disallow: /api/
-Disallow: /_next/
+# Host
+Host: https://dildhanieducationgroupmakrana.com
 
-# Sitemap location
-Sitemap: https://dildhanieducationgroupmakrana.com/sitemap.xml 
+# Sitemaps
+Sitemap: https://dildhanieducationgroupmakrana.com/sitemap.xml

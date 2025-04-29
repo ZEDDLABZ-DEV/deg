@@ -1,3 +1,5 @@
+import { supportsLazyLoading } from '@/lib/dom-helpers';
+
 // Image loading optimization utilities
 
 // Function to add lazy loading attribute to all images
@@ -6,10 +8,10 @@ export function addLazyLoadingToImages() {
     // Use IntersectionObserver for lazy loading
     const lazyImages = document.querySelectorAll('img:not([loading])');
     
-    if ('loading' in HTMLImageElement.prototype) {
+    if (supportsLazyLoading()) {
       // Browser supports native lazy loading
       lazyImages.forEach(img => {
-        img.setAttribute('loading', 'lazy');
+        (img as HTMLImageElement).setAttribute('loading', 'lazy');
       });
     } else {
       // Fallback to IntersectionObserver for older browsers
@@ -26,9 +28,10 @@ export function addLazyLoadingToImages() {
       });
       
       lazyImages.forEach(img => {
-        if (img.src) {
-          img.dataset.src = img.src;
-          img.src = 'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=='; // Transparent placeholder
+        const imgEl = img as HTMLImageElement;
+        if (imgEl.src) {
+          imgEl.dataset.src = imgEl.src;
+          imgEl.src = 'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=='; // Transparent placeholder
           imageObserver.observe(img);
         }
       });
@@ -68,11 +71,12 @@ export function enableWebPFormat() {
 export function preventLayoutShift() {
   if (typeof window !== 'undefined') {
     const images = document.querySelectorAll('img:not([width]):not([height])');
+    
     images.forEach(img => {
       // Only add dimensions if they're missing
       if (!img.getAttribute('width') && !img.getAttribute('height')) {
         img.setAttribute('width', '100%');
-        img.style.aspectRatio = 'auto'; // Use aspect-ratio when available
+        (img as HTMLImageElement).style.aspectRatio = 'auto'; // Use aspect-ratio when available
       }
     });
   }
