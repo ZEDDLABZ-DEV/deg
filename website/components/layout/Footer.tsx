@@ -166,7 +166,7 @@ export function Footer() {
                 <div className="mt-4 pt-4 border-t border-indigo-700/50">
                   <p className="text-sm text-indigo-200 flex items-center">
                     <span className="bg-amber-500/20 px-2 py-1 rounded text-amber-300 font-medium text-xs mr-2">
-                      EST. 2005
+                      EST. 2011
                     </span>
                     Excellence in Education
                   </p>
@@ -210,14 +210,6 @@ export function Footer() {
                           {link.isPhoneGroup && (
                             <div className="flex flex-wrap items-center">
                               <a
-                                href="tel:+918290356671"
-                                className="relative group-hover:text-amber-300"
-                              >
-                                +91 8290356671
-                                <span className="absolute left-0 bottom-0 w-full h-[1px] bg-amber-300 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-right group-hover:origin-left duration-300"></span>
-                              </a>
-                              <span className="mx-1">,</span>
-                              <a
                                 href="tel:+919142670007"
                                 className="relative group-hover:text-amber-300"
                               >
@@ -253,14 +245,6 @@ export function Footer() {
                           )}
                           {link.isPhoneGroup && (
                             <div className="flex flex-wrap items-center">
-                              <a
-                                href="tel:+918290356671"
-                                className="relative group-hover:text-amber-300"
-                              >
-                                +91 8290356671
-                                <span className="absolute left-0 bottom-0 w-full h-[1px] bg-amber-300 transform scale-x-0 hover:scale-x-100 transition-transform origin-right hover:origin-left duration-300"></span>
-                              </a>
-                              <span className="mx-1">,</span>
                               <a
                                 href="tel:+919142670007"
                                 className="relative group-hover:text-amber-300"
