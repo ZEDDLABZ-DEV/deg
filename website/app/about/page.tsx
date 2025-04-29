@@ -266,7 +266,7 @@ export default function AboutPage() {
                   Recognized by the All India Council for Technical Education (AICTE) and affiliated with the Board of Technical Education, Rajasthan, we maintain rigorous academic standards across all our programs while embracing innovation in education.
                 </p>
                 <p>
-                  Today, our campus houses multiple specialized institutions including the Bhawani Polytechnic College, Kaptan Officer Academy, Adarsh Senior Secondary School, Colonel Rajvardhan Cricket Academy, and Kaptan Girls Hostel &mdash; creating a holistic educational ecosystem that addresses diverse career aspirations.
+                  Today, our campus houses multiple specialized institutions including the Bhawani Polytechnic College, Kaptan Officer Academy, Adarsh Senior Secondary School, Colonel Rajyavardhan Cricket Academy, and Kaptan Girls Hostel &mdash; creating a holistic educational ecosystem that addresses diverse career aspirations.
                 </p>
               </div>
               
@@ -446,7 +446,7 @@ export default function AboutPage() {
                 { 
                   year: "2019", 
                   title: "Growth", 
-                  description: "Addition of Adarsh Senior Secondary School and Colonel Rajvardhan Cricket Academy to our educational ecosystem.",
+                  description: "Addition of Adarsh Senior Secondary School and Colonel Rajyavardhan Cricket Academy to our educational ecosystem.",
                   highlight: "Sports Integration"
                 },
                 { 

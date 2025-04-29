@@ -38,7 +38,7 @@ const schools = [
   },
   {
     id: 4,
-    name: "Colonel Rajvardhan Cricket Academy",
+    name: "Colonel Rajyavardhan Cricket Academy",
     description: "Professional cricket training facility developing the next generation of cricket talent.",
     image: "/images/institutions/cricket-academy.jpg",
     gradient: "from-emerald-700 to-green-800",
