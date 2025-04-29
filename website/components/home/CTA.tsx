@@ -8,11 +8,16 @@ export function CTA() {
   return (
     <section className="py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="relative overflow-hidden rounded-3xl">
-          {/* Gradient Background */}
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="relative overflow-hidden rounded-3xl"
+        >
+          {/* Animated Background Elements */}
           <div className="absolute inset-0 bg-gradient-to-br from-blue-600 via-indigo-700 to-purple-800"></div>
           
-          {/* Animated Shapes */}
           <motion.div 
             className="absolute top-0 right-0 w-72 h-72 bg-white/10 rounded-full -mt-20 -mr-20"
             animate={{
@@ -89,7 +94,7 @@ export function CTA() {
               </Link>
             </motion.div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   )
