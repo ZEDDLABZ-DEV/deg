@@ -352,13 +352,6 @@ export default function DefenceAcademyPage() {
                       <Clock className="h-4 w-4 mr-1" />
                       <span>{program.duration}</span>
                     </div>
-                    <Link
-                      href="#contact"
-                      className="text-indigo-600 hover:text-indigo-800 text-sm font-medium flex items-center"
-                    >
-                      Learn more
-                      <ChevronRight className="h-4 w-4 ml-1" />
-                    </Link>
                   </div>
                 </div>
               </motion.div>
