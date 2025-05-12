@@ -136,7 +136,7 @@ export function Footer() {
 
       {/* Main footer content */}
       <div className="bg-indigo-900 pt-24 pb-12 text-white relative z-10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-full mx-auto px-4 sm:px-6 lg:px-8">
           {/* Grid layout for footer sections */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8">
             {/* Branding and description */}
@@ -202,7 +202,7 @@ export function Footer() {
                             </span>
                           )}
                           {!link.isPhoneGroup && (
-                            <span className="relative overflow-hidden">
+                            <span className="relative">
                               {link.name}
                               <span className="absolute left-0 bottom-0 w-full h-[1px] bg-amber-300 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-right group-hover:origin-left duration-300"></span>
                             </span>
