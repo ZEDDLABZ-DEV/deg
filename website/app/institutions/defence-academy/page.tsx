@@ -412,64 +412,6 @@ export default function DefenceAcademyPage() {
         </div>
       </section>
 
-      {/* Success Stories */}
-      <section className="py-24 bg-indigo-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5 }}
-            >
-              <h2 className="text-sm font-semibold text-indigo-600 tracking-wide uppercase mb-2">
-                Success Stories
-              </h2>
-              <h3 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight">
-                Our Alumni
-              </h3>
-              <div className="mt-2 mx-auto w-24 h-1 bg-gradient-to-r from-indigo-500 to-indigo-300 rounded-full"></div>
-            </motion.div>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-white p-6 rounded-xl shadow-md"
-              >
-                <div className="flex items-center mb-4">
-                  <div className="h-12 w-12 rounded-full overflow-hidden mr-4">
-                    <Image
-                      src={testimonial.image}
-                      alt={testimonial.name}
-                      width={48}
-                      height={48}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  <div>
-                    <h4 className="text-lg font-semibold text-gray-900">
-                      {testimonial.name}
-                    </h4>
-                    <p className="text-indigo-600 text-sm">
-                      {testimonial.position}
-                    </p>
-                  </div>
-                </div>
-                <p className="text-gray-600 italic">
-                  &quot;{testimonial.quote}&quot;
-                </p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Call to Action Section */}
       <section className="py-16 bg-gradient-to-r from-indigo-600 to-blue-700 relative overflow-hidden">
         <div className="absolute inset-0 overflow-hidden opacity-20">
@@ -566,32 +508,5 @@ const features = [
     description:
       "Extensive coaching for SSB and other interview processes with mock sessions.",
     icon: Users,
-  },
-];
-
-const testimonials = [
-  {
-    name: "Lt. Amit Sharma",
-    position: "Indian Army",
-    quote:
-      "The training at Kaptan Officer Academy was instrumental in my success at the SSB interview. The mentors provided excellent guidance throughout my preparation journey.",
-    image:
-      "/images/more_images/83afd1_d8295c77a1c3423e881f3dd0c2c7a9da~mv2.jpeg",
-  },
-  {
-    name: "Cadet Priya Singh",
-    position: "NDA Graduate",
-    quote:
-      "From physical training to written exam preparation, Kaptan Officer Academy covered all aspects of NDA preparation. I'm grateful for their comprehensive approach.",
-    image:
-      "/images/more_images/83afd1_b5ccad43f0654accb97baa4b7d097b73~mv2.jpeg",
-  },
-  {
-    name: "Officer Rahul Mehra",
-    position: "Border Security Force",
-    quote:
-      "The personalized attention and expert guidance at the academy helped me overcome my weaknesses and build on my strengths. Proud to be an alumnus!",
-    image:
-      "/images/more_images/83afd1_a470b6e8b1724464a2d05b223cb937a1~mv2.jpeg",
   },
 ];
