@@ -102,6 +102,7 @@ export function AdmissionForm({ open, onClose }: { open: boolean, onClose: () =>
         grade: '',
         message: '',
       });
+      onClose();
     } catch (error) {
       toast.error('Failed to submit form. Please try again.');
       console.error('Error sending email:', error);
